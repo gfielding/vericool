@@ -1,0 +1,32 @@
+/*Footer*/
+
+.footer {
+	background-color: $background;
+	padding:2rem;
+	&__container {
+		@include container;
+  	display: flex;
+	  align-items: flex-start;
+	  justify-content: space-evenly;
+  }
+	.wrapper {
+		padding:12rem 2rem 2rem 2rem;
+		@include respond(phone) {
+			padding:16rem 2rem 2rem 2rem;
+		}
+		flex-direction: row;
+		display: flex;
+		flex-wrap: wrap;
+		.col {
+			flex:1;
+			flex-direction: column;
+		}
+	}
+	&__legal {
+		text-align: center;
+		padding-top: 2rem;
+	}
+	&__logo {
+		height:2.2rem;
+	}
+}

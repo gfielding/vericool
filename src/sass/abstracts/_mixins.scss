@@ -1,0 +1,38 @@
+/*MIXINS*/
+
+@mixin container {
+	max-width:1100px;
+	margin:auto;
+	height: 100%;
+}
+
+@mixin button {
+	background-color: white;
+  border-radius: $radius;
+  letter-spacing: $letter-spacing;
+  border: .1rem solid inherit;
+  padding: .72rem 1.8rem;
+  font-size:1.3rem;
+  transition: all .3s;
+	display:inline-block;
+	color:inherit;
+}
+
+@mixin shadow {
+	box-shadow: 0 1rem 3rem -.6rem rgba(0,0,0,.4);
+}
+
+@mixin respond ($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) { @content }; //600px
+	}
+	@if $breakpoint == tablet-port {
+		@media (max-width: 56.25em) { @content }; //900px
+	}
+	@if $breakpoint == tablet-land {
+		@media (max-width: 75em) { @content }; //1200px
+	}
+	@if $breakpoint == desktop {
+		@media (max-width: 112.5em) { @content }; //1800px
+	}
+}

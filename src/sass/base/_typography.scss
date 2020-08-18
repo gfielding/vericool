@@ -1,0 +1,86 @@
+/**TYPOGRAPHY**/
+
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 400;
+  
+
+  src: local(-apple-system), local(BlinkMacSystemFont),
+    local("Segoe UI"), local("Roboto"), local("Oxygen"),
+    local("Ubuntu"), local("Cantarell"), local("Fira Sans"),
+    local("Droid Sans"), local("Helvetica Neue"), sans-serif;
+}
+
+/* Now, let's apply it on an element */
+body {
+  font-family: "system";
+  font-size: 1.6rem;
+  color: $text;
+}
+
+#app {
+  font-family: "system";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  font-size:1rem;
+  color:$text;
+}
+
+html {
+  font-size:62.5% !important;
+
+  @include respond(phone) {
+    font-size:50% !important;
+  }
+}
+p {
+  margin-bottom: 1rem;
+}
+p, ul, li {
+  font-size: 1.6rem;
+}
+
+h1, .h1 {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+h2, .h2 {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+h3, .h3 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+}
+
+.italic {
+    font-style: italic;
+  }
+.caption {
+  font-size: 1rem;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $textLight;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $textLight;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $textLight;
+}

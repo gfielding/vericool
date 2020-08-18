@@ -1,0 +1,43 @@
+/*Nav*/
+.navbar {
+  padding: 1rem;
+  width:calc(100% - 2rem);
+  background-color: white;
+  @include shadow;
+  position:fixed;
+  z-index: 10;
+  &__container {
+  	@include container;
+  	display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+  }
+  &__logo {
+		img {
+			height: 3.6rem;
+		}
+  }
+  &__items {
+  	button {
+  		margin:1rem;
+  		background-color: transparent;
+  		font-size: 1.2rem;
+  		text-transform: uppercase;
+  		color:$text;
+  		position: relative;
+  		&:hover {
+				color:$secondary;
+  		}
+  		.dropdown {
+  			display: flex;
+  			flex-direction: column;
+				position: absolute;
+				background-color: white;
+				padding:2rem 1rem 1rem 1rem;
+				border-radius: 6px;
+				transform: translateX(-50%);
+    		left: 50%;
+  		}	
+  	}
+  }
+}

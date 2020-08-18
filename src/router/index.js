@@ -26,6 +26,21 @@ const router = new Router({
       name: 'home',
       component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
     },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    },
+    {
+      path: '/distribution',
+      name: 'distribution',
+      component: () => import(/* webpackChunkName: "distribution" */ '../views/Partners/Distribution.vue'),
+    },
+    {
+      path: '/customers',
+      name: 'customers',
+      component: () => import(/* webpackChunkName: "customers" */ '../views/Partners/Customers.vue'),
+    },
   ]
 })
 

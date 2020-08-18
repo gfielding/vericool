@@ -1,5 +1,14 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="page about">
+    About Page
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex'
+const fb = require('../firebaseConfig.js')
+
+export default {
+  name: 'About',
+}
+</script>

@@ -1,0 +1,38 @@
+/*Home*/
+
+.home {
+	&__video {
+		height:70vh;
+		position: relative;
+		.bg-video {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			&__content {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__mission {
+		&-container {
+			@include container;
+				padding:$section-padding;
+			@include respond(tablet-port) {
+				padding:$section-padding-tablet;
+			}
+			@include respond(phone) {
+				padding:$section-padding-phone;
+			}
+		}
+		h2 {
+			text-align:center;
+			margin-bottom: 0;
+			line-height: 1;
+		}
+	}
+}
