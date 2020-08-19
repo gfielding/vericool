@@ -1,0 +1,21 @@
+/*Distribition*/
+
+.distribution {
+	&__hero {
+		min-height: 28vh;
+		background-color: $primary;
+		color: white;
+		.container {
+			height:28vh;
+		}
+	}
+	&__map {
+		display: flex;
+		&-col-1 {
+			flex:3;
+		}
+		&-col-2 {
+			flex:1;
+		}
+	}
+}

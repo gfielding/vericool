@@ -19,7 +19,7 @@
 }
 
 @mixin shadow {
-	box-shadow: 0 1rem 3rem -.6rem rgba(0,0,0,.4);
+	box-shadow: 0 1rem 2rem -.6rem rgba(0,0,0,.2);
 }
 
 @mixin respond ($breakpoint) {
