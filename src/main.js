@@ -25,7 +25,7 @@ fb.auth.onAuthStateChanged(user => {
     		AOS.init({ 
     			easing: 'ease-in-out',
     			offset: 0,
-      		duration: 400,
+      		duration: 600,
     		});
     	},
       render: h => h(App)

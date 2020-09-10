@@ -1,0 +1,49 @@
+.bg-video {
+	height: calc(100vh - 80px);
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	&__content {
+		height: calc(100vh - 80px);
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.bg-video-small {
+	height: calc(60vh);
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	border-bottom: solid;
+	border-image-slice: 1;
+	border-width: .4rem;
+	border-image-source: linear-gradient(to right, $primary, $secondary);
+	z-index: 0;
+		&__content {
+			height: calc(60vh);
+			width: 100%;
+			object-fit: cover;
+		}
+		&-text {
+		position: absolute;
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		text-align: center;
+		color: white;
+			h1 {
+				font-size: 9rem;
+		  line-height: 1.1;
+		  font-weight: 700;
+		  text-transform: uppercase;
+		  margin-bottom: 0.6rem;
+		  letter-spacing: 1rem;
+		  transform: skewY(-8deg);
+		  font-style: oblique;
+		}
+	}
+}

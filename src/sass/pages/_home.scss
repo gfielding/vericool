@@ -2,23 +2,49 @@
 
 .home {
 	&__video {
-		height:70vh;
+		height:100vh;
 		position: relative;
-		.bg-video {
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			top: 0;
-			left: 0;
-			z-index: 0;
-			&__content {
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
+		.circle1 {
+			background-color: transparent;
+			img {
+				width:20vh;
+				margin: auto;
+				margin-top:7.25vh;
+				margin-left:4.35vw;
+				filter: brightness(100);
 			}
+		}
+		&-rect-1 {
+			position: absolute;
+			top: 40vh;
+			left:10vw;
+			z-index: 3;
+			color:white;
+			animation: rect-in 1s 1s ease-in-out both;
+			font-size: 5rem;
+			font-weight: bold;
+			background-color: $primary;
+			padding: 1rem 2rem;
+		}
+		&-rect-2 {
+			position: absolute;
+			bottom: 20vh;
+			left:10vw;
+			z-index: 3;
+			color:white;
+			animation: rect-in 1s 3s ease-in-out both;
+			font-size: 5rem;
+			font-weight: bold;
+			background-color: $primary;
+			padding: 1rem 2rem;
+			max-width:60vw;
 		}
 	}
 	&__mission {
+		position: relative;
+		&-card {
+			background: white;
+		}
 		&-container {
 			@include container;
 				padding:$section-padding;
@@ -34,5 +60,21 @@
 			margin-bottom: 0;
 			line-height: 1;
 		}
+	}
+	section {
+		min-height: 100vh;
+	}
+	&__impact {
+		background-color: white;
+		position: relative;
+	}
+	&__performance {
+		background-color: red;
+	}
+	&__chance {
+		background-image:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/background.png?alt=media&token=f8454ba9-99dd-482b-a5e5-58b037463112');
+		background-position: center right;
+		background-size:cover;
+		background-repeat: no-repeat;
 	}
 }

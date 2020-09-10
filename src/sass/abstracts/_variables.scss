@@ -1,5 +1,6 @@
 /*VARIABLES*/
-$text: #9897A1;
+//$text: #9897A1;
+$text: #666;
 $textLight: lighten($text, 24%);
 $textBright: lighten($text, 36%);
 $textDark: darken($text, 20%);
@@ -11,7 +12,7 @@ $primary: #00a4df;
 $ptrans1: rgba($primary, 0.2);
 $ptrans2: rgba($primary, 0.4);
 $ptrans3: rgba($primary, 0.6);
-$primaryDark: darken($primary, 20%);
+$primaryDark: darken($primary, 10%);
 $primaryLight: lighten($primary, 46%);
 $secondary: #78c255;
 $strans1: rgba($secondary, 0.2);

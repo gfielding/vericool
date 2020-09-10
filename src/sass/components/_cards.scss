@@ -1,0 +1,6 @@
+/* CARDS */
+
+.card {
+	@include card;
+	@include shadow;
+}

@@ -33,7 +33,7 @@ html {
   font-size:62.5% !important;
 
   @include respond(phone) {
-    font-size:50% !important;
+    font-size:55% !important;
   }
 }
 p {
@@ -46,8 +46,9 @@ p, ul, li {
 h1, .h1 {
   font-size: 4rem;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 0.6rem;
+  text-transform: uppercase;
 }
 
 h2, .h2 {

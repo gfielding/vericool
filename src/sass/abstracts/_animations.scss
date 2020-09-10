@@ -20,12 +20,12 @@
 	width: 30vw;
 	height: 10vw;
 	z-index: 3;
-	animation: rect-in 1s 3s both;
+	animation: rect-in 1s 1s both;
 }
 
 .circle1 {
 	position: absolute;
-	bottom:-10vh;
+	bottom:20vh;
 	right:5vw;
 	background-color: $ptrans3;
 	width: 20vw;
@@ -44,7 +44,7 @@
 	height: 14vw;
 	border-radius: 50%;
 	z-index: 4;
-	animation: circle-in2 1s 4s both;
+	animation: circle-in2 2s 2s both;
 }
 
 @keyframes circle-in1 {
@@ -75,17 +75,9 @@
 
 @keyframes rect-in {
 	0% {
-		transform: translateX(-25vw);
 		opacity: 0;
 	}
-
-	50% {
-		transform: translateX(2vw);
-		opacity:0.75;
-	}
-
 	100% {
-		transform: translateX(0vw);
 		opacity:1;
 	}
 }

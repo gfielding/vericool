@@ -9,3 +9,11 @@
 ::before, ::after {
 	box-sizing: inherit;
 }
+
+a {
+	color: $primary;
+	text-decoration:none;
+	&:hover {
+		color: $primaryDark;
+	}
+}

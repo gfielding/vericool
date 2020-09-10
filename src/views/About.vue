@@ -1,6 +1,10 @@
 <template>
-  <div class="page about">
-    About Page
+  <div class="about">
+  	<div class="about__hero">
+  		About Page
+  		<div class="iconmark"></div>
+  	</div>
+    
   </div>
 </template>
 

@@ -1,39 +1,22 @@
 /*Customers*/
 
 .customers {
-	&__video {
-		height:70vh;
-		position: relative;
-		color: white;
-		.bg-video {
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			top: 0;
-			left: 0;
-			z-index: 0;
-			&__content {
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
-			}
+	&__area {
+		&-filter {
+			background-color: $background;
+			padding:6rem 3rem;
 		}
-		&-text {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			z-index: 1;
-			text-align: center;
-			h1 {
-				font-size: 9rem;
-	    line-height: 1.1;
-	    font-weight: 700;
-	    text-transform: uppercase;
-	    margin-bottom: 0.6rem;
-	    letter-spacing: 1rem;
-	    transform: skewY(-8deg);
-	    font-style: oblique;
+		&-grid {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 6rem 0;
+			justify-content: center;
+			&-item {
+				min-width: 280px;
+				max-width: 33.33%;
+				.card {
+					margin:1rem;
+				}
 			}
 		}
 	}
