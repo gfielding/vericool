@@ -1,14 +1,12 @@
 <template>
   <div class="page customers">
-    <div class="distribution__video">
-      <div class="bg-video-small">
-        <video class="bg-video-small__content" autoplay muted loop>
-          <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/HikePreview.webm?alt=media&token=b6b8716b-6b20-4220-8a1a-926bde0161bb" type="video/mp4">
-        </video>
-        <div class="bg-video-small-text">
-          <h1>Amazing<br />distribution</h1>
-        </div>
+    <div class="distribution__hero">
+      <div class="container" data-aos="fade-right" data-aos-once="true" data-aos-delay="600">
+      <div class="distribution__hero-text">
+        <h1>Distribution<br />Network</h1>
       </div>
+      
+    </div>
     </div>
   </div>
 </template>

@@ -13,6 +13,7 @@
 a {
 	color: $primary;
 	text-decoration:none;
+	cursor: pointer;
 	&:hover {
 		color: $primaryDark;
 	}

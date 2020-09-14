@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="pre-nav">
+		<div class="pre-nav" style="display: none;">
 			<div class="pre-nav__container">
 				<div class="pre-nav__items">
 					<router-link :to="{ name: 'second-chance' }">

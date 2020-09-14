@@ -2,7 +2,7 @@
   <div class="page mission">
     <div class="bg-video-small">
       <video class="bg-video-small__content" autoplay muted loop>
-        <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/HikePreview.webm?alt=media&token=b6b8716b-6b20-4220-8a1a-926bde0161bb" type="video/mp4">
+        <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/SwanPreview.mp4?alt=media&token=7255d8a1-f158-470b-9a0d-3c9b073fd505" type="video/mp4">
       </video>
       <div class="bg-video-small-text">
         <h1>Help Us End<br />Marine Pollution</h1>

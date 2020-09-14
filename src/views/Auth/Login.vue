@@ -6,7 +6,7 @@
         	<h1>Admin Login</h1>
         </div>
       </div>
-      <div class="login-form">
+      <div class="login__form">
         <form @submit.prevent>
           <div>
             <label for="email1">Email</label>

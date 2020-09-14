@@ -3,7 +3,7 @@
     <section class="home__video">
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
-          <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/HikePreview.webm?alt=media&token=b6b8716b-6b20-4220-8a1a-926bde0161bb" type="video/mp4">
+          <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/AdobeStock_282043525_Video_HD_Preview.mp4?alt=media&token=e9fb168f-4355-47d5-9bbc-613fd8efae8a" type="video/mp4">
         </video>
       </div>
       <div class="circle1">
@@ -19,7 +19,7 @@
     <section class="home__mission">
     	<div class="home__mission-container" data-aos="fade-right" data-aos-once="true">
         <div class="home__mission-card card">
-      		<h2>Our Mission</h2>
+      		<h2><span class="color-primary">Our </span><span class="color-secondary">Mission</span></h2>
       		<div class="line"></div>
       		<p>I'm baby gluten-free listicle austin plaid pinterest food truck air plant readymade drinking vinegar direct trade hoodie vegan. Paleo air plant direct trade biodiesel. Selfies kombucha edison bulb pug neutra kitsch single-origin coffee gentrify polaroid umami narwhal. Vexillologist leggings man braid scenester.</p>
       	</div>

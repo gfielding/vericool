@@ -1,7 +1,8 @@
 /*Nav*/
 
 .pre-nav {
-  background-color:$background;
+  //background-color:$primary;
+  background-image: linear-gradient(to right, $primary, $secondary);
   font-size:1.2rem;
   &__container {
     @include nav-container;
@@ -11,20 +12,25 @@
   }
   &__items {
     button {
-      margin:1rem 1.6rem;
-      color:$text;
+      margin:0.6rem 1.6rem;
+      color:#e8e8e8;
       font-size: 1.2rem;
       font-weight: 500;
+      background-color:transparent;
       &:hover {
-        color:$primary;
+        color:white;
       }
     }
   }
 }
 .navbar {
-  padding: 1rem;
-  width:calc(100% - 2rem);
-  background-color: white;
+  //padding: 1rem;
+  //width:calc(100% - 2rem);
+  position:absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  background-color: transparent;
   //@include shadow;
   //position:absolute;
   z-index: 10;
@@ -32,6 +38,7 @@
   	@include nav-container;
   	display: flex;
 	  align-items: center;
+    justify-content: space-between;
   }
   &__logo {
     a {
@@ -39,38 +46,53 @@
       align-items: center;
     }
     &-textLogo {
-      height: 3rem;
+      height: 2.2rem;
       margin-right: 1rem;
+      filter: brightness(100);
     }
     &-iconLogo {
       height: 4.8rem;
       padding: 0.6rem 0;
+      filter: brightness(100);
     }
   }
   &__items {
     margin-left:4rem;
   	button {
-  		margin:1rem 1.6rem;
+  		margin:0.8rem 1.6rem;
   		background-color: transparent;
   		font-size: 1.4rem;
       font-weight: 500;
   		text-transform: uppercase;
-  		color:$text;
+  		color:white;
   		position: relative;
+      padding: 1rem 0;
   		&:hover {
-				color:$primary;
+				color:$primaryLight;
   		}
   		.dropdown {
   			display: flex;
   			flex-direction: column;
 				position: absolute;
+        margin-top: 1.2rem;
 				background-color: white;
-				padding:2rem 1rem 1rem 1rem;
+				padding:1rem 0.5rem;
 				border-radius: 6px;
 				transform: translateX(-50%);
     		left: 50%;
-        min-width:100px;
+        min-width:10rem;
         z-index: 10;
+        a {
+          button {
+            padding:0;
+            color:$text;
+          }
+          &:hover {
+            button {
+              color:$primary;
+            }
+          }
+        }
   		}	
   	}
   }

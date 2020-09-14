@@ -1,9 +1,11 @@
 <template>
   <div class="page environmental-impact">
-    <div class="bg-video-small">
-      <video class="bg-video-small__content" autoplay muted loop>
-        <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/HikePreview.webm?alt=media&token=b6b8716b-6b20-4220-8a1a-926bde0161bb" type="video/mp4">
-      </video>
+    <div class="environmental-impact__hero">
+      <div class="container" data-aos="fade-right" data-aos-once="true" data-aos-delay="600">
+        <div class="environmental-impact__hero-text">
+          <h1>Environmental<br />Impact</h1>
+        </div>
+      </div>
     </div>
     <div class="container-small">
       <div class="environmental-impact__lead">

@@ -1,0 +1,7 @@
+/*products*/
+
+.products {
+	&__hero {
+		@include hero;
+	}
+}

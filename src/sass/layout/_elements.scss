@@ -34,20 +34,35 @@
 	opacity: 0.4;
 }
 
+div [class$="__lead-text"] {
+	h1 {
+		background-image:linear-gradient(to right, $primary, $secondary);
+		display: inline-block;
+		-webkit-background-clip:text;
+		color:transparent;
+	}
+}
+
+div [class$="__hero-text"] {
+	h1 {
+		font-size:8rem;
+	}
+}
+
 div [class$="__lead"] {
-  margin: 10rem 0 0 0;
+  margin: 8rem 0 0 0;
 	text-align: center;
 }
 div [class$="__lead-box"] {
 	width: fit-content;
 	border: solid;
 	border-image-slice: 1;
-	border-width: 1rem;
+	border-width: 2.4rem;
 	border-image-source: linear-gradient(to right, $primary, $secondary);
 	padding: 2rem;
 	margin:	3rem auto;
 	text-align: left;
-	max-width: 600px;
+	max-width: 720px;
 }
 
 div [class$="__body"] {
