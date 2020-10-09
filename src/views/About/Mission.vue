@@ -5,13 +5,13 @@
         <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/SwanPreview.mp4?alt=media&token=7255d8a1-f158-470b-9a0d-3c9b073fd505" type="video/mp4">
       </video>
       <div class="bg-video-small-text">
-        <h1>Help Us End<br />Marine Pollution</h1>
+        <h1>Help Us End EPS Pollution</h1>
       </div>
     </div>
   	<div class="container">
       <div class="mission__lead">
         <div class="mission__lead-text">
-        	<h1>Mission</h1>
+        	<h1>Our Mission</h1>
           <div class="mission__lead-box">
             <ul>
               <li>• Rid the world of unsustainable packaging, this helps explain to the customer why Vericool was made</li>

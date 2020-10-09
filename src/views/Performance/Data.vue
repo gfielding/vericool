@@ -1,10 +1,12 @@
 <template>
   <div class="page data">
   	<div class="data__hero">
+  		<div class="container" data-aos="fade-right" data-aos-once="true" data-aos-delay="600">
       <div class="data__hero-text">
       	<h1>data</h1>
       </div>
     </div>
+  </div>
   </div>
 </template>
 

@@ -1,14 +1,16 @@
 <template>
   <div class="page buy">
-    <div class="bg-video-small">
-      <video class="bg-video-small__content" autoplay muted loop>
-        <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/HikePreview.webm?alt=media&token=b6b8716b-6b20-4220-8a1a-926bde0161bb" type="video/mp4">
-      </video>
+   <div class="buy__hero">
+      <div class="container" data-aos="fade-right" data-aos-once="true" data-aos-delay="600">
+        <div class="buy__hero-text">
+          <h1>Where to<br />Buy</h1>
+        </div>
+      </div>
     </div>
   	<div class="container">
       <div class="buy__lead">
         <div class="buy__lead-text">
-        	<h1>buy</h1>
+        	<h1>Where to buy</h1>
           <div class="buy__lead-box">
             <ul>
               <li>• Rid the world of unsustainable packaging, this helps explain to the customer why Vericool was made</li>

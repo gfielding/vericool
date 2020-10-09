@@ -1,14 +1,14 @@
 .team {
+	&__hero {
+		@include hero;
+	}
 	&__content {
 		margin: 3rem 0;
 	}
 	&__pics {
-		display: flex;
+		display: flex !important;
 		margin-bottom: 4rem !important;
-		flex-wrap: wrap;
-		height:40rem;
-
-			
+		flex-wrap: wrap;			
 	}
 }
 

@@ -1,0 +1,7 @@
+/*press*/
+
+.pr {
+	&__hero {
+		@include hero;
+	}
+}

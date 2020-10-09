@@ -1,0 +1,7 @@
+/*disposal*/
+
+.disposal {
+	&__hero {
+		@include hero;
+	}
+}

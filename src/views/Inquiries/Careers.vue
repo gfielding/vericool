@@ -1,21 +1,31 @@
 <template>
-  <div class="page careers">
-    <div class="bg-video-small">
-      <video class="bg-video-small__content" autoplay muted loop>
-        <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/HikePreview.webm?alt=media&token=b6b8716b-6b20-4220-8a1a-926bde0161bb" type="video/mp4">
-      </video>
-    </div>
-  	<div class="container">
-      <div class="careers__lead">
-        <div class="careers__lead-text">
-        	<h1>Careers</h1>
-          <div class="careers__lead-box">
-            <ul>
-              <li>• Rid the world of unsustainable packaging, this helps explain to the customer why Vericool was made</li>
-              <li>• Includes pictures and statistics of the harmful environmental effects of EPS</li>
-              <li>• Explains WHY Vericool exists, WHAT they’re passionate about and why the mission matters</li>
-              <li>• Takes over for the current website’s Environmental Impact tab</li>
-            </ul>
+  <div>
+    <Nav />
+    <div class="page careers">
+      <div class="careers__hero">
+      </div>
+    	<div class="container">
+
+        <div class="careers__main">
+
+          <h1>Current Job Openings</h1>
+          <hr>
+
+          <transition name="fadeStop">
+            <Loader v-if="!careers || careers.length == 0" />
+          </transition>
+
+      
+          <div v-for="item in careers" :key="item.id" class="list__item mt-5">
+            <div class="flex align-center justify-space-between">
+              <h3 class="item--title">{{item.title}}</h3>
+              <router-link :to="`/dashboard/career/` + item.id">
+                <button class="btn btn__primary">Apply
+                  <i class="ml-2 fad fa-external-link"></i>
+                </button>
+              </router-link>
+            </div>
+            <div v-html="item.description"></div>
           </div>
         </div>
       </div>
@@ -23,11 +33,31 @@
   </div>
 </template>
 
+<style scoped>
+.list__item {
+  flex-direction: column;
+}
+</style>
+
 <script>
 import { mapState } from 'vuex'
+import Nav from '@/components/Nav.vue'
+import Loader from '@/components/Loader.vue'
 const fb = require('../../firebaseConfig.js')
 
 export default {
   name: 'careers',
+  computed: {
+    ...mapState(['careers']),
+  },
+  async mounted () {
+    if (!this.careers || this.careers.length < 1) {
+      this.$store.dispatch("getCareers")
+    }
+  },
+  components: {
+    Nav,
+    Loader
+  }
 }
 </script>

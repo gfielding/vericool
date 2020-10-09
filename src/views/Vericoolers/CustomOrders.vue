@@ -1,9 +1,11 @@
 <template>
   <div class="page custom">
   	<div class="custom__hero">
+  		<div class="container" data-aos="fade-right" data-aos-once="true" data-aos-delay="600">
       <div class="custom__hero-text">
-      	<h1>custom</h1>
+      	<h1>custom<br />Orders</h1>
       </div>
+    </div>
     </div>
   </div>
 </template>

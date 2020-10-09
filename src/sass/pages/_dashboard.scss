@@ -1,0 +1,14 @@
+.dashboard {
+	@include container;
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+	&__lead {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&.text-center {
+	    text-align: center !important;
+	    display: block
+		}
+	}
+}

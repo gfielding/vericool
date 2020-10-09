@@ -7,13 +7,11 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  scrollBehavior: (to, from, savedPosition) => {
-    let scrollTo = 0
-
-    if (to.hash) {
-      scrollTo = to.hash
-    } else if (savedPosition) {
-      scrollTo = savedPosition.y
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
     }
   },
   routes: [
@@ -23,8 +21,8 @@ const router = new Router({
     },
     {
       path: '/',
-      name: 'home',
-      component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
+      name: 'homepage',
+      component: () => import(/* webpackChunkName: "homepage" */ '../views/Homepage.vue'),
     },
     {
       path: '/about',
@@ -97,6 +95,11 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "data" */ '../views/Performance/Data.vue'),
     },
     {
+      path: '/ohana',
+      name: 'ohana',
+      component: () => import(/* webpackChunkName: "ohana" */ '../views/Ohana/Ohana.vue'),
+    },
+    {
       path: '/news',
       name: 'news',
       component: () => import(/* webpackChunkName: "news" */ '../views/News/News.vue'),
@@ -107,7 +110,7 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "contact" */ '../views/Inquiries/ContactUs.vue'),
     },
     {
-      path: '/press-media',
+      path: '/in-the-news',
       name: 'pr',
       component: () => import(/* webpackChunkName: "pr" */ '../views/Inquiries/PR.vue'),
     },
@@ -134,6 +137,84 @@ const router = new Router({
         requiresAuth: true
       }
     },
+    {
+      path: '/dashboard/careers',
+      name: 'listcareers',
+      component: () => import(/* webpackChunkName: "listcareers" */ '../views/Dashboard/Careers/ListCareers.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/addcareer',
+      name: 'addcareer',
+      component: () => import(/* webpackChunkName: "addcareer" */ '../views/Dashboard/Careers/AddCareer.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/career/:id',
+      name: 'editcareer',
+      component: () => import(/* webpackChunkName: "editcareer" */ '../views/Dashboard/Careers/EditCareer.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/addpress',
+      name: 'addpress',
+      component: () => import(/* webpackChunkName: "addpress" */ '../views/Dashboard/Press/AddPress.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/press',
+      name: 'listpress',
+      component: () => import(/* webpackChunkName: "listpress" */ '../views/Dashboard/Press/ListPress.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/press/:id',
+      name: 'editpress',
+      component: () => import(/* webpackChunkName: "editpress" */ '../views/Dashboard/Press/EditPress.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+
+
+
+    {
+      path: '/dashboard/addchance',
+      name: 'addchance',
+      component: () => import(/* webpackChunkName: "addchance" */ '../views/Dashboard/SecondChances/AddChance.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/chances',
+      name: 'chances',
+      component: () => import(/* webpackChunkName: "listchance" */ '../views/Dashboard/SecondChances/ListChances.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/chance/:id',
+      name: 'editchance',
+      component: () => import(/* webpackChunkName: "editchance" */ '../views/Dashboard/SecondChances/EditChance.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+
+
+
   ]
 })
 

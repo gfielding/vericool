@@ -1,0 +1,5 @@
+<template>
+  <div class="loading">
+  	<i class="fa fa-spinner fa-spin"></i>
+  </div>
+</template>

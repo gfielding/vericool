@@ -1,6 +1,7 @@
 /**FLEXBOX**/
 .flex {
 	display:flex;
+	width: 100%;
 }
 .flex-column {
 	flex-direction:column;
@@ -129,6 +130,10 @@
 	margin-bottom: 2rem;
 }
 
+.mb-10 {
+	margin-bottom: 6rem !important;
+}
+
 .pa-1 {
 	padding: 0.25rem;
 }
@@ -189,6 +194,9 @@
 .pt-5 {
 	padding-top: 2rem;
 }
+.pt-6 {
+	padding-top: 3rem;
+}
 .pb-1 {
 	padding-bottom: 0.25rem;
 }
@@ -203,6 +211,9 @@
 }
 .pb-5 {
 	padding-bottom: 2rem;
+}
+.pb-6 {
+	padding-bottom: 3rem;
 }
 
 
@@ -219,7 +230,16 @@
 .background {
 	background:$background;
 }
-
+.inline-block {
+	display: inline-block;
+}
+.dark-text {
+	color:$text !important;
+}
+.light {
+	color:$textLight;
+	font-weight: 600;
+}
 /**RESPONSIVE**/
 .hiddenMdAndDown {
 	@media only screen and (max-width: 1263px) {

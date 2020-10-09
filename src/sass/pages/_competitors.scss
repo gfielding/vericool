@@ -1,0 +1,7 @@
+/*competitors*/
+
+.competitors {
+	&__hero {
+		@include hero;
+	}
+}

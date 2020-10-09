@@ -1,0 +1,76 @@
+.second-chance {
+	margin-bottom: 6rem;
+	&__hero {
+		@include hero;
+	}
+	&__main {
+		@include upfix;
+		background-color: white;
+		padding:6rem 4rem;
+		z-index: 1;
+		position: relative;
+	}
+	&__darrell {
+		background-color:$background !important;
+		padding: 6rem 0;
+		@include content-wrapper;
+		@include grid-container;
+		grid-template-rows: repeat(1, minmax(40rem, min-content)) !important;
+  	grid-template-columns: 2fr 3fr;
+  	@include respond(tablet-land) {
+  		grid-template-rows: repeat(2, minmax(20rem, min-content)) !important;
+  		grid-template-columns: 1fr;
+  	}
+		&--item {
+			text-align: center;
+			padding:2rem;
+			.video-responsive {
+				@include shadow;
+			}
+		}
+	}
+	&__data {
+		padding: 2rem 0 2rem 0;
+		@include grid-container;
+		grid-template-rows: repeat(1, minmax(20rem, min-content)) !important;
+  	grid-template-columns: 1fr 1fr 1fr;
+  	@include respond(tablet-port) {
+  		grid-template-rows: repeat(3, minmax(12rem, min-content)) !important;
+  		grid-template-columns: 1fr;
+  	}
+		&--item {
+			text-align: center;
+			padding:1rem 3rem;
+			.number {
+				font-size: 5vw;
+				font-weight: 700;
+				@include respond(tablet-port) {
+					font-size: 12vw;
+				}
+			}
+		}
+	}
+	&__stories {
+		&--grid {
+			@include grid-container;
+			grid-template-rows: repeat(1, min-content);
+			grid-gap:2rem;
+			@include respond(tablet-port) {
+				grid-template-rows: repeat(1, min-content);
+				grid-template-columns: 1fr 1fr;
+			}
+			@include respond(phone) {
+				grid-template-rows: repeat(3, min-content);
+				grid-template-columns: 1fr;
+			}
+			.card {
+				img {
+					width:100%;
+				}
+				p {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}

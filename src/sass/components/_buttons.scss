@@ -3,20 +3,49 @@
 .btn, .btn:link, .btn:visited {
 	@include button;
 	&.btn__large {
-		padding: 1.2rem 4rem;
-		font-size: 2rem;
+		padding: 1rem 2rem;
+		font-size: 1.8rem;
 	}
 	&.btn__primary {
-		@include shadow;
 		color:white;
-		background-image: linear-gradient(to right bottom, $primary ,$primaryDark);
-		transition: all .2s;
+		background-color:$primary;
+		transition: all .3s;
 		&:hover {
-			background-color: $primaryDark;
-			transform: translateY(-1px);
+			background-color:$primaryDark;
+		}
+	}
+
+	&.btn__secondary {
+		color:white;
+		background-color:$secondary;
+		transition: all .3s;
+		&:hover {
+			background-color:$secondaryDark;
+		}
+	}
+
+	&.btn__outlined {
+		color:$text;
+		border: 2px solid $text;
+		background-color:transparent;
+		&:hover {
+			color:white;
+			background-color:$text;
+			border: 2px solid $text;
+		}
+	}
+
+	&.btn__ghost {
+		color:white;
+		border: 2px solid white;
+		background-color:transparent;
+		&:hover {
+			color:$primaryDark;
+			background-color:white;
+			border: 2px solid white;
 		}
 	}
 }
-.btn:hover {
-	box-shadow: 0 1rem 3rem -.6rem rgba(0,0,0,.4);
-}
+//.btn:hover {
+//	box-shadow: 0 1rem 3rem -.6rem rgba(0,0,0,.4);
+//}

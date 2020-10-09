@@ -1,9 +1,11 @@
 <template>
   <div class="page disposal">
   	<div class="disposal__hero">
+  		<div class="container" data-aos="fade-right" data-aos-once="true" data-aos-delay="600">
       <div class="disposal__hero-text">
       	<h1>disposal</h1>
       </div>
+    </div>
     </div>
   </div>
 </template>

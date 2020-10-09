@@ -24,6 +24,10 @@ time, mark, audio, video {
 	box-sizing: inherit;
 }
 
+ul {
+  padding-inline-start: 4rem;
+}
+
 /* make sure to set some focus styles for accessibility */
 :focus {
   outline: 0 !important;
@@ -41,7 +45,7 @@ body {
 }
 
 ol, ul {
-	list-style: none;
+	//list-style: none;
 }
 
 blockquote, q {
@@ -351,14 +355,15 @@ textarea {
     color: #777;
 }
 
-input {
+input, textarea {
 	padding: 12px;
-  border-radius: 6px;
+  border-radius: 0;
   border-style: solid;
   border-image: none;
   border-width: 1px;
-  border-color: #999;
+  border-color: $text;
     width: calc(100% - 1.75rem);
+    font-size:1.6rem;
 }
 input.error {
     border-color: $error;

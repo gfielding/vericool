@@ -2,12 +2,39 @@
 
 .footer {
 	background-color: $background;
-	padding:2rem;
+	background-image:linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0)), url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/AdobeStock_49449461-min.jpeg?alt=media&token=09c04bbc-b325-4614-9de1-ccbb12756102');
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	
+	padding:14rem 2rem 6rem 2rem;
+	color:$textDark !important;
 	&__container {
 		@include container;
   	display: flex;
 	  align-items: flex-start;
 	  justify-content: space-evenly;
+	  &--item {
+	  	h3 {
+	  		color:$textDark !important;
+	  	}
+	  	a {
+	  		display: block;
+	  		font-size: 1.2rem;
+	  		font-weight: 500;
+    		margin-bottom: 2px;
+    		color:$textDark !important;
+    		button {
+    			background: transparent;
+    			color:$textDark !important;
+    		}
+    		&:hover {
+    			button {
+	    			font-weight: 700;
+	    		}
+    		}
+	  	}
+	  }
   }
 	.wrapper {
 		padding:12rem 2rem 2rem 2rem;

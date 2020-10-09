@@ -17,16 +17,50 @@
       </div>
     </section>
     <section class="home__mission">
-    	<div class="home__mission-container" data-aos="fade-right" data-aos-once="true">
-        <div class="home__mission-card card">
-      		<h2><span class="color-primary">Our </span><span class="color-secondary">Mission</span></h2>
-      		<div class="line"></div>
-      		<p>I'm baby gluten-free listicle austin plaid pinterest food truck air plant readymade drinking vinegar direct trade hoodie vegan. Paleo air plant direct trade biodiesel. Selfies kombucha edison bulb pug neutra kitsch single-origin coffee gentrify polaroid umami narwhal. Vexillologist leggings man braid scenester.</p>
+    	<div class="home__mission-container" data-aos="fade-up" data-aos-once="true">
+        <div class="home__mission-text">
+      		<p>Vericool™ provides a proprietary green technology solution that leaves zero impact on the environment unlike the alternative solution that is devastating our global landscape. The mission of Vericool is to eliminate Styrofoam (EPS) usage in the biomedical, pharmaceutical, life sciences, fish, and food delivery industries. Vericool was founded by temperature controlled packaging experts in response to customer request for recyclable and better yet, compostable, shipping alternatives to EPS, commonly known as Styrofoam®.</p>
       	</div>
       </div>
     </section>
     <section class="home__impact">
-    	<div class="vc-bar"></div>
+    	<div class="container">
+        <div class="customers__area-grid">
+          <div class="customers__area-grid-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="400">
+            <div class="card">
+              <div class="card__image">
+                <img src="http://vericoolpackaging.com/images/ice2.jpg" alt="">
+              </div>
+              <div class="card__body">
+                <h3>What is a Vericooler</h3>
+                <p>Cornhole raclette tote bag poke hashtag seitan. Tumeric DIY disrupt man bun bitters migas normcore fixie. Hashtag celiac brunch tbh salvia humblebrag slow-carb drinking vinegar chillwave deep v chia chartreuse quinoa scenester.</p>
+              </div>
+            </div>
+          </div>
+          <div class="customers__area-grid-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="400">
+            <div class="card">
+              <div class="card__image">
+                <img src="https://livinginpanama.com/wp-content/uploads/2018/12/birds-eating-m2-styrofoam-800.jpg" alt="">
+              </div>
+              <div class="card__body">
+                <h3>Impact of Styrofoam</h3>
+                <p>Cornhole raclette tote bag poke hashtag seitan. Tumeric DIY disrupt man bun bitters migas normcore fixie. Hashtag celiac brunch tbh salvia humblebrag slow-carb drinking vinegar chillwave deep v chia chartreuse quinoa scenester.</p>
+              </div>
+            </div>
+          </div>
+          <div class="customers__area-grid-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="400"> 
+            <div class="card">
+              <div class="card__image">
+                <img src="http://vericoolpackaging.com/images/inmates.jpg" alt="">
+              </div>
+              <div class="card__body">
+                <h3>Home Of Second Chances</h3>
+                <p>Cornhole raclette tote bag poke hashtag seitan. Tumeric DIY disrupt man bun bitters migas normcore fixie. Hashtag celiac brunch tbh salvia humblebrag slow-carb drinking vinegar chillwave deep v chia chartreuse quinoa scenester.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="home__performance">
       <div class="iconmark"></div>

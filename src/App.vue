@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Nav />
+    <Nav v-if="!currentUser" />
     <router-view :key="$route.fullPath"></router-view>
     <Footer />
   </div>
@@ -15,6 +15,9 @@ const fb = require('./firebaseConfig.js')
 export default {
   data: () => ({
   }),
+  computed: {
+    ...mapState(['currentUser', 'userProfile']),
+  },
   components: {
     Nav,
     Footer

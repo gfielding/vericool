@@ -16,7 +16,14 @@
             <label for="password1">Password</label>
             <input type="password" placeholder="******" id="password1" v-model.trim="loginForm.password" />
           </div>
-          <button class="btn btn__primary mt-5 mb-5" @click="login()">Log In</button>
+          <button class="btn btn__primary mt-5 mb-5" @click="login()">
+            Log In
+            <transition name="fade">
+              <span class="ml-2" v-if="performingRequest">
+              <i class="fa fa-spinner fa-spin"></i>
+              </span>
+            </transition>
+          </button>
           <div class="extras">
             <a>Forgot Password</a>
           </div>

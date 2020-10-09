@@ -5,8 +5,77 @@
 	margin:auto;
 	height: 100%;
 	padding:1.6rem;
+	display: block;
+	@include respond(desktop) {
+		width:80%;
+	}
+	@include respond(tablet-land) {
+		width:90%;
+	}
+	@include respond(phone) {
+		width:calc(100% - 4rem);
+	}
 }
 
+@mixin upfix {
+	margin-top: -24vh;
+	@include respond(phone) {margin-top: 2rem;}
+}
+
+@mixin gradient {
+	background-image:linear-gradient(to right, $primary, $secondary);
+  display: inline-block;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+@mixin form {
+	max-width: 64rem;
+	margin: 2rem auto;
+}
+@mixin box {
+	border: solid;
+	border-image-slice: 1;
+	border-width: 1.6rem;
+	border-image-source: linear-gradient(to right, $primary, $secondary);
+}
+
+@mixin gradline {
+	border-bottom: solid;
+	border-image-slice: 1;
+	border-width: 1.2rem;
+	border-image-source: linear-gradient(to right, $primary, $secondary);
+}
+
+@mixin grid-container {
+	//@include container;
+	display: grid;
+	grid-template-rows: repeat(3, minmax(32rem, min-content));
+  grid-template-columns: 1fr 1fr 1fr;
+ 	grid-auto-flow:row dense;
+	grid-gap:1rem;
+	align-items:stretch;
+	@include respond(tablet-port) {
+		grid-template-rows: repeat(5, 20rem);
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@mixin content-wrapper {
+	background:white;
+	margin-bottom:6rem;
+	margin: 4rem 10vw;
+	@include respond(phone) {margin: 4rem 0;}
+}
+
+@mixin slide-image {
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+}
 @mixin nav-container {
 	max-width:1400px;
 	margin:auto;
@@ -19,14 +88,21 @@
 
 @mixin button {
 	background-color: white;
-  border-radius: $radius;
-  letter-spacing: $letter-spacing;
-  border: .1rem solid inherit;
-  padding: .72rem 1.8rem;
-  font-size:1.3rem;
+  border-radius: 0;
+  letter-spacing: -0.02rem;
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  padding: .6rem 1.2rem;
+  letter-spacing: 0.24rem;
+  font-size:1.4rem;
+  font-weight: 400;
   transition: all .3s;
 	display:inline-block;
 	color:inherit;
+	text-transform: uppercase;
 }
 
 @mixin card {
@@ -38,13 +114,15 @@
 		margin: 0 !important;
 	}
 	&__image {
+		min-height: 24rem;
 		img {
 			border-radius:6px 6px 0 0;
 			-webkit-clip-path: ellipse(92% 70% at 50% 20%);
   		clip-path: ellipse(92% 70% at 50% 20%);
   		width:100%;
-  		object-fit: contain;
-  		min-height: 24rem;
+  		object-fit: cover;
+  		height: 100%;
+  		height: 24rem;
 		}
 	}
 }
@@ -59,17 +137,22 @@
 	box-shadow: 0 1rem 2rem -.6rem rgba(0,0,0,.2);
 }
 
+@mixin text-shadow {
+	text-shadow: 0.2rem 0.2rem 1.6rem $dark;
+}
+
 @mixin hero {
 	min-height: 48vh;
-	background-image:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/TreesUp.jpg?alt=media&token=7c7e227f-550f-443a-b42e-6adb00e3addc');
+	//background-image:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/TreesUp.jpg?alt=media&token=7c7e227f-550f-443a-b42e-6adb00e3addc');
+	background-image:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Carousel%2Fshutterstock_208368145-min.jpg?alt=media&token=d37ca7a9-6df2-4d0a-a723-21d6a8fb7346');
 	background-position:center center;
 	background-size:cover;
 	background-repeat:no-repeat;
 	color: white;
-	border-bottom: solid;
-	border-image-slice: 1;
-	border-width: 1.2rem;
-	border-image-source: linear-gradient(to right, $primary, $secondary);
+	//border-bottom: solid;
+	//border-image-slice: 1;
+	///border-width: 1.2rem;
+	//border-image-source: linear-gradient(to right, $primary, $secondary);
 	.container {
 		height:48vh;
 		display: flex;

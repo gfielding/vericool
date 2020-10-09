@@ -1,28 +1,37 @@
 /*VARIABLES*/
 //$text: #9897A1;
-$text: #666;
-$textLight: lighten($text, 24%);
+//$text: #666;
+$text: #26282A;
+$textLight: lighten($text, 36%);
 $textBright: lighten($text, 36%);
 $textDark: darken($text, 20%);
 $background:#f7f5f1;
 $backDark: darken($background, 20%);
 $backLight: lighten($background, 20%);
 $black: #1f1f1f;
+$dark: #26282A;
 $primary: #00a4df;
 $ptrans1: rgba($primary, 0.2);
 $ptrans2: rgba($primary, 0.4);
 $ptrans3: rgba($primary, 0.6);
-$primaryDark: darken($primary, 10%);
+//$primaryDark: darken($primary, 5%);
+$primaryDark: darken($primary, 28%);
 $primaryLight: lighten($primary, 24%);
 $secondary: #78c255;
 $strans1: rgba($secondary, 0.2);
 $strans2: rgba($secondary, 0.4);
 $strans3: rgba($secondary, 0.6);
 $secondaryDark: darken($secondary, 10%);
-$secondaryLight: lighten($secondary, 10%);
+$secondaryLight: #a4f57f;
+$secondaryLight1: lighten($secondaryLight, 6%);
+$secondaryLight2: darken($secondaryLight, 6%);
 $accent: #ffee55;
 $accentDark: darken($accent, 10%);
 $accentLight: lighten($accent, 10%);
+
+
+$primaryTrans: rgba(122,203,232, 0.48);
+$secondaryTrans: rgba($secondary, 0.88);
 
 $success: green;
 $error: red;
@@ -30,7 +39,7 @@ $error: red;
 $letter-spacing: 0.12rem;
 
 /*BORDER RADIUS*/
-$radius: 10rem;
+$radius: 0.4rem;
 
 /*FONTS*/
 $smallText: 1rem;

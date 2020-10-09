@@ -1,0 +1,7 @@
+/*contact*/
+
+.contact {
+	&__hero {
+		@include hero;
+	}
+}

@@ -1,0 +1,7 @@
+/*custom*/
+
+.custom {
+	&__hero {
+		@include hero;
+	}
+}

@@ -1,0 +1,7 @@
+/*materials*/
+
+.materials {
+	&__hero {
+		@include hero;
+	}
+}

@@ -28,6 +28,9 @@ const functions = firebase.functions()
 
 // firebase collections
 const usersCollection = db.collection('users')
+const careersCollection = db.collection('careers')
+const pressCollection = db.collection('press')
+const chancesCollection = db.collection('chances')
 
 export {
   db,
@@ -37,4 +40,7 @@ export {
   currentUser,
   functions,
   usersCollection,
+  careersCollection,
+  pressCollection,
+  chancesCollection
 }
