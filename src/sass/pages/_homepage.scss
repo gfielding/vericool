@@ -3,8 +3,9 @@
 	&__top {
 		width:100%;
 		position: relative;
-		background-color:$primary;
+		//background-color:$primary;
 		max-height: 100vh;
+		//padding:0 2rem;
 		&--image {
 			width:100%;
 			max-height: 100vh;
@@ -18,7 +19,7 @@
 			position:absolute;
 			color:white;
 			z-index: 1;
-			top:36%;
+			top:32%;
 			width:60%;
 			left:10%;
 			@include respond(phone) {
@@ -27,20 +28,15 @@
 			}
 			h1 {
 				font-size: 6vw;
+				line-height:1;
 			}
 		}
 	}
 	&__box {
-		margin-top:-16rem;
 		z-index: 1;
 		position: relative;
 		display: flex;
-		@include respond(tablet-port) {
-			margin-top:-10rem;
-		}
-		@include respond(phone) {
-			margin-top:2rem;
-		}
+		@include upfix;
 		&--grid {
 			background:$secondaryLight;
 			background-image: linear-gradient(to bottom right, $secondaryLight1, $secondaryLight, $secondaryLight2);

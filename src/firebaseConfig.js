@@ -31,6 +31,7 @@ const usersCollection = db.collection('users')
 const careersCollection = db.collection('careers')
 const pressCollection = db.collection('press')
 const chancesCollection = db.collection('chances')
+const articlesCollection = db.collection('articles')
 
 export {
   db,
@@ -42,5 +43,6 @@ export {
   usersCollection,
   careersCollection,
   pressCollection,
-  chancesCollection
+  chancesCollection,
+  articlesCollection
 }

@@ -44,6 +44,13 @@
 		flex-direction: column;
 		justify-content: space-between;
 		color:$textDark;
+		button {
+			transition: 0.2s ease all;
+			&:hover {
+				transform: translateY(-0.1rem);
+				@include shadow;
+			}
+		}
 		h3 {
 			color:$textDark;
 		}

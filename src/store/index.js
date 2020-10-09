@@ -11,6 +11,7 @@ fb.auth.onAuthStateChanged(user => {
     store.dispatch('getCareers')
     store.dispatch('getPress')
     store.dispatch('getChances')
+    store.dispatch('getArticles')
   } else {
     store.commit('setCurrentUser', null)
   }
@@ -26,6 +27,8 @@ export const store = new Vuex.Store({
     pressInfo: {},
     chances: [],
     chanceInfo: {},
+    articles: [],
+    articleInfo: {},
   },
   actions: {
     fetchUserProfile({ commit, state }) {
@@ -84,6 +87,30 @@ export const store = new Vuex.Store({
         })
       })
     },
+
+
+    getArticles({ commit }) {
+      fb.articlesCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
+        let articlesArray = []
+        querySnapshot.forEach(doc => {
+          let articles = doc.data()
+          articles.id = doc.id
+          articlesArray.push(articles)
+        })
+        commit('setArticles', articlesArray)
+      })
+    },
+    getArticleFromId({ commit }, payload) {
+      fb.articlesCollection.where("id", "==", payload)
+      .get()
+      .then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          commit("setArticleInfo", doc.data())
+        })
+      })
+    },
+
+
     getPressFromId({ commit }, payload) {
       fb.pressCollection.where("id", "==", payload)
       .get()
@@ -148,6 +175,13 @@ export const store = new Vuex.Store({
         state.press = []
       }
     },
+    setArticles(state, val) {
+      if (val) {
+        state.articles = val
+      } else {
+        state.articles = []
+      }
+    },
     setCareerInfo(state, payload) {
       state.careerInfo = payload
     },
@@ -156,6 +190,9 @@ export const store = new Vuex.Store({
     },
     setChanceInfo(state, payload) {
       state.chanceInfo = payload
+    },
+    setArticleInfo(state, payload) {
+      state.articleInfo = payload
     },
     
   },

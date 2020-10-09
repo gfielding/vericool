@@ -65,6 +65,20 @@
 							</transition>
 						</button>
 
+						<button v-on:mouseover="showPosts" v-on:mouseleave="hidePosts" @click="postsMenu = !postsMenu">
+							Posts
+							<transition name="fade">
+								<div class="dropdown" v-if="postsMenu">
+									<router-link :to="{ name: 'postlist' }" @click="postsMenu == false">
+										<button>Posts</button>
+									</router-link>
+									<router-link :to="{ name: 'newpost' }" @click="postsMenu == false">
+										<button>New Post</button>
+									</router-link>
+								</div>
+							</transition>
+						</button>
+
 
 						
 
@@ -105,6 +119,7 @@ export default {
 		careersMenu: false,
 		pressMenu: false,
 		chancesMenu: false,
+		postsMenu: false,
 	}),
 	methods: {
     logout() {
@@ -127,6 +142,12 @@ export default {
 		},
 		hideChances() {
 			this.chancesMenu = false;
+		},
+		showPosts() {
+			this.postsMenu = true;
+		},
+		hidePosts() {
+			this.postsMenu = false;
 		}
 	}
 }

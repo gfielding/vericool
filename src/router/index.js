@@ -105,6 +105,11 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "news" */ '../views/News/News.vue'),
     },
     {
+      path: '/news/:id',
+      name: 'article',
+      component: () => import(/* webpackChunkName: "article" */ '../views/News/Article.vue'),
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: () => import(/* webpackChunkName: "contact" */ '../views/Inquiries/ContactUs.vue'),
@@ -208,6 +213,24 @@ const router = new Router({
       path: '/dashboard/chance/:id',
       name: 'editchance',
       component: () => import(/* webpackChunkName: "editchance" */ '../views/Dashboard/SecondChances/EditChance.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+
+
+    {
+      path: '/dashboard/newpost',
+      name: 'newpost',
+      component: () => import(/* webpackChunkName: "newpost" */ '../views/Dashboard/Posts/AddPost.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/posts',
+      name: 'postlist',
+      component: () => import(/* webpackChunkName: "postlist" */ '../views/Dashboard/Posts/ListPosts.vue'),
       meta: {
         requiresAuth: true
       }

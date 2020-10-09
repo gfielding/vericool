@@ -18,7 +18,9 @@
 }
 
 @mixin upfix {
-	margin-top: -24vh;
+	margin-top: -20vh;
+	@include respond(tablet-land) {margin-top: -16vh;}
+	@include respond(tablet-port) {margin-top: -8vh;}
 	@include respond(phone) {margin-top: 2rem;}
 }
 
@@ -106,7 +108,7 @@
 }
 
 @mixin card {
-	border-radius: 0.6rem;
+	border-radius: 0;
 	background:white;
 	min-height: 10rem;
 	&__body {

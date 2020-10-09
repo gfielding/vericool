@@ -1,33 +1,37 @@
 <template>
-  <div class="page login">
-  	<div class="container-small">
-      <div class="login__lead">
-        <div class="login__lead-text">
-        	<h1>Admin Login</h1>
+  <div>
+    <Nav />
+  
+    <div class="page login">
+    	<div class="container-small">
+        <div class="login__lead">
+          <div class="login__lead-text">
+          	<h1>Admin Login</h1>
+          </div>
         </div>
-      </div>
-      <div class="login__form">
-        <form @submit.prevent>
-          <div>
-            <label for="email1">Email</label>
-            <input type="text" placeholder="you@email.com" v-model.trim="loginForm.email" id="email1" />
-          </div>
-          <div>
-            <label for="password1">Password</label>
-            <input type="password" placeholder="******" id="password1" v-model.trim="loginForm.password" />
-          </div>
-          <button class="btn btn__primary mt-5 mb-5" @click="login()">
-            Log In
-            <transition name="fade">
-              <span class="ml-2" v-if="performingRequest">
-              <i class="fa fa-spinner fa-spin"></i>
-              </span>
-            </transition>
-          </button>
-          <div class="extras">
-            <a>Forgot Password</a>
-          </div>
-        </form>
+        <div class="login__form">
+          <form @submit.prevent>
+            <div>
+              <label for="email1">Email</label>
+              <input type="text" placeholder="you@email.com" v-model.trim="loginForm.email" id="email1" />
+            </div>
+            <div>
+              <label for="password1">Password</label>
+              <input type="password" placeholder="******" id="password1" v-model.trim="loginForm.password" />
+            </div>
+            <button class="btn btn__primary mt-5 mb-5" @click="login()">
+              Log In
+              <transition name="fade">
+                <span class="ml-2" v-if="performingRequest">
+                <i class="fa fa-spinner fa-spin"></i>
+                </span>
+              </transition>
+            </button>
+            <div class="extras">
+              <a>Forgot Password</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -35,6 +39,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import Nav from '@/components/Nav.vue'
 const fb = require('../../firebaseConfig.js')
 
 export default {
@@ -47,6 +52,9 @@ export default {
         password: ''
       }
     }
+  },
+  components: {
+    Nav,
   },
   computed: {
     ...mapState(['currentUser', 'userProfile']),

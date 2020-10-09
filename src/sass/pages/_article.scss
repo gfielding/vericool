@@ -1,0 +1,6 @@
+.article {
+	margin-bottom: 6rem;
+	&__hero {
+		@include hero;
+	}
+}

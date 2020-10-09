@@ -213,6 +213,7 @@ div [class$="__main"] {
 	}
 	.item--title {
 		max-width:80%;
+		margin-bottom: 0;
 	}
 }
 .list__button {
@@ -226,11 +227,11 @@ div [class$="__main"] {
 	width: calc(100% - 1.75rem);
 }
 .quillWrapper .ql-snow.ql-toolbar {
-	border-radius: 0.6rem 0.6rem 0 0;
+	border-radius:0;
 	//border: 1px solid #999;
 }
 .ql-container.ql-snow {
-  border-radius: 0 0 0.6rem 0.6rem;
+  border-radius: 0;
   //border: 1px solid #999 !important;
 }
 .ql-editor.ql-blank::before {

@@ -80,7 +80,7 @@
 
 
         <div class="second-chance__stories--grid" v-if="chances && chances.length > 0">
-          <div v-for="item in chances" key="item.id" class="card">
+          <div v-for="item in chances" key="item.id" class="card" data-aos="flip-left" data-aos-once="true" data-aos-delay="200">
             <img :src="item.picUrl">
             <div class="card__body">
               <h4>{{item.name}}</h4>

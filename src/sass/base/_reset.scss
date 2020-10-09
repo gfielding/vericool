@@ -92,7 +92,7 @@ textarea {
 audio,
 canvas,
 video {
-    display: inline-block;
+    display: block;
     *display: inline;
     *zoom: 1;
     max-width: 100%;

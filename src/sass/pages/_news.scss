@@ -1,0 +1,8 @@
+/*news*/
+
+.news {
+	&__hero {
+		@include hero;
+		background-image: url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/surf.jpg?alt=media&token=99b96e0d-4989-4399-8e94-c2dd021666ae');
+	}
+}

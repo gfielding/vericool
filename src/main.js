@@ -18,8 +18,8 @@ Vue.use(require('vue-moment'));
 Vue.config.productionTip = false
 Vue.config.devtools = true
 
-Vue.filter('readMore', function (text, length, suffix) {
-  return text.substring(0, length) + suffix;
+Vue.filter('truncate', function (text, length, suffix) {
+    return text.substring(0, length) + suffix;
 })
 
 Vue.directive('numflip', {
