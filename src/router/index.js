@@ -20,19 +20,19 @@ const router = new Router({
       redirect: '/'
     },
     {
-      path: '/',
+      path: '/2',
       name: 'homepage',
       component: () => import(/* webpackChunkName: "homepage" */ '../views/Homepage.vue'),
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+      path: '/',
+      name: 'home2',
+      component: () => import(/* webpackChunkName: "home2" */ '../views/Home2.vue'),
     },
     {
-      path: '/mission',
-      name: 'mission',
-      component: () => import(/* webpackChunkName: "mission" */ '../views/About/Mission.vue'),
+      path: '/getstarted',
+      name: 'getstarted',
+      component: () => import(/* webpackChunkName: "getstarted" */ '../views/GetStarted.vue'),
     },
     {
       path: '/environmental-impact',
@@ -60,29 +60,82 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "customers" */ '../views/Partners/Customers.vue'),
     },
     {
-      path: '/products',
+      path: '/products', redirect: '/products/all',
       name: 'products',
-      component: () => import(/* webpackChunkName: "products" */ '../views/Vericoolers/Products.vue'),
-    },
-    {
-      path: '/custom',
-      name: 'custom',
-      component: () => import(/* webpackChunkName: "custom" */ '../views/Vericoolers/CustomOrders.vue'),
-    },
-    {
-      path: '/disposal',
-      name: 'disposal',
-      component: () => import(/* webpackChunkName: "disposal" */ '../views/Vericoolers/Disposal.vue'),
-    },
-    {
-      path: '/materials',
-      name: 'materials',
-      component: () => import(/* webpackChunkName: "materials" */ '../views/Vericoolers/OurMaterials.vue'),
-    },
-    {
-      path: '/stock',
-      name: 'stock',
-      component: () => import(/* webpackChunkName: "stock" */ '../views/Vericoolers/StockOrders.vue'),
+      component: () => import(/* webpackChunkName: "products" */ '../views/Products/Products.vue'),
+      children: [
+        {
+          path: '/products/all',
+          name: 'all-products',
+          component: () => import(/* webpackChunkName: "all-products" */ '../views/Products/AllProducts.vue'),
+        },
+        {
+          path: '/products/custom',
+          name: 'custom',
+          component: () => import(/* webpackChunkName: "custom" */ '../views/Products/CustomOrders.vue'),
+        },
+        {
+          path: '/products/disposal',
+          name: 'disposal',
+          component: () => import(/* webpackChunkName: "disposal" */ '../views/Products/Disposal.vue'),
+        },
+        {
+          path: '/products/materials',
+          name: 'materials',
+          component: () => import(/* webpackChunkName: "materials" */ '../views/Products/OurMaterials.vue'),
+        },
+        {
+          path: '/products/stock',
+          name: 'stock',
+          component: () => import(/* webpackChunkName: "stock" */ '../views/Products/StockOrders.vue'),
+        },
+        {
+          path: '/products/ohana',
+          name: 'ohana',
+          component: () => import(/* webpackChunkName: "ohana" */ '../views/Products/Ohana.vue'),
+        },
+        {
+          path: '/products/vcplus',
+          name: 'vcplus',
+          component: () => import(/* webpackChunkName: "vcplus" */ '../views/Products/VCPlus.vue'),
+        },
+        {
+          path: '/products/vcfiber',
+          name: 'vcfiber',
+          component: () => import(/* webpackChunkName: "vcfiber" */ '../views/Products/VCFiber.vue'),
+        },
+        {
+          path: '/products/vcthree',
+          name: 'vcthree',
+          component: () => import(/* webpackChunkName: "vcthree" */ '../views/Products/VCThree.vue'),
+        },
+        {
+          path: '/products/vcfusion',
+          name: 'vcfusion',
+          component: () => import(/* webpackChunkName: "vcfusion" */ '../views/Products/VCFusion.vue'),
+        },
+        {
+          path: '/products/vc241',
+          name: 'vc241',
+          component: () => import(/* webpackChunkName: "vc241" */ '../views/Products/VC241.vue'),
+        },
+        {
+          path: '/products/gogreenmailer',
+          name: 'gogreenmailer',
+          component: () => import(/* webpackChunkName: "gogreenmailer" */ '../views/Products/GoGreenMailer.vue'),
+        },
+        {
+          path: '/products/recyclablemailer',
+          name: 'recyclablemailer',
+          component: () => import(/* webpackChunkName: "recyclablemailer" */ '../views/Products/InsulatedRecyclableMailer.vue'),
+        },
+        {
+          path: '/products/fibermailer',
+          name: 'fibermailer',
+          component: () => import(/* webpackChunkName: "fibermailer" */ '../views/Products/InsulatedFiberMailer.vue'),
+        },
+      ]
+
     },
     {
       path: '/competitors',
@@ -95,9 +148,19 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "data" */ '../views/Performance/Data.vue'),
     },
     {
-      path: '/ohana',
-      name: 'ohana',
-      component: () => import(/* webpackChunkName: "ohana" */ '../views/Ohana/Ohana.vue'),
+      path: '/industries',
+      name: 'industries',
+      component: () => import(/* webpackChunkName: "industries" */ '../views/Industries.vue'),
+    },
+    {
+      path: '/testing',
+      name: 'testing',
+      component: () => import(/* webpackChunkName: "testing" */ '../views/Performance/Testing.vue'),
+    },
+    {
+      path: '/light-test',
+      name: 'light-test',
+      component: () => import(/* webpackChunkName: "light-test" */ '../views/Performance/LightTest.vue'),
     },
     {
       path: '/news',
@@ -125,9 +188,19 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "careers" */ '../views/Inquiries/Careers.vue'),
     },
     {
+      path: '/careers/:id',
+      name: 'apply',
+      component: () => import(/* webpackChunkName: "apply" */ '../views/Inquiries/Apply.vue'),
+    },
+    {
       path: '/buy',
       name: 'buy',
       component: () => import(/* webpackChunkName: "buy" */ '../views/Inquiries/Buy.vue'),
+    },
+    {
+      path: '/awards',
+      name: 'awards',
+      component: () => import(/* webpackChunkName: "awards" */ '../views/Awards.vue'),
     },
     {
       path: '/login',
@@ -236,6 +309,95 @@ const router = new Router({
       }
     },
 
+
+    {
+      path: '/dashboard/addlogo',
+      name: 'addlogo',
+      component: () => import(/* webpackChunkName: "addlogo" */ '../views/Dashboard/Logos/AddLogo.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/logos',
+      name: 'logolist',
+      component: () => import(/* webpackChunkName: "logolist" */ '../views/Dashboard/Logos/ListLogos.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/leads',
+      name: 'leads',
+      component: () => import(/* webpackChunkName: "leads" */ '../views/Dashboard/Leads/Leads.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/leads/:id',
+      name: 'lead',
+      component: () => import(/* webpackChunkName: "lead" */ '../views/Dashboard/Leads/Lead.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/awards',
+      name: 'listawards',
+      component: () => import(/* webpackChunkName: "listawards" */ '../views/Dashboard/Awards/ListAwards.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/addaward',
+      name: 'addaward',
+      component: () => import(/* webpackChunkName: "addaward" */ '../views/Dashboard/Awards/AddAward.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/awards/:id',
+      name: 'editaward',
+      component: () => import(/* webpackChunkName: "editaward" */ '../views/Dashboard/Awards/EditAward.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/impact-pics',
+      name: 'impactlist',
+      component: () => import(/* webpackChunkName: "impactlist" */ '../views/Dashboard/Impact/ImpactPics.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/addimpactpic',
+      name: 'addimpactpic',
+      component: () => import(/* webpackChunkName: "addimpactpic" */ '../views/Dashboard/Impact/AddPic.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/applications',
+      name: 'applications',
+      component: () => import(/* webpackChunkName: "applications" */ '../views/Dashboard/Applications/Applications.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/applications/:id',
+      name: 'application',
+      component: () => import(/* webpackChunkName: "applications" */ '../views/Dashboard/Applications/Application.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
 
 
   ]

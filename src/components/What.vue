@@ -2,35 +2,68 @@
 	<div class="what">
 		<div class="grid__container">
 			<div class="item grid__container--item--1">
-				<video class="bg-video__content" autoplay muted loop>
-          <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/AdobeStock_282043525_Video_HD_Preview.mp4?alt=media&token=e9fb168f-4355-47d5-9bbc-613fd8efae8a" type="video/mp4">
-        </video>
-        <div class="item__overlay">
-        	<h2>What we do</h2>
-        	<p>Vegan biodiesel four loko, lumbersexual subway tile cliche organic jean shorts meh keffiyeh.</p>
+				<Spinner />
+			</div>
+			<div class="item grid__container--item--2 grid__container--item--text text-center">
+				<span style="color: #00a4df;">
+					<i class="fad fa-chart-line fa-5x" data-aos="flip-left" data-aos-delay="400" data-aos-once="true"></i>
+				</span>
+				<h3>Cost-Effective</h3>
+        <p class="mb-0">Vericoolers™ are just as affordable as EPS alternatives.</p>
+        <div class="mt-3">
+        	<router-link :to="{name: 'products'}" class="mt-5"><strong><span class="underline--magical">Buying Options &#8594</span></strong></router-link>
         </div>
 			</div>
-			<div class="item grid__container--item--2">
-				<img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/VC-fusion.png?alt=media&token=8552e58a-5bb6-435b-ae4c-6bfec8239e64" alt="" style="object-fit: contain;">
-			</div>
-			<div class="item grid__container--item--3">
-				<img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/pollution.jpg?alt=media&token=34fb5a3d-93e8-4f7a-997d-16176f906e89" alt="">
-				<div class="item__overlay--motion">
-					<h3>Learn More About EPS</h3>
-				</div>
-			</div>
-			<div class="item grid__container--item--4"><img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/vericooler-viles.png?alt=media&token=cbb9a245-a271-4a4c-8f85-66c030c1f9f2" alt="" style="object-fit: contain;"></div>
-			<div class="item grid__container--item--5">
-				<video class="bg-video__content--sm" autoplay muted loop>
-					<source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/SwanPreview.mp4?alt=media&token=7255d8a1-f158-470b-9a0d-3c9b073fd505" type="video/mp4">
-				</video>
-				<router-link :to="{ name: 'environmental-impact' }">
+			<div class="item grid__container--item--3" style="display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;">
+				<img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/mailerAsset%2011%404x.png?alt=media&token=9c0461bd-e06d-42d6-a7f6-47de573f6f4e" alt="" style="width:100%;">
+				<router-link :to="{ name: 'data' }">
 					<div class="item__overlay--motion">
-						<h3>EPS Environmental Impact  &#8594</h3>
+						<h3>Performance  &#8594</h3>
 					</div>
 				</router-link>
 			</div>
-			<div class="item grid__container--item--6 grid__container--item--text pa-3"><router-link :to="{ name: 'second-chance' }"><strong>Vericool is committed to protecting our global landscape while giving formerly incarcerated men, women, and youth a second chance to live productive lives. <br>Learn More &#8594</strong></router-link></div>
+			<div class="item grid__container--item--4">
+				<BeforeAfter />
+				<router-link :to="{ name: 'light-test' }">
+					<div class="item__overlay--motion">
+						<h3>The Light Test  &#8594</h3>
+					</div>
+				</router-link>
+			</div>
+			<div class="item grid__container--item--5"  style="display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;">
+				<img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/logoPics%2F8LW5AL3EWOVC1F6I6DQLUT?alt=media&token=bfef4f68-d605-44a9-9f55-aebb07058b65" alt="" style="object-fit: contain; width:80%; min-width:80%; margin:auto; height:auto;">
+				<router-link :to="{ name: 'customers' }">
+					<div class="item__overlay--motion">
+						<h3>Our Customers  &#8594</h3>
+					</div>
+				</router-link>
+			</div>
+			<div class="item grid__container--item--6">
+				<img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FVC3%2FVC3-wines-min.png?alt=media&token=2d87f7d8-3fe7-454d-b54d-581fcf327585" alt="" style="object-fit: contain; width:100%; height:auto;">
+				<router-link :to="{ name: 'products' }">
+					<div class="item__overlay--motion">
+						<h3>Explore Our Products &#8594</h3>
+					</div>
+				</router-link>
+			</div>
 		</div>
 	</div>
 </template>
+
+<script>
+import Spinner from '@/components/Spinner.vue'
+import BeforeAfter from '@/components/BeforeAfter.vue'
+
+	export default {
+		components: {
+			Spinner,
+			BeforeAfter
+		}
+	}
+</script>

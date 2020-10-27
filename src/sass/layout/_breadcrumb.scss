@@ -1,0 +1,57 @@
+// .breadcrumb {
+// 	display: flex;
+// 	background-color: $backDark;
+// 	color:$textLight;
+// 	ul {
+// 		list-style-type:none;
+// 		li {
+// 			a {
+// 				color:red;
+// 				&:disabled {
+// 					color:grey;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+.breadcrumb {
+  //background-color:$primary;
+  //background-image: linear-gradient(to right, $primary, $secondary);
+  background-color:$background;
+  font-size:1.2rem;
+  &__container {
+    @include container;
+    padding:0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__items {
+    &--item {
+      display: inline-block;
+      button {
+        margin:0.2rem 0.2rem;
+        color:$textLight;
+        font-size: 1.2rem;
+        font-weight: 600;
+        background-color:transparent;
+        &:hover {
+          color:$textDark;
+        }
+      }
+      .arrow {
+        display: inline-block;
+      }
+      &:last-of-type {
+        button {
+          cursor: text;
+          color: $textLight;
+        }
+        .arrow {
+          display: none;
+        }
+      }
+    }
+  }
+}

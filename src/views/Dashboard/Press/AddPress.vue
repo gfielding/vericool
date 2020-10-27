@@ -40,6 +40,7 @@
         </form>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -47,6 +48,7 @@
 import { mapState } from 'vuex'
 import router from '@/router'
 import NavAdmin from '@/components/NavAdmin.vue'
+import Footer from '@/components/Footer.vue'
 const fb = require('../../../firebaseConfig.js')
 
 export default {
@@ -80,6 +82,7 @@ export default {
   },
   components: {
     NavAdmin,
+    Footer
   },
   methods: {
     addPress() {

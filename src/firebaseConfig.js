@@ -32,6 +32,12 @@ const careersCollection = db.collection('careers')
 const pressCollection = db.collection('press')
 const chancesCollection = db.collection('chances')
 const articlesCollection = db.collection('articles')
+const logosCollection = db.collection('logos')
+const productsCollection = db.collection('products')
+const leadsCollection = db.collection('leads')
+const awardsCollection = db.collection('awards')
+const impactPicsCollection = db.collection('impactPics')
+const applicationsCollection = db.collection('applications')
 
 export {
   db,
@@ -44,5 +50,11 @@ export {
   careersCollection,
   pressCollection,
   chancesCollection,
-  articlesCollection
+  articlesCollection,
+  logosCollection,
+  productsCollection,
+  leadsCollection,
+  awardsCollection,
+  impactPicsCollection,
+  applicationsCollection
 }

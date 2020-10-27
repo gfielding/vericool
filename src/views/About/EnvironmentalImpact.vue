@@ -8,20 +8,22 @@
       </div>
 
       <div class="container">
-        <div class="environmental-impact__main">
+        <div class="environmental-impact__main pb-0">
           <h1>Environmental Impact</h1>
           <h3>What EPS (Styrofoam) does to our environment, and what to do about it</h3>
           <hr>
-          <h2>THE EFFECTS OF EPS ( DATA)</h2>
-            <div class="video-wrapper" style="float:right; width:50%; padding-bottom: 33%; margin-left:1rem;">
-              <video class="bg-video-small__content" style="opacity: 1; height:300px;" autoplay muted loop>
-                <source src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/AdobeStock_278084952_Video_4K_Preview.mp4?alt=media&token=2edb65f6-9c37-4c07-b556-7cffc349eed8" type="video/mp4">
-              </video>
+          <h2>What is EPS?</h2>
+          <div class="flex">
+            <div class="col-1">
+              <p>EPS stands for expanded polystyrene, or as we know it.... “Styrofoam”</p>
+              <p>“Styrofoam” is popularly used as a cheap and disposable cold-chain shipping insulator.</p>
+              <p>EPS does not decompose, but instead “photodegrades,” breaking down into smaller and smaller pieces that continue to pervasively accumulate in marine environments.</p>
+              <p>EPS can only be recycled when it is “clean” and uncontaminated by food (which is extremely rare), and even then manufacturers lose money when they recycle EPS, meaning it rarely gets done.</p>
             </div>
-            <p>EPS ( Commonly referred to as Styrofoam) is pervasive in the marine environment. The ubiquity, durability and ability to accumulate high levels of persistent pollutants make EPS products extremely harmful. EPS photo degrades, meaning it breaks down into smaller and smaller pieces and marine animals easily mistake it for food. EPS does not decompose and will continue to accumulate in the environment we depend on for our food. Chemically, absorbent properties make EPS even more dangerous. "Polystyrene foams essentially act like little pollutant sponges, picking up and concentrating some of the nastiest contaminants in the ocean... It is very worrisome to me that some of these plastic-feeding fish may be ending up back on our tables." - <a href="https://www.bbc.com/news/magazine-33334994" target="_blank" nofollow>(source)</a></p>  
-            <p>In 1986, the US Environmental Protection Agency (EPA) announced that the polystyrene manufacturing process was the fifth largest source of hazardous waste. Styrene has been linked to adverse health effects in humans, and in 2014, it was listed as a possible carcinogen.</p>
-            <p>Recycling EPS has been a failure in most cities because of food waste contamination and its low market value.</p>
-            <ul>
+          </div>
+            
+            
+            <!-- <ul>
               <li>More than <a href="https://greendiningalliance.org/wp-content/uploads/2016/12/real-cost-of-styrofoam_written-report.pdf" target="_blank" nofollow>14 million US tons of polystyrene (plastic foam)</a> each year.</li>
               <li>Polystyrene products comprise 25-35% (by volume) of landfills.</li>
             </ul>
@@ -36,12 +38,84 @@
                 <img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Screen%20Shot%202020-10-05%20at%2011.18.18%20AM.png?alt=media&token=f7927fff-92b5-42f8-a3be-f69207757717" alt="">
                 <h4>Keep Reading &#8594</h4>
               </div>
-            </a>
+            </a> -->
             <hr>
-            <h2>WHAT EPS DOES TO THE ENVIRONMENT</h2>
-            <h3>How do Recycling Plants breakdown EPS?</h3>
-            <p>Polystyrene, commonly referred to as Styrofoam™, is extremely difficult to dispose of properly, and it releases dangerous styrene into virtually all living creatures. After it has been used, polystyrene food packaging is typically not “clean” enough to be recycled, and only 1.3% of total polystyrene was recycled in the US in 2015. Even when it is clean enough to recycle, only about 5% of the volume of Styrofoam is actually polystyrene, and the rest is air, making Styrofoam uneconomical to collect and store for recycling. In rare instances, manufacturers who handle large amounts of polystyrene will consolidate their scrap materials with compactors (compressing them to less than a tenth of their original volume), and then will sell the compacted blocks of polystyrene to recyclers. However, the polystyrene in these blocks cannot be recovered for use in new polystyrene products. Its quality is only adequate to use as filler in other plastics, which then, in turn, becomes virtually impossible to recycle. - <a href="https://www.worldcentric.com/blog/impacts-and-risks-of-styrofoam" target="_blank" nofollow>(source)</a></p>
-            <h3>How do our materials reduce footprint?</h3>
+            
+            <h2>What EPS does to the Environment</h2>
+            <p>Because polystyrene (Styrofoam) is so difficult to properly dispose of or recycle, it ends up in our environment where it releases carcinogenic styrene into virtually all living creatures. Some of these plastic-feeding animals make it all the way to our tables!</p>
+            <p>When exposed to sunlight, styrofoam creates harmful air pollutants which contaminate landfills and deplete the ozone layer.</p>
+            <p>In 2014 styrene, a key component of EPS, was listed as a possible carcinogen.</p>
+            <p>Because styrofoam products break apart so easily, animals either confuse it as food and ingest its toxic chemicals or they suffer from it as a choking hazard.</p>
+            <!-- <p>Polystyrene, commonly referred to as Styrofoam™, is extremely difficult to dispose of properly, and it releases dangerous styrene into virtually all living creatures. After it has been used, polystyrene food packaging is typically not “clean” enough to be recycled, and only 1.3% of total polystyrene was recycled in the US in 2015. Even when it is clean enough to recycle, only about 5% of the volume of Styrofoam is actually polystyrene, and the rest is air, making Styrofoam uneconomical to collect and store for recycling. In rare instances, manufacturers who handle large amounts of polystyrene will consolidate their scrap materials with compactors (compressing them to less than a tenth of their original volume), and then will sell the compacted blocks of polystyrene to recyclers. However, the polystyrene in these blocks cannot be recovered for use in new polystyrene products. Its quality is only adequate to use as filler in other plastics, which then, in turn, becomes virtually impossible to recycle. - <a href="https://www.worldcentric.com/blog/impacts-and-risks-of-styrofoam" target="_blank" nofollow>(source)</a></p> -->
+          </div>
+        </div>
+        <div class="dark pt-5 pb-5">
+          <div class="container mt-5 mb-5">
+          <h2>Just how bad is the problem?</h2>
+          <div class="environmental-impact__data">
+            <div class="environmental-impact__data--item">
+              <span class="number" v-numflip="num1">
+              </span>
+              <span class="number"></span>
+              <p>years is how long experts estimate it takes <span class="underline--magical"><strong>styrofoam to decompose</strong></span></p>
+            </div>
+            <div class="environmental-impact__data--item">
+              <span class="number" v-numflip="num2">
+              </span>
+              <span class="number">%</span>
+              <p>or more of landfill composition (by volume) is <span class="underline--magical"><strong>styrofoam</strong></span></p>
+            </div>
+            <div class="environmental-impact__data--item">
+              <span class="number" v-numflip="num3">
+              </span>
+              <span class="number"></span>
+              <p> <span class="underline--magical"><strong>Million tons</strong></span> of polystyrene are improperly recycled every year in the U.S alone</p>
+            </div>
+            <div class="environmental-impact__data--item">
+              <span class="number" v-numflip="num4">
+              </span>
+              <span class="number">%</span>
+              <p>of total polystyrene was <span class="underline--magical"><strong>recycled in the US</strong></span> in 2015</p>
+            </div>
+            <div class="environmental-impact__data--item">
+              <span class="number" v-numflip="num5">
+              </span>
+              <span class="number"></span>
+              <p><span class="underline--magical"><strong>Billion Styrofoam</strong></span> coffee cups are thrown away every year by Americans alone</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="pt-5">How do Our Materials Reduce our Footprint?</h2>
+        <ul>
+          <li>Our products are made with renewable raw and post-consumer materials</li>
+          <li>All of our materials match or outperform EPS, but without the harmful effects on our environment/wildlife</li>
+          <li>All materials meet compostable and curbside recyclability standards</li>
+          <li>Our insulation material is non-toxic, starch-based and water soluble (meaning if you run it under water, it will disappear!)</li>
+          <li>Our materials meet US ASTM D6400 and European specification EN 13432, which require non-harmful degradation in 180 days or less</li>
+          <li>All our materials support corporate zero waste and sustainability goals</li>
+        </ul>
+        <hr>
+        <ProductScroller />
+        <hr>
+        <transition name="fade">
+          <Loader v-if="!impactPics || impactPics.length < 1" />
+        </transition>
+          <div class="environmental-impact__grid" v-if="impactPics || impactPics.length >= 1">
+            <div class="environmental-impact__grid--item" v-for="item in impactPics" data-aos="fade" data-aos-once="true">
+              <img :src="item.picUrl" alt="environmental impact of EPS">
+            </div>
+          </div>
+
+
+
+ 
+ 
+ 
+
+
+<!-- 
             <p>Vericoolers improve the health and well-being of people and our planet.</p>
             <ul>
               <li>Affordable</li>
@@ -52,11 +126,9 @@
               <li>Reduce temperature edge loss and will not crack or split, offering increased thermal and transit protection</li>
               <li>Insulation beads with enclosure bags meet US ASTM D6400 and European specification EN 13432, which require degradation in 180 days or less</li>
               <li>Materials support corporate zero waste and sustainability goals</li>
-            </ul>
-          <hr>
+            </ul> -->
 
-
-
+<!-- 
           <h2>Vericool has the perfect products for your cold chain shipping needs.</h2>
           <p>Vericool provides an environmentally and financially safe replacement of EPS. There is no reason to risk the health of your customers by shipping meals in unproven and unsafe packages. Make it clear to your customers, stockholders, environmental and government organizations that your company is committed to reducing environmental impact, sustainability, and life cycle to end of life management.</p>
           <div class="icon__boxes">
@@ -74,28 +146,71 @@
             </div>
           </div>
 
-          <hr>
+          <hr> -->
 
-          <h2>EPS BANS AROUD THE WORLD</h2>
+          <!-- <h2>EPS BANS AROUD THE WORLD</h2>
           <p>Thanks to the <a href="https://www.surfrider.org/" target="_blank" nofollow>Surfrider Foundation</a> for contributing to our map!</p>
           <div class="video-wrapper">
             <iframe src="https://www.google.com/maps/d/embed?mid=1BxPj2XWM8xxY07ra1moSGRPkI20" width="640" height="480"></iframe>
-          </div>
+          </div> -->
         </div>
       </div>
-    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import Nav from '@/components/Nav.vue'
-const fb = require('../../firebaseConfig.js')
+import ProductScroller from '@/components/ProductScroller.vue'
+import Footer from '@/components/Footer.vue'
+import Loader from '@/components/Loader.vue'
 
 export default {
   name: 'environmental-impact',
+  data() {
+    return {
+      windowTop: 0,
+      num1:0,
+      num2:0,
+      num3:0,
+      num4:0,
+      num5:0,
+    }
+  },
+  async mounted() {
+    window.addEventListener("scroll", this.onScroll)
+     if (!this.impactPics || this.impactPics.length < 1) {
+        this.$store.dispatch("getImpactPics")
+      }
+  },
+  computed: {
+  ...mapState(['impactPics']),
+  },
+  methods: {
+    onScroll(e) {
+      this.windowTop = e.target.documentElement.scrollTop;
+      let top = this.windowTop
+      if (this.windowTop > 1000) {
+        this.run()
+      }
+    },
+    run() {
+      this.num1 = 500
+      this.num2 = 25
+      this.num3 = 14
+      this.num4 = 1.3
+      this.num5 = 25
+    },
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll)
+  },
   components: {
     Nav,
+    Footer,
+    ProductScroller,
+    Loader
   }
 }
 </script>

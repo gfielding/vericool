@@ -29,6 +29,7 @@
         </form>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -36,6 +37,7 @@
 import { mapState } from 'vuex'
 import { VueEditor } from "vue2-editor";
 import NavAdmin from '@/components/NavAdmin.vue'
+import Footer from '@/components/Footer.vue'
 import router from '@/router'
 const fb = require('../../../firebaseConfig.js')
 
@@ -65,7 +67,8 @@ export default {
   },
   components: {
     VueEditor,
-    NavAdmin
+    NavAdmin,
+    Footer
   },
   computed: {
     ...mapState(['currentUser', 'userProfile']),

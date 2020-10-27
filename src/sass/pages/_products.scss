@@ -4,4 +4,265 @@
 	&__hero {
 		@include hero;
 	}
+	&__page {
+		@include container;
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+		hr {
+			margin-top:1rem;
+		}
+	}
 }
+
+.all-products {
+	@include container;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	&__grid {
+		@include grid-container;
+		grid-template-rows: repeat(1, minmax(30rem, min-content));
+		grid-gap:2rem;
+		@include respond(tablet-port) {
+			grid-template-rows: repeat(1, minmax(30rem, min-content));
+			grid-template-columns: 1fr 1fr;
+		}
+		@include respond(phone) {
+			grid-template-rows: repeat(3, min-content);
+			grid-template-columns: 1fr;
+		}
+		&--item {
+			display: flex;
+			a {
+				width: 100%;
+			}
+			.card {
+				text-align: center;
+				height: 100%;
+				width: 100%;
+		    display: flex;
+		    justify-content: space-between;
+		    flex-direction: column;
+		    padding-top: 1rem;
+		    transition: all 0.3s ease-in-out !important;
+		    h4 {
+		    	display: inline-block;
+		    }
+				img {
+					max-height: 20rem;
+					width: auto;
+					margin:auto;
+				}
+				&:hover {
+					transform:translateY(-1px);
+		    	box-shadow: 0 2rem 3rem -0.2rem rgba(0, 0, 0, 0.2);
+		    	h4 {
+		    		@include magic-fast;
+		    	}
+		    }
+				p {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}
+
+.ohana {
+	&__hero {
+		@include hero;
+		min-height: 70vh;
+		@include respond(tablet-port) {
+			min-height: 48vh;
+		}
+		background-image: url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FScreen%20Shot%202020-10-15%20at%2012.04.29%20PM.png?alt=media&token=5093af44-a42b-41ae-9f5c-94b1c6b9509e');
+	}
+	&__main {
+		@include container;
+	}
+	&__grid {
+		@include grid-container;
+		grid-template-rows: repeat(1, minmax(30rem, min-content));
+	  grid-template-columns: 1fr 1fr 6fr;
+	 	grid-auto-flow:row dense;
+		grid-gap:1rem;
+	}
+	&__grid2 {
+		@include grid-container;
+		grid-template-rows: repeat(1, minmax(30rem, min-content));
+	  grid-template-columns: 6fr 1fr 1fr;
+	 	grid-auto-flow:row dense;
+		grid-gap:1rem;
+	}
+}
+
+.vcplus {
+	&__hero {
+		@include hero;
+		min-height: 70vh;
+		@include respond(tablet-port) {
+			min-height: 48vh;
+		}
+		background-image:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FrrAsset%202.svg?alt=media&token=86ca382c-8560-4c97-bd26-01c21d16f1e1');
+	}
+	&__content {
+		img {
+			max-width:100%;
+		}
+	}
+	&__grid {
+		.grid__container {
+			@include product-grid;
+			@include grid-container;
+			grid-template-rows: repeat(1, minmax(min-content, min-content));
+			grid-template-columns: 1fr 1fr;
+			@include respond(tablet-port) {
+				grid-template-rows: repeat(1, minmax(min-content, min-content));
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+	&__main {
+		@include container;
+		&--icons {
+			display: flex;
+			flex-wrap:wrap;
+			justify-content: center;
+			img {
+				min-width:30rem;
+				margin:1rem 2rem;
+				width: calc(50% - 4rem);
+			}
+		}
+		&--cell {
+			margin:2rem 0;
+			@include respond(tablet-port) {
+				text-align: center;
+				h2 {
+					text-align: left;
+				}
+			}
+			img {
+				width:60%;
+				max-width: 64rem;
+				min-width:36rem;
+				margin:auto;
+			}
+		}
+	}
+}
+
+.vcfiber {
+	&__hero {
+		@include hero;
+		min-height: 70vh;
+		@include respond(tablet-port) {
+			min-height: 48vh;
+		}
+		background-image:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FvcfiberAsset%207%404x.png?alt=media&token=2c15664b-d7f5-43fb-906f-ed41b03a9efa');
+	}
+	&__grid {
+		.grid__container {
+			@include product-grid;
+			@include grid-container;
+			grid-template-rows: repeat(1, minmax(min-content, min-content));
+			grid-template-columns: 1fr 1fr;
+			@include respond(tablet-port) {
+				grid-template-rows: repeat(1, minmax(min-content, min-content));
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+	&__main {
+		@include container;
+	}
+	&__content {
+		img {
+			max-width:100%;
+		}
+	}
+}
+
+.vcthree {
+	&__content {
+		img {
+			max-width:100%;
+		}
+	}
+	&__grid {
+		.grid__container {
+			@include product-grid;
+			&--item {
+				height:auto;
+				img {
+					height:auto;
+				}
+			}
+		}
+	}
+}
+
+.vcfusion {
+	&__content {
+		img {
+			max-width:100%;
+		}
+	}
+	&__grid {
+		.grid__container {
+			@include product-grid;
+		}
+	}
+}
+
+.vc241 {
+	&__content {
+		img {
+			max-width:100%;
+		}
+	}
+	&__grid {
+		.grid__container {
+			@include product-grid;
+		}
+	}
+}
+
+.greenmailer {
+	&__content {
+		img {
+			max-width:100%;
+		}
+	}
+	&__grid {
+		.grid__container {
+			@include product-grid;
+		}
+	}
+}
+.recyclablemailer {
+	&__content {
+		img {
+			max-width:100%;
+		}
+	}
+	&__grid {
+		.grid__container {
+			@include product-grid;
+		}
+	}
+}
+
+.fibermailer {
+	&__content {
+		img {
+			max-width:100%;
+		}
+	}
+	&__grid {
+		.grid__container {
+			@include product-grid;
+		}
+	}
+}
+
+

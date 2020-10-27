@@ -19,19 +19,21 @@
 	@include form;
 }
 .item {
-	position:relative;
-	color:white;
-	font-size: 2rem;
-	background-color: pink;
-	overflow: hidden;
-	//min-height:200px;
+	position: relative;
+  font-size: 2rem;
+  height: 24rem;
+  overflow: hidden;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
 	a {
   	color:inherit;
   	text-decoration: none;
   }
 	img {
 		min-width: 100%;
-	  height:32rem;
+	  height:24rem;
 	  object-fit: cover;
 	}
 	&__overlay {
@@ -40,6 +42,7 @@
     left: 2rem;
     width: calc(100% - 4rem);
     font-weight:500;
+    color:white;
     h2, .h2 {
     	margin-bottom:0;
     }
@@ -68,8 +71,7 @@
 
 
 .page {
-	min-height: calc(100vh - 16rem);
-	padding:0 2rem;
+	min-height: calc(100vh - 24rem);
 }
 .line {
 	border-bottom: 4px solid;
@@ -86,6 +88,55 @@
 	opacity: 0.4;
 }
 
+div [class$="__iconrow"] {
+	display: flex;
+  justify-content: space-between;
+}
+div [class$="__iconrow--item"] {
+	width:8rem;
+	min-width:4rem;
+	padding:1rem 0.25rem;
+	@include respond(phone) {
+		width:4rem;
+		min-width:2.4rem;
+	}
+	justify-content: center;
+	text-align: center;
+	display:inline-flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+  align-items: center;
+	img {
+		max-width:66%;
+		max-height: 5rem;
+		margin-bottom:1rem;
+		opacity: 0.8;
+	}
+	p {
+		font-size: 1rem;
+		font-weight:900;
+		color:$primary;
+		margin-bottom:0;
+		@include respond(phone) {display: none;}
+	}
+	img.p {
+		max-width: 10rem;
+		max-height:10rem;
+		width:10rem !important;
+		height: 10rem !important;
+		margin-bottom:0;
+		opacity: 0.9;
+		height: 10rem !important;
+  	width: 10rem !important;
+		background-image: radial-gradient(circle, $background, $background 66%, transparent 66%);
+		@include respond(phone) {
+			position: absolute;
+			width:6rem !important;
+			height: 6rem !important;
+		}
+	}
+}
+
 div [class$="__lead-text"] {
 	* {
 		background-image:linear-gradient(to right, $primary, $secondary);
@@ -97,7 +148,7 @@ div [class$="__lead-text"] {
 
 div [class$="__hero-text"] {
 	h1 {
-		font-size:8rem;
+		font-size:6rem;
 	}
 }
 
@@ -166,15 +217,18 @@ div [class$="__main"] {
   position: absolute;
   width: 100%;
   .vc1 {
-		color:rgba(white, 0.9);
+		color:rgba(white, 1);
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		width: 90%;
+		margin:auto;
 		h1, .h1 {
-			font-size:10vw;
+			font-size:6vw;
+			@include respond(phone) {font-size:12vw;}
 			font-weight: 900;
-			line-height:0.92;
-			margin-left:1rem;
+			line-height:1.1;
+			margin-left:3rem;
 		}
 		h3, .h3 {
 			font-size:4vw;
@@ -184,6 +238,21 @@ div [class$="__main"] {
 		}
 	}
 }
+
+.slide {
+	display: block;
+	height: 500px;
+	object-fit: cover;
+	width: 100%;
+	align-items: center;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	h1 {
+		font-size: 6vw;
+	}
+}
+
 
 //Lists
 .list__item {
@@ -202,10 +271,22 @@ div [class$="__main"] {
 		@include respond(tablet-port) {
 			margin-right: 0;
 			margin-bottom: 2rem;
+			width: 16rem;
+			height: 16rem;
+		}
+		@include respond(phone) {
+			width: 12rem;
+			height: 12rem;
 		}
 	}
 	&--body {
 		display: flex;
+		&--sm {
+			img {
+				width: 10rem;
+				height: 10rem;
+			}
+		}
 		@include respond(tablet-port) {
 			flex-wrap: wrap;
 		}
@@ -298,4 +379,289 @@ div [class$="__main"] {
     font-weight: bold;
     font-size: 5rem;
   }
+}
+
+//Product Spinner
+.vue-product-spinner {
+	cursor: grab;
+	img {width:100%;}
+}
+.vue-product-spinner-slider {
+	position: absolute;
+  bottom: 1rem;
+  left: 10%;
+  width:80%;
+
+}
+
+//Product Scroller
+.product-scroller {
+	overflow: auto;
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  &--item {
+  	position:relative;
+  	width: 24rem;
+  	display: flex;
+    padding: 1rem;
+  	.card {
+	    display: flex;
+	    flex-direction: column;
+	    width: 24rem;
+	    height: 100%;
+	    transition: all 0.3s;
+	    &__body {
+	    	text-align:center;
+	    	a {
+	    		padding:1rem;
+	    	}
+	    }
+	    &:hover {
+	    	@include shadow-large;
+	    	transform: translateY(-2px);
+	    	h4 {
+	    		color:$text;
+	    		@include magic-fast
+	    	}
+	    }
+  		img {
+  			width:auto;
+  			height:100%;
+  			max-height: 16rem;
+  			max-width:calc(100% - 2rem);
+  			padding:1rem;
+  			object-fit: contain;
+  		}
+  		h4 {
+  			font-size: 1.2rem;
+		    line-height: 1.2;
+		    font-weight: 700;
+		    margin-bottom: 0;
+		    text-align: center;
+		    display: inline-block;
+  		}
+  		p {
+  			font-size: 1.2rem;
+  		}
+  	}
+  }
+}
+
+.product-scroller-lg {
+	overflow: auto;
+  display: flex;
+  overflow-x: auto;
+  //margin-top:6rem;
+  margin-bottom:6rem;
+  cursor: grab;
+  white-space: nowrap;
+  &--item {
+  	position:relative;
+  	width: 32rem;
+  	@include respond(tablet-port) {
+  		width: 24rem;
+  	}
+  	display: flex;
+    padding: 1rem;
+  	.card {
+	    display: flex;
+	    flex-direction: column;
+	    width: 32rem;
+	    transition: all 0.3s;
+	    &__body {
+	    	text-align:center;
+	    	a {
+	    		padding:1rem;
+	    	}
+	    }
+	    &:hover {
+	    	@include shadow-large;
+	    	transform: translateY(-2px);
+	    	h4 {
+	    		color:$text;
+	    		@include magic-fast
+	    	}
+	    }
+	    @include respond(tablet-port) {
+	  		width: 24rem;
+	  	}
+	    height: 100%;
+  		img {
+  			width:auto;
+  			height:100%;
+  			max-height: 24rem;
+  			max-width:calc(100% - 2rem);
+  			padding:1rem;
+  			object-fit: contain;
+  		}
+  		h4 {
+  			font-size: 1.8rem;
+  			@include respond(tablet-port) {
+		  		font-size: 1.6rem;
+		  	}
+		    line-height: 1.2;
+		    font-weight: 700;
+		    margin-bottom: 1rem;
+		    text-align: center;
+		    color:$textLight;
+		    display: inline-block;
+  		}
+  		p {
+  			font-size: 1.2rem;
+  		}
+  	}
+  }
+}
+
+
+//tables
+
+td {
+	border: 1px solid;
+  padding: 0.5rem 2rem;
+  font-size:1.4rem;
+}
+
+//Before After
+
+.left-label, .right-label {
+	font-weight: 700 !important;
+  color: white !important;
+  font-size: 2rem;
+}
+
+.right-image {
+	height:32rem;
+}
+.before-after img {
+	height:32rem !important;
+	
+}
+
+.before-after--lg {
+	.left-label, .right-label {
+	font-size: 4rem;
+}
+	.left-label {
+		margin-top:20%;
+		margin-left:4rem;
+	}
+	.right-label {
+		margin-top:20%;
+		margin-right:4rem;
+	}
+}
+
+//Dragscroll
+.dragscroll {
+	display:flex;
+	position: relative;
+	overflow-x: scroll;
+	cursor: move;
+  cursor: grab; 
+  &:active {
+  	cursor: grabbing;
+  }
+}
+
+//Agile
+
+
+
+.agile {
+	.main {
+		margin-bottom:2rem;
+	}
+	.thumbnails {
+  margin: 0 -5px;
+  width: calc(100% + 10px);
+}
+
+.agile__nav-button {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 24px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.thumbnails .agile__nav-button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.thumbnails .agile__nav-button--prev {
+  left: -45px;
+}
+.thumbnails .agile__nav-button--next {
+  right: -45px;
+}
+.agile__nav-button:hover {
+  color: #888;
+}
+.agile__dot {
+  margin: 0 10px;
+}
+.agile__dot button {
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 10px;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  width: 10px;
+}
+.agile__dot--current button, .agile__dot:hover button {
+  background-color: #888;
+}
+
+.slide {
+  -webkit-box-align: center;
+          align-items: center;
+  box-sizing: border-box;
+  color: #fff;
+  display: -webkit-box;
+  display: flex;
+  height: 48rem;
+  max-height: 88vh !important;
+  @include respond(tablet-port) {max-height: 94vh !important;}
+  @include respond(phone) {max-height: 92vh !important;}
+  -webkit-box-pack: center;
+   justify-content: center;
+	  &.slide--thumbnail {
+	  	cursor: pointer;
+		  height: 10rem;
+		  padding: 0 5px;
+		  -webkit-transition: opacity 0.3s;
+		  transition: opacity 0.3s;
+		  &:hover {
+		  	opacity: 0.75;
+		  }
+	  }
+	}
+
+	.slide img {
+	  height: 100%;
+	  max-height: 88vh !important;
+	  @include respond(tablet-port) {max-height: 94vh !important;}
+	  @include respond(phone) {max-height: 92vh !important;} 
+	  -o-object-fit: contain;
+	     object-fit: contain;
+	  -o-object-position: center;
+	     object-position: center;
+	  width: 100%;
+	}
+}
+
+.agile__dots {
+	display: none;
 }

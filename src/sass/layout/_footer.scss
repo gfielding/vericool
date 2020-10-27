@@ -7,13 +7,28 @@
 	background-size:cover;
 	background-repeat:no-repeat;
 	
-	padding:14rem 2rem 6rem 2rem;
+	padding:12rem 2rem 4rem 2rem;
 	color:$textDark !important;
 	&__container {
 		@include container;
   	display: flex;
 	  align-items: flex-start;
-	  justify-content: space-evenly;
+	  justify-content: space-between;
+	  &--logo {
+	  	width:90%;
+	  	max-width: 30rem;
+	  	margin-bottom: 1rem;
+	  	filter:brightness(0);
+	  	opacity: 0.9;
+	  }
+	  &--social {
+	  	display: inline-block !important;
+	  	color:$primary !important;
+	  	transition: all 0.3s;
+	  	&:hover {
+	  		color:$primaryDark !important;
+	  	}
+	  }
 	  &--item {
 	  	h3 {
 	  		color:$textDark !important;
@@ -23,10 +38,10 @@
 	  		font-size: 1.2rem;
 	  		font-weight: 500;
     		margin-bottom: 2px;
-    		color:$textDark !important;
+    		color:$textDark;
     		button {
     			background: transparent;
-    			color:$textDark !important;
+    			color:$textDark;
     		}
     		&:hover {
     			button {

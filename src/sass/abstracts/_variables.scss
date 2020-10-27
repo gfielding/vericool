@@ -1,12 +1,13 @@
 /*VARIABLES*/
 //$text: #9897A1;
 //$text: #666;
-$text: #26282A;
-$textLight: lighten($text, 36%);
+//$text: #26282A;
+$text: #585858;
+$textLight: lighten($text, 20%);
 $textBright: lighten($text, 36%);
 $textDark: darken($text, 20%);
 $background:#f7f5f1;
-$backDark: darken($background, 20%);
+$backDark: darken($background, 4%);
 $backLight: lighten($background, 20%);
 $black: #1f1f1f;
 $dark: #26282A;
@@ -15,14 +16,14 @@ $ptrans1: rgba($primary, 0.2);
 $ptrans2: rgba($primary, 0.4);
 $ptrans3: rgba($primary, 0.6);
 //$primaryDark: darken($primary, 5%);
-$primaryDark: darken($primary, 28%);
-$primaryLight: lighten($primary, 24%);
+$primaryDark: darken($primary, 10%);
+$primaryLight: lighten($primary, 20%);
 $secondary: #78c255;
 $strans1: rgba($secondary, 0.2);
 $strans2: rgba($secondary, 0.4);
 $strans3: rgba($secondary, 0.6);
 $secondaryDark: darken($secondary, 10%);
-$secondaryLight: #a4f57f;
+$secondaryLight: lighten(#a4f57f, 10%);
 $secondaryLight1: lighten($secondaryLight, 6%);
 $secondaryLight2: darken($secondaryLight, 6%);
 $accent: #ffee55;
@@ -30,8 +31,10 @@ $accentDark: darken($accent, 10%);
 $accentLight: lighten($accent, 10%);
 
 
-$primaryTrans: rgba(122,203,232, 0.48);
-$secondaryTrans: rgba($secondary, 0.88);
+$primaryTrans: rgba(122,203,232, 0.28);
+$secondaryTrans: rgba($secondary, 0.28);
+
+$gradient:linear-gradient(to right,($secondary, $primary));
 
 $success: green;
 $error: red;

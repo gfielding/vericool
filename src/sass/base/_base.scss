@@ -25,3 +25,19 @@ hr {
 	margin-bottom: 2rem;
 	margin-top: 2rem;
 }
+
+canvas {
+	border: 1px solid !important;
+}
+
+.dark {
+	background-color:#212121;
+	color:white;
+	h2 {
+		font-size: 4.8rem;
+		font-style: italic;
+	}
+	.underline--magical {
+		color:black;
+	}
+}

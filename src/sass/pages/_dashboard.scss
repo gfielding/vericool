@@ -6,9 +6,42 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin:0 !important;
 		&.text-center {
 	    text-align: center !important;
 	    display: block
+		}
+	}
+	&__grid {
+		@include grid-container;
+		grid-template-rows: repeat(1, minmax(min-content, min-content));
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		@include respond(tablet-port) {
+			grid-template-rows: repeat(2, minmax(min-content, min-content));
+			grid-template-columns: 1fr 1fr;
+		}
+		grid-gap:2rem;
+		&--item {
+			.card {
+				text-align: center;
+				min-height: 0;
+				transition: 0.3s all ease;
+				padding:2rem;
+				background-color: $primary;
+				h4 {
+					display: inline-block;
+					margin-bottom: 0;
+					color:white;
+				}
+				&:hover {
+		    	@include shadow-large;
+		    	transform: translateY(-2px);
+		    	h4 {
+		    		color:white;
+		    		//@include magic-fast
+		    	}
+		    }
+			}
 		}
 	}
 }

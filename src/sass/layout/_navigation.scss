@@ -3,7 +3,8 @@
 .pre-nav {
   //background-color:$primary;
   //background-image: linear-gradient(to right, $primary, $secondary);
-  background-color:$background;
+  //background-color:$background;
+  @include gradient;
   font-size:1.2rem;
   &__container {
     @include nav-container;
@@ -13,14 +14,20 @@
     justify-content: center;
   }
   &__items {
+    a {
+      color:rgba(0,0,0,0.85);
+      &:hover {
+        color:black;
+      }
+    }
     button {
       margin:0.4rem 1.6rem;
-      color:$text;
+      color:rgba(0,0,0,0.8);
       font-size: 1.2rem;
       font-weight: 600;
       background-color:transparent;
       &:hover {
-        color:$textDark;
+        color:black;
       }
     }
   }
@@ -32,28 +39,58 @@
   top: 0;
   left:0;
   width: calc(100% - 4rem);
+  //margin-bottom: 2rem;
   //background-color: transparent;
-  //@include shadow;
+  @include shadow;
   //position:absolute;
   z-index: 10;
+  &__right {
+    display: flex;
+    align-items: center;
+    &--bars {
+      background:transparent; margin-top:0.2rem; margin-left: 3rem;
+      transition: 0.2s all;
+      //color:$primary;
+      &:hover {
+        //transform: skewX(-10deg);
+        transform: rotate(90deg) scale(1.2);
+        color:$primary;
+      }
+    }
+  }
+  &__right--social {
+    margin-right:2rem;
+    a {
+      color:$textLight;
+      &:hover {
+        color:$primary;
+      }
+    }
+  }
   &__admin {
     background-color: white;
     &__items {
-      margin-left:2rem;
+      margin-left:1.2rem;
       display: flex;
+      align-items: center;
       button {
-        margin:0.8rem 1.6rem;
+        margin:0.6rem;
         background-color: transparent;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 600;
         //text-transform: uppercase;
         color:$text;
         position: relative;
-        padding: 1rem 0;
+        padding: 1rem 0.5rem 0.8rem 0.5rem;
         
         &:hover {
-          color:$primaryLight;
+          color:$text;
+          span.hov {
+            @include magic-fast;
+          }
         }
+
+
 
         .dropdown {
           display: flex;
@@ -97,30 +134,42 @@
     }
     &-textLogo {
       height: 6rem;
+      @include respond(tablet-land) {
+        height: 6rem;
+      }
+      @include respond(tablet-port) {
+        height: 5rem;
+      }
+      @include respond(phone) {
+        height: 4rem;
+      }
       margin-right: 1rem;
       //filter: brightness(100);
     }
     &-iconLogo {
-      height: 4.8rem;
+      height: 4rem;
       padding: 0.6rem 0;
       //filter: brightness(100);
     }
   }
   &__items {
-    margin-left:2rem;
+    margin-left:1.2em;
     display: flex;
   	button {
-  		margin:0.8rem 1.6rem;
+  		margin:0.6rem;
   		background-color: transparent;
-  		font-size: 1.6rem;
+  		font-size: 1.4rem;
       font-weight: 600;
   		//text-transform: uppercase;
   		color:$text;
   		position: relative;
-      padding: 1rem 0;
+      padding: 1rem 0.5rem 0.8rem 0.5rem;
       
   		&:hover {
-				color:$primaryLight;
+				color:$text;
+        span.hov {
+          @include magic-fast;
+        }
   		}
       
   		.dropdown {
@@ -152,6 +201,13 @@
   }
 }
 
+
+.navbar__items .router-link-active {
+  span.hov {
+    @include magic-fast;
+  }
+}
+
 .menu-icon {
   width:2rem;
   path {
@@ -161,44 +217,56 @@
   }
 }
 
-
-.breadcrumb {
-  //background-color:$primary;
-  //background-image: linear-gradient(to right, $primary, $secondary);
-  background-color:$background;
-  font-size:1.2rem;
-  &__container {
-    @include container;
-    padding:0.6rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.full__nav {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+  left: 0;
+  top:0;
+  background:$gradient;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  flex-direction: column;
+  padding-top:6vw;
+  @include respond(phone) {
+    padding-top:10vw;
   }
-  &__items {
-    &--item {
-      display: inline-block;
-      button {
-        margin:0.2rem 0.2rem;
-        color:$textLight;
-        font-size: 1.2rem;
-        font-weight: 600;
-        background-color:transparent;
-        &:hover {
-          color:$textDark;
-        }
-      }
-      .arrow {
-        display: inline-block;
-      }
-      &:last-of-type {
-        button {
-          cursor: text;
-          color: $textLight;
-        }
-        .arrow {
-          display: none;
-        }
-      }
+  button {
+    background:transparent;
+    color:rgba(255,255,255,0.72);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom:1rem;
+    transition: 0.3s all;
+    &:hover {
+      color:white;
+      transform: scale(1.2);
     }
   }
+  button.close {
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    background:transparent;
+    color:white;
+    font-size: 1rem;
+    &:hover {
+      transform: rotate(90deg) scale(1.2);
+    }
+  }
+  img {
+    width:30vw;
+    min-width: 30rem;
+    height: auto;
+    margin-bottom: 3rem;
+    margin-top:4rem;
+    opacity: 0.88;
+  }
+  &--item {
+
+  }
 }
+
+

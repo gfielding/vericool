@@ -19,8 +19,12 @@
 						<img src="@/assets/logo.png" alt="Vericool Pacakging" class="navbar__logo-textLogo">
 						<!--<img src="@/assets/vericool-icon-white.png" alt="Vericool Pacakging" class="navbar__logo-iconLogo">-->
 					</router-link>
-				
+
 					<div class="navbar__admin__items">
+						<h3>// Admin</h3>
+					</div>
+				
+					<!-- <div class="navbar__admin__items">
 				
 						<button v-on:mouseover="showCareers" v-on:mouseleave="hideCareers" @click="careersMenu = !careersMenu">
 							Careers
@@ -35,8 +39,7 @@
 								</div>
 							</transition>
 						</button>
-						<button>Customers</button>
-						<button>Articles</button>
+
 						<button v-on:mouseover="showPress" v-on:mouseleave="hidePress" @click="pressMenu = !pressMenu">
 							In The Press
 							<transition name="fade">
@@ -80,10 +83,63 @@
 						</button>
 
 
+						<button v-on:mouseover="showLogos" v-on:mouseleave="hideLogos" @click="logosMenu = !logosMenu">
+							Logos
+							<transition name="fade">
+								<div class="dropdown" v-if="logosMenu">
+									<router-link :to="{ name: 'logolist' }" @click="logosMenu == false">
+										<button>Logos</button>
+									</router-link>
+									<router-link :to="{ name: 'addlogo' }" @click="logosMenu == false">
+										<button>Add Logo</button>
+									</router-link>
+								</div>
+							</transition>
+						</button>
+
+						<button v-on:mouseover="showAwards" v-on:mouseleave="hideAwards" @click="awardsMenu = !awardsMenu">
+							Awards
+							<transition name="fade">
+								<div class="dropdown" v-if="awardsMenu">
+									<router-link :to="{ name: 'listawards' }" @click="awardsMenu == false">
+										<button>Awards</button>
+									</router-link>
+									<router-link :to="{ name: 'addaward' }" @click="awardsMenu == false">
+										<button>Add Award</button>
+									</router-link>
+								</div>
+							</transition>
+						</button>
+
+						<button v-on:mouseover="showImpact" v-on:mouseleave="hideImpact" @click="impactMenu = !impactMenu">
+							Impact Pics
+							<transition name="fade">
+								<div class="dropdown" v-if="impactMenu">
+									<router-link :to="{ name: 'impactlist' }" @click="impactMenu == false">
+										<button>Impact Pics</button>
+									</router-link>
+									<router-link :to="{ name: 'addimpactpic' }" @click="impactMenu  == false">
+										<button>Add Pic</button>
+									</router-link>
+								</div>
+							</transition>
+						</button>
+
+						<router-link :to="{ name: 'leads' }" tag="button">
+							Leads
+						</router-link>
+
+						<router-link :to="{ name: 'applications' }" tag="button">
+							Applications
+						</router-link>
+
+
+
+
 						
 
 						
-					</div>
+					</div> -->
 				</div>
 				<div class="navbar__right">
 					<button class="btn btn__outlined" @click="logout">Logout</button>
@@ -120,6 +176,9 @@ export default {
 		pressMenu: false,
 		chancesMenu: false,
 		postsMenu: false,
+		logosMenu: false,
+		awardsMenu: false,
+		impactMenu: false,
 	}),
 	methods: {
     logout() {
@@ -148,6 +207,24 @@ export default {
 		},
 		hidePosts() {
 			this.postsMenu = false;
+		},
+		showLogos() {
+			this.logosMenu = true;
+		},
+		hideLogos() {
+			this.logosMenu = false;
+		},
+		showAwards() {
+			this.awardsMenu = true;
+		},
+		hideAwards() {
+			this.awardsMenu = false;
+		},
+		showImpact() {
+			this.impactMenu = true;
+		},
+		hideImpact() {
+			this.impactMenu = false;
 		}
 	}
 }

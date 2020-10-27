@@ -19,8 +19,8 @@
           <div v-for="item in careers" :key="item.id" class="list__item mt-5">
             <div class="flex align-center justify-space-between">
               <h3 class="item--title">{{item.title}}</h3>
-              <router-link :to="`/dashboard/career/` + item.id">
-                <button class="btn btn__primary">Apply
+              <router-link :to="`/careers/` + item.id">
+                <button class="btn btn__primary mb-3">Apply
                   <i class="ml-2 fad fa-external-link"></i>
                 </button>
               </router-link>
@@ -30,6 +30,7 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -43,7 +44,7 @@
 import { mapState } from 'vuex'
 import Nav from '@/components/Nav.vue'
 import Loader from '@/components/Loader.vue'
-const fb = require('../../firebaseConfig.js')
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'careers',
@@ -57,7 +58,8 @@ export default {
   },
   components: {
     Nav,
-    Loader
+    Loader,
+    Footer
   }
 }
 </script>

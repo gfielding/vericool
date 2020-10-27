@@ -1,6 +1,7 @@
 /*data*/
 
 .data {
+	padding-top:2rem;
 	&__hero {
 		@include hero;
 	}

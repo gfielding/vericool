@@ -3,8 +3,59 @@
 	&__hero {
 		@include hero;
 		background-image: url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/11PLASTIC1-jumbo.jpg?alt=media&token=1af425c2-e00a-4786-ab5d-2c7b0e1cd37f');
+		min-height: 72vh;
 	}
 	&__main {
-
+		@include upfix;
+		background-color: white;
+		padding:6rem 4rem 2rem 4rem;
+		@include respond(phone) {padding:0;}
+		z-index: 1;
+		position: relative;
+	}
+	&__data {
+		padding: 2rem 0 2rem 0;
+		@include grid-container;
+		grid-template-rows: repeat(1, minmax(20rem, min-content)) !important;
+  	grid-template-columns: 1fr 1fr 1fr;
+  	@include respond(tablet-port) {
+  		grid-template-rows: repeat(3, minmax(12rem, min-content)) !important;
+  		grid-template-columns: 1fr 1fr;
+  	}
+		&--item {
+			text-align: center;
+			padding:1rem 3rem;
+			.number {
+				font-size: 5vw;
+				font-weight: 700;
+				@include respond(tablet-port) {
+					font-size: 12vw;
+				}
+			}
+		}
+	}
+	&__grid {
+		padding-top:2rem;
+		@include grid-container;
+		grid-gap:2rem;
+		grid-template-rows: repeat(1, minmax(min-content, min-content));
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		@include respond(tablet-port) {
+			grid-template-rows: repeat(1, minmax(min-content, min-content));
+			grid-template-columns: 1fr 1fr;
+		}
+		&--item {
+			background-color: white;
+	    overflow: hidden;
+	    display: flex;
+	    align-items: center;
+	    height:auto;
+			img {
+				min-height:100%;
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+			}
+		}
 	}
 }

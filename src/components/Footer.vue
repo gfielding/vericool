@@ -1,14 +1,43 @@
 <template>
+	<div>
 	<footer class="footer">
 		<div class="footer__container">
 			<div class="footer__container--item">
-				wgwrg
+				<img src="@/assets/logo.png" alt="Vericool Pacakging" class="footer__container--logo">
+				<div>
+					<a class="footer__container--social" href="https://www.facebook.com/VericoolPackaging" target="_blank">
+						<i class="fab fa-facebook-square fa-2x ma-2"></i>
+					</a>
+					<a class="footer__container--social" href="https://www.instagram.com/vericoolcompany" target="_blank">
+						<i class="fab fa-instagram-square fa-2x ma-2"></i>
+					</a>
+
+					<a class="footer__container--social" href="https://twitter.com/vericoolcompany" target="_blank">
+						<i class="fab fa-twitter-square fa-2x ma-2"></i>
+					</a>
+					<a class="footer__container--social" href="https://www.linkedin.com/company/vericool-packaging" target="_blank">
+							<i class="fab fa-linkedin fa-2x ma-2"></i>
+						</a>
+				</div>
+
+				<p>Phone<br />
+				<p>info@vericool</p>
+				<p>925-574-7888</p>
+				<h4>Corporate HQ</h4>
+				<p>Livermore, CA</p>
+
+
+
+				
+
+
+				
 			</div>
 			<div class="footer__container--item">
 				<h3>About Vericool™</h3>
-				<router-link :to="{ name: 'mission' }">
+				<!--<router-link :to="{ name: 'mission' }">
 					<button>Mission</button>
-				</router-link>
+				</router-link>-->
 				<router-link :to="{ name: 'team'}">
 					<button>Meet the Team</button>
 				</router-link>
@@ -17,6 +46,9 @@
 				</router-link>
 				<router-link :to="{ name: 'environmental-impact'}">
 					<button>Environmental Impact</button>
+				</router-link>
+				<router-link :to="{ name: 'industries' }">
+					<button>Industries</button>
 				</router-link>
 				<h3 class="mt-3">Partners</h3>
 				<router-link :to="{ name: 'distribution' }">
@@ -52,6 +84,9 @@
 				<router-link :to="{ name: 'data' }">
 					<button>Data</button>
 				</router-link>
+				<router-link :to="{ name: 'light-test' }">
+					<button>Light Test</button>
+				</router-link>
 			</div>
 			<div class="footer__container--item">
 				<h3>Inquiries</h3>
@@ -63,6 +98,9 @@
 				</router-link>
 				<router-link :to="{ name: 'buy' }" @click="inquiriesMenu == false">
 					<button>Where to Buy</button>
+				</router-link>
+				<router-link :to="{ name: 'awards' }">
+					<button>Awards</button>
 				</router-link>
 				<router-link :to="{ name: 'contact' }" @click="inquiriesMenu == false">
 					<button>Contact Us</button>
@@ -77,6 +115,8 @@
 			© Vericool Inc
 		</div>
 	</footer>
+	<div class="pt-3 gradient block"></div>
+	</div>
 </template>
 
 <script>

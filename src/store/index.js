@@ -12,6 +12,11 @@ fb.auth.onAuthStateChanged(user => {
     store.dispatch('getPress')
     store.dispatch('getChances')
     store.dispatch('getArticles')
+    store.dispatch('getLogos')
+    store.dispatch('getLeads')
+    store.dispatch('getAwards')
+    store.dispatch('getImpactPics')
+    store.dispatch('getApplications')
   } else {
     store.commit('setCurrentUser', null)
   }
@@ -29,6 +34,16 @@ export const store = new Vuex.Store({
     chanceInfo: {},
     articles: [],
     articleInfo: {},
+    logos: [],
+    logoInfo: {},
+    products: [],
+    leads: [],
+    leadInfo: {},
+    awards: [],
+    awardInfo: {},
+    impactPics: [],
+    applications: [],
+    applicationInfo: {},
   },
   actions: {
     fetchUserProfile({ commit, state }) {
@@ -78,6 +93,50 @@ export const store = new Vuex.Store({
         commit('setChances', chancesArray)
       })
     },
+    getLogos({ commit }) {
+      fb.logosCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
+        let logosArray = []
+        querySnapshot.forEach(doc => {
+          let logos = doc.data()
+          logos.id = doc.id
+          logosArray.push(logos)
+        })
+        commit('setLogos', logosArray)
+      })
+    },
+    getImpactPics({ commit }) {
+      fb.impactPicsCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
+        let impactPicsArray = []
+        querySnapshot.forEach(doc => {
+          let impactPics = doc.data()
+          impactPics.id = doc.id
+          impactPicsArray.push(impactPics)
+        })
+        commit('setImpactPics', impactPicsArray)
+      })
+    },
+    getAwards({ commit }) {
+      fb.awardsCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
+        let awardsArray = []
+        querySnapshot.forEach(doc => {
+          let awards = doc.data()
+          awards.id = doc.id
+          awardsArray.push(awards)
+        })
+        commit('setAwards', awardsArray)
+      })
+    },
+    getApplications({ commit }) {
+      fb.applicationsCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
+        let applicationsArray = []
+        querySnapshot.forEach(doc => {
+          let applications = doc.data()
+          applications.id = doc.id
+          applicationsArray.push(applications)
+        })
+        commit('setApplications', applicationsArray)
+      })
+    },
     getCareerFromId({ commit }, payload) {
       fb.careersCollection.where("id", "==", payload)
       .get()
@@ -109,6 +168,15 @@ export const store = new Vuex.Store({
         })
       })
     },
+    getApplicationFromId({ commit }, payload) {
+      fb.applicationsCollection.where("id", "==", payload)
+      .get()
+      .then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          commit("setApplicationInfo", doc.data())
+        })
+      })
+    },
 
 
     getPressFromId({ commit }, payload) {
@@ -129,6 +197,78 @@ export const store = new Vuex.Store({
         })
       })
     },
+    getAwardFromId({ commit }, payload) {
+      fb.awardsCollection.where("id", "==", payload)
+      .get()
+      .then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          commit("setAwardInfo", doc.data())
+        })
+      })
+    },
+    getLogoFromId({ commit }, payload) {
+      fb.logosCollection.where("id", "==", payload)
+      .get()
+      .then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          commit("setLogoInfo", doc.data())
+        })
+      })
+    },
+    getProducts({ commit }) {
+      fb.productsCollection.orderBy('title', 'desc').onSnapshot(querySnapshot => {
+        let productsArray = []
+        querySnapshot.forEach(doc => {
+          let products = doc.data()
+          products.id = doc.id
+          productsArray.push(products)
+        })
+        commit('setProducts', productsArray)
+      })
+    },
+    newLead({ commit }, payload) {
+      fb.leadsCollection.add(payload)
+      .then(
+        doc => {
+          fb.leadsCollection.doc(doc.id).update({
+            id: doc.id,
+            created: fb.firestore.FieldValue.serverTimestamp(),
+          })
+        }
+      )
+    },
+    newApplication({commit}, payload) {
+      fb.applicationsCollection.add(payload)
+      .then(
+        doc => {
+          fb.applicationsCollection.doc(doc.id).update({
+            id: doc.id,
+            created: fb.firestore.FieldValue.serverTimestamp(),
+          })
+        }
+      )
+    },
+    getLeads({ commit }) {
+      fb.leadsCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
+        let leadsArray = []
+        querySnapshot.forEach(doc => {
+          let leads = doc.data()
+          leads.id = doc.id
+          leadsArray.push(leads)
+        })
+        commit('setLeads', leadsArray)
+      })
+    },
+    getLeadFromId({ commit }, payload) {
+      fb.leadsCollection.where("id", "==", payload)
+      .get()
+      .then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          commit("setLeadInfo", doc.data())
+        })
+      })
+    },
+
     clearData({ commit }) {
       commit('setCurrentUser', null)
       commit('setCareerInfo', null)
@@ -136,6 +276,15 @@ export const store = new Vuex.Store({
       commit('setPress', [])
       commit('setChances', [])
       commit('setCareers', [])
+      commit('setLogos', [])
+      commit('setProducts', [])
+      commit('setLeads', [])
+      commit('setImpactPics', [])
+      commit('setAwards', [])
+      commit('setApplications', [])
+    },
+    clearLeadState({ commit }) {
+      commit('setLeadInfo', null)
     },
     clearCareerState({ commit }) {
       commit('setCareerInfo', null)
@@ -145,6 +294,9 @@ export const store = new Vuex.Store({
     },
     clearChanceState({ commit }) {
       commit('setChanceInfo', null)
+    },
+    clearApplicationState({ commit }) {
+      commit('setApplicationInfo', null)
     },
   },
   mutations: {
@@ -168,6 +320,13 @@ export const store = new Vuex.Store({
         state.chances = []
       }
     },
+    setAwards(state, val) {
+      if (val) {
+        state.awards = val
+      } else {
+        state.awards = []
+      }
+    },
     setPress(state, val) {
       if (val) {
         state.press = val
@@ -182,6 +341,41 @@ export const store = new Vuex.Store({
         state.articles = []
       }
     },
+    setLeads(state, val) {
+      if (val) {
+        state.leads = val
+      } else {
+        state.leads = []
+      }
+    },
+    setLogos(state, val) {
+      if (val) {
+        state.logos = val
+      } else {
+        state.logos = []
+      }
+    },
+    setProducts(state, val) {
+      if (val) {
+        state.products = val
+      } else {
+        state.products = []
+      }
+    },
+    setImpactPics(state, val) {
+      if (val) {
+        state.impactPics = val
+      } else {
+        state.impactPics = []
+      }
+    },
+    setApplications(state, val) {
+      if (val) {
+        state.applications = val
+      } else {
+        state.applications = []
+      }
+    },
     setCareerInfo(state, payload) {
       state.careerInfo = payload
     },
@@ -191,9 +385,20 @@ export const store = new Vuex.Store({
     setChanceInfo(state, payload) {
       state.chanceInfo = payload
     },
+    setAwardInfo(state, payload) {
+      state.awardInfo = payload
+    },
     setArticleInfo(state, payload) {
       state.articleInfo = payload
     },
-    
+    setLogoInfo(state, payload) {
+      state.logoInfo = payload
+    },
+    setLeadInfo(state, payload) {
+      state.leadInfo = payload
+    },
+    setApplicationInfo(state, payload) {
+      state.applicationInfo = payload
+    },
   },
 })

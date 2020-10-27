@@ -56,6 +56,7 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -63,13 +64,14 @@
 import { mapState } from 'vuex'
 import Nav from '@/components/Nav.vue'
 import Loader from '@/components/Loader.vue'
-const fb = require('../../firebaseConfig.js')
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'customers',
   components: {
     Nav,
-    Loader
+    Loader,
+    Footer
   }
 }
 </script>

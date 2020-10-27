@@ -1,0 +1,7 @@
+.apply {
+	margin-bottom: 10rem;
+	&__hero {
+		@include hero;
+		background-image:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/sean-o-KMn4VEeEPR8-unsplash%20(1).jpg?alt=media&token=009892a6-570b-4be6-84e3-206e650727da');
+	}
+}

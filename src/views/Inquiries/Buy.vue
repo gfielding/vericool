@@ -26,18 +26,20 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import Nav from '@/components/Nav.vue'
-const fb = require('../../firebaseConfig.js')
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'buy',
   components: {
     Nav,
+    Footer
   },
 }
 </script>

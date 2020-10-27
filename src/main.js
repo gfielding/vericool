@@ -5,13 +5,16 @@ import { store } from './store/index.js'
 import AOS from "aos"
 import "aos/dist/aos.css"
 import Croppa from 'vue-croppa';
+import VueDragscroll from 'vue-dragscroll'
+import VueMask from 'v-mask'
+import VueAgile from 'vue-agile'
 import './sass/main.scss'
 const fb = require('./firebaseConfig.js')
-
-import VueAgile from 'vue-agile'
  
 Vue.use(VueAgile);
 Vue.use(Croppa);
+Vue.use(VueMask);
+Vue.use(VueDragscroll);
 
 Vue.use(require('vue-moment'));
 

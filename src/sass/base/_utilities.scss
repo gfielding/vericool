@@ -49,6 +49,12 @@
 .text-right {
 	text-align:right;
 }
+.primary {
+	color:$primary;
+}
+.gradient {
+	@include gradient;
+}
 
 /**SPACING**/
 .ma-1 {
@@ -230,39 +236,49 @@
 .background {
 	background:$background;
 }
+
+.back-dark {
+	background:$backDark;
+}
 .inline-block {
 	display: inline-block;
 }
-.dark-text {
-	color:$text !important;
-}
-.light {
-	color:$textLight;
-	font-weight: 600;
-}
+
 /**RESPONSIVE**/
+.hiddenLgAndDown {
+	@media only screen and (max-width: 1478px) {
+		display:none !important;
+	}
+}
+
 .hiddenMdAndDown {
 	@media only screen and (max-width: 1263px) {
-		display:none;
+		display:none !important;
 	}
 }
 .hiddenSmAndDown {
 	@media only screen and (max-width: 959px) {
-		display:none;
+		display:none !important;
 	}
 }
 .hiddenXsOnly {
 	@include respond(phone) {
-    display:none;
+    display:none !important;
   }
 }
 .hiddenSmAndUp {
 	@media only screen and (min-width: 600px) {
-		display:none;
+		display:none !important;
 	}
 }
 .hiddenMdAndUp {
-	@media only screen and (max-width: 960px) {
-		display:none;
+	@media only screen and (min-width: 960px) {
+		display:none !important;
+	}
+}
+
+.hiddenLgAndUp {
+	@media only screen and (min-width: 1264px) {
+		display:none !important;
 	}
 }

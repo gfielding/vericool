@@ -4,11 +4,7 @@
   
     <div class="page login">
     	<div class="container-small">
-        <div class="login__lead">
-          <div class="login__lead-text">
-          	<h1>Admin Login</h1>
-          </div>
-        </div>
+        <h2 style="text-align:center;">Admin Login</h2>
         <div class="login__form">
           <form @submit.prevent>
             <div>
@@ -27,13 +23,11 @@
                 </span>
               </transition>
             </button>
-            <div class="extras">
-              <a>Forgot Password</a>
-            </div>
           </form>
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -41,6 +35,7 @@
 import { mapState } from 'vuex'
 import Nav from '@/components/Nav.vue'
 const fb = require('../../firebaseConfig.js')
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'login',
@@ -55,6 +50,7 @@ export default {
   },
   components: {
     Nav,
+    Footer
   },
   computed: {
     ...mapState(['currentUser', 'userProfile']),

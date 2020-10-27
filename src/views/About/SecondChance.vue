@@ -36,7 +36,8 @@
           <p class="text-left">I dedicated myself to learning about packaging materials and developing my own environmentally friendly replacements. With my portfolio of inventions, I founded Vericool Inc.: an environmentally friendly, cost-effective, packaging solutions company. We are growing extremely fast with 2 national locations and multiple partnerships serving our planet, people, and products.</p>
         </div>
         <div class="second-chance__darrell--item">
-          <div class="video-responsive"><iframe src='//players.brightcove.net/2097119709001/HkGIdDTwWg_default/index.html?videoId=6018370766001' allowfullscreen frameborder=0></iframe></div>
+          <div class="video-responsive"><iframe src='//players.brightcove.net/2097119709001/HkGIdDTwWg_default/index.html?videoId=6018370766001' allowfullscreen frameborder=0 controls></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -64,10 +65,11 @@
       </div>
       <p>401,288 prisoners released in 2005 between 30 states were arrested an estimated 2 million times during the 9 years after their release, an average of <span class="underline--magical"><strong>five arrests per released prisoner</strong></span>.</p>
       <hr>
-      <div class="video-responsive">
-        <iframe src='//players.brightcove.net/2097119709001/HkGIdDTwWg_default/index.html?videoId=6018366991001' allowfullscreen frameborder=0></iframe>
+      <div class="video-responsive" @click="showPlayer2 == false">
+        <iframe src='//players.brightcove.net/2097119709001/HkGIdDTwWg_default/index.html?videoId=6018366991001' allowfullscreen frameborder=0
+        ></iframe>
       </div>
-      
+
     </div>
     <div class="second-chance__stories mt-5 mb-10">
       <div class="container">
@@ -80,7 +82,7 @@
 
 
         <div class="second-chance__stories--grid" v-if="chances && chances.length > 0">
-          <div v-for="item in chances" key="item.id" class="card" data-aos="flip-left" data-aos-once="true" data-aos-delay="200">
+          <div v-for="item in chances" :key="item.id" class="card" data-aos="flip-left" data-aos-once="true" data-aos-delay="200">
             <img :src="item.picUrl">
             <div class="card__body">
               <h4>{{item.name}}</h4>
@@ -91,6 +93,7 @@
       </div>
     </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -98,7 +101,7 @@
 import { mapState } from 'vuex'
 import Nav from '@/components/Nav.vue'
 import Loader from '@/components/Loader.vue'
-const fb = require('../../firebaseConfig.js')
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'second-chance',
@@ -108,6 +111,7 @@ export default {
       num1:0,
       num2:0,
       num3:0,
+      showPlayer2: true,
     }
   },
   async mounted() {
@@ -118,7 +122,8 @@ export default {
   },
   components: {
     Nav,
-    Loader
+    Loader,
+    Footer
   },
   computed: {
     ...mapState(['chances']),

@@ -115,6 +115,14 @@
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%;
+  .fad {
+  	font-size: 8vw;
+  	filter: brightness(5);
+  	position: absolute;
+		left: 50%;
+		top:50%;
+		transform: translate(-50%, -50%);
+  }
 }
 .video-responsive iframe{
   position: absolute;
@@ -125,3 +133,4 @@
   width: 100%;
   height: 100%;
 }
+
