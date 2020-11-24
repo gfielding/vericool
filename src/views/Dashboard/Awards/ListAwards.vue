@@ -15,10 +15,9 @@
 
       <div class="list__item" v-for="item in awards" :key="item.id">
         <div class="list__item--body">
-          <img :src="item.picUrl" alt="">
+          <v-lazy-image :src="item.picUrl" alt="" />
           <div class="inline-block">
             <h4>{{item.title}}</h4>
-            <p v-html="item.description"></p>
           </div>
         </div>
         <div class="list__button">

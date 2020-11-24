@@ -72,6 +72,16 @@
 
 .page {
 	min-height: calc(100vh - 24rem);
+	// padding-top:11.6rem;
+	@include respond(tablet-land) {
+		// padding-top:8rem;
+	}
+	@include respond(tablet-port) {
+		// padding-top:7rem;
+	}
+	@include respond(phone) {
+		// padding-top:6rem;
+	}
 }
 .line {
 	border-bottom: 4px solid;
@@ -91,14 +101,23 @@
 div [class$="__iconrow"] {
 	display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 div [class$="__iconrow--item"] {
-	width:8rem;
-	min-width:4rem;
-	padding:1rem 0.25rem;
+	width:10%;
+	min-width:10rem;
+	padding:1rem 1rem;
+	@include respond(tablet-land) {
+		width:10%;
+		min-width:8rem;
+	}
+	@include respond(tablet-port) {
+		width:10%;
+		min-width:8rem;
+	}
 	@include respond(phone) {
-		width:4rem;
-		min-width:2.4rem;
+		width:10%;
+		min-width:8rem;
 	}
 	justify-content: center;
 	text-align: center;
@@ -110,31 +129,32 @@ div [class$="__iconrow--item"] {
 		max-width:66%;
 		max-height: 5rem;
 		margin-bottom:1rem;
-		opacity: 0.8;
+		opacity: 0.9;
+		//filter: brightness(999);
 	}
 	p {
-		font-size: 1rem;
-		font-weight:900;
-		color:$primary;
+		font-size: 1.2rem;
+		font-weight:600;
+		//color:rgba(255,255,255,0.9);
+		//color:$primaryLight;
 		margin-bottom:0;
-		@include respond(phone) {display: none;}
-	}
-	img.p {
-		max-width: 10rem;
-		max-height:10rem;
-		width:10rem !important;
-		height: 10rem !important;
-		margin-bottom:0;
-		opacity: 0.9;
-		height: 10rem !important;
-  	width: 10rem !important;
-		background-image: radial-gradient(circle, $background, $background 66%, transparent 66%);
 		@include respond(phone) {
-			position: absolute;
-			width:6rem !important;
-			height: 6rem !important;
+			font-size:1rem;
 		}
 	}
+	// img.p {
+	// 	max-width: 10rem;
+	// 	max-height:10rem;
+	// 	width:10rem !important;
+	// 	height: 10rem !important;
+	// 	margin-bottom:0;
+	
+	// 	@include respond(phone) {
+
+	// 		width:8rem !important;
+	// 		height: 8rem !important;
+	// 	}
+	// }
 }
 
 div [class$="__lead-text"] {
@@ -200,14 +220,32 @@ div [class$="__body-row"] {
 		}
 	}
 }
-
 div [class$="__main"] {
 	@include upfix;
 	background-color: white;
 	padding:6rem 4rem;
-	@include respond(phone) {padding:0;}
+	@include respond(phone) {padding:2rem;}
 	z-index: 1;
 	position: relative;
+	li {
+		// overflow: hidden;
+	 //  white-space: nowrap;
+	 //  text-overflow: ellipsis;
+	 overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+	}
 }
 
 //Slider text
@@ -258,8 +296,8 @@ div [class$="__main"] {
 .list__item {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px solid $background;
-	padding:1rem;
+	border-bottom: 2px solid $textBright;
+	padding:1rem 1rem 2rem 1rem;
 	&:last-of-type {
 		border:none;
 	}
@@ -318,7 +356,6 @@ div [class$="__main"] {
 .ql-editor.ql-blank::before {
    color: $textLight;
 }
-
 .learn-more {
 	max-height: 8rem;
 	min-width:12rem;
@@ -354,15 +391,15 @@ div [class$="__main"] {
 	}
 }
 .callout {
-	background-image: linear-gradient(to bottom right, $primaryLight, $primary, $primaryDark);
+	//background-image: linear-gradient(to bottom right, $primaryLight, $primary, $primaryDark);
 	color:white;
-	padding:4rem 2rem;
+	//padding:2rem 0;
+	background:$varDarkBlueGrey;
 }
 
 .content-wrapper {
 	@include content-wrapper;
 }
-
 .numbers-list {
   margin-top:200px;
   align-items: flex-start;
@@ -393,8 +430,19 @@ div [class$="__main"] {
   width:80%;
 
 }
+.spinbox {
+	height:100%;
+}
 
-//Product Scroller
+.ohana {
+	.spinbox {
+		height:auto;
+	}
+	.vue-product-spinner-slider {
+		margin-top: 1rem;
+	}
+}
+
 .product-scroller {
 	overflow: auto;
   display: flex;
@@ -403,36 +451,70 @@ div [class$="__main"] {
   &--item {
   	position:relative;
   	width: 24rem;
+  	@include respond(tablet-port) {
+  		width:20rem;
+  	}
+  	@include respond(phone) {
+  		width: 18rem;
+  	}
   	display: flex;
-    padding: 1rem;
+    padding: 0 1rem;
   	.card {
 	    display: flex;
 	    flex-direction: column;
 	    width: 24rem;
-	    height: 100%;
+	    max-height: 36rem;
+	    @include respond(tablet-port) {
+	  		width:20rem;
+	  		max-height: 30rem;
+	  	}
+	    @include respond(phone) {
+  			width: 18rem;
+  			max-height: 24rem;
+  		}
+	    //height: 100%;
+	    
 	    transition: all 0.3s;
 	    &__body {
 	    	text-align:center;
-	    	a {
-	    		padding:1rem;
+	    	padding:0;
+	    	// a {
+	    	// 	padding:1rem;
+	    	// }
+	    	button {
+	    		margin-top: 1.5rem;
+	    		cursor: pointer;
+	    		@include respond(tablet-port) {
+			  		font-size: 1.2rem;
+			  	}
+			  	@include respond(phone) {
+			  		font-size: 1rem;
+			  	}
 	    	}
 	    }
 	    &:hover {
-	    	@include shadow-large;
-	    	transform: translateY(-2px);
-	    	h4 {
-	    		color:$text;
-	    		@include magic-fast
-	    	}
+	    	//@include shadow-large;
+	    	button {transform: translateY(-2px);}
+	    	
+	    	// h4 {
+	    	// 	color:white;
+	    	// 	@include magic-fast;
+	    	// }
 	    }
   		img {
   			width:auto;
   			height:100%;
-  			max-height: 16rem;
+  			//max-height: 16rem;
   			max-width:calc(100% - 2rem);
-  			padding:1rem;
+  			padding:0 1rem;
   			object-fit: contain;
+  			transition: all .2s ease-in-out;
   		}
+  		// &:hover {
+	   //  	img {
+	   //  		transform: scale(1.06);
+	   //  	}
+		  // }
   		h4 {
   			font-size: 1.2rem;
 		    line-height: 1.2;
@@ -458,16 +540,16 @@ div [class$="__main"] {
   white-space: nowrap;
   &--item {
   	position:relative;
-  	width: 32rem;
+  	width: 28rem;
   	@include respond(tablet-port) {
-  		width: 24rem;
+  		width: 20rem;
   	}
   	display: flex;
     padding: 1rem;
   	.card {
 	    display: flex;
 	    flex-direction: column;
-	    width: 32rem;
+	    width: 28rem;
 	    transition: all 0.3s;
 	    &__body {
 	    	text-align:center;
@@ -484,21 +566,21 @@ div [class$="__main"] {
 	    	}
 	    }
 	    @include respond(tablet-port) {
-	  		width: 24rem;
+	  		width: 20rem;
 	  	}
 	    height: 100%;
   		img {
   			width:auto;
   			height:100%;
-  			max-height: 24rem;
+  			max-height: 20rem;
   			max-width:calc(100% - 2rem);
   			padding:1rem;
   			object-fit: contain;
   		}
   		h4 {
-  			font-size: 1.8rem;
+  			font-size: 1.6rem;
   			@include respond(tablet-port) {
-		  		font-size: 1.6rem;
+		  		font-size: 1.4rem;
 		  	}
 		    line-height: 1.2;
 		    font-weight: 700;
@@ -514,9 +596,7 @@ div [class$="__main"] {
   }
 }
 
-
 //tables
-
 td {
 	border: 1px solid;
   padding: 0.5rem 2rem;
@@ -581,7 +661,7 @@ td {
 .agile__nav-button {
   background: transparent;
   border: none;
-  color: #ccc;
+  color: rgba(0,0,0,0.5);
   cursor: pointer;
   font-size: 24px;
   -webkit-transition-duration: 0.3s;
@@ -594,13 +674,13 @@ td {
           transform: translateY(-50%);
 }
 .thumbnails .agile__nav-button--prev {
-  left: -45px;
+  left: 0;
 }
 .thumbnails .agile__nav-button--next {
-  right: -45px;
+  right: 0;
 }
 .agile__nav-button:hover {
-  color: #888;
+  color: rgba(0,0,0,0.8);
 }
 .agile__dot {
   margin: 0 10px;
@@ -631,10 +711,10 @@ td {
   color: #fff;
   display: -webkit-box;
   display: flex;
-  height: 48rem;
-  max-height: 88vh !important;
-  @include respond(tablet-port) {max-height: 94vh !important;}
-  @include respond(phone) {max-height: 92vh !important;}
+  height: 48vh;
+  max-height: 48vh !important;
+  @include respond(tablet-port) {max-height: 36vh !important;}
+  @include respond(phone) {max-height: 36vh !important;}
   -webkit-box-pack: center;
    justify-content: center;
 	  &.slide--thumbnail {
@@ -651,17 +731,27 @@ td {
 
 	.slide img {
 	  height: 100%;
-	  max-height: 88vh !important;
-	  @include respond(tablet-port) {max-height: 94vh !important;}
-	  @include respond(phone) {max-height: 92vh !important;} 
+	  max-height: 48vh !important;
+	  @include respond(tablet-port) {max-height: 36vh !important;}
+	  @include respond(phone) {max-height: 36vh !important;} 
 	  -o-object-fit: contain;
 	     object-fit: contain;
 	  -o-object-position: center;
 	     object-position: center;
-	  width: 100%;
+	  //width: 100%;
+	  width: 80%;
 	}
 }
 
 .agile__dots {
 	display: none;
 }
+
+//Lazy
+// .v-lazy-image {
+//   filter: blur(0.4rem);
+//   transition: filter 0.3s;
+// }
+// .v-lazy-image-loaded {
+//   filter: blur(0);
+// }

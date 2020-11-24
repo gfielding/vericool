@@ -9,7 +9,7 @@
       <div v-if="products && products.length > 0" class=" product-scroller-lg--item mt-5 mb-5" v-for="item in products" :key="item.id">
         
           <div class="card">
-            <img :src="item.picUrl" :alt="item.title">
+            <img :src="item.picUrl" :alt="item.title" />
             <div class="card__body">
               <router-link :to="`products/` + item.to">
                 <h4 class="card__title--link">{{item.title}} &#8594</h4>
@@ -32,11 +32,6 @@ import Loader from '@/components/Loader.vue'
 export default {
   computed: {
     ...mapState(['products']),
-  },
-  async mounted () {
-    if (!this.products || this.products.length < 1) {
-      this.$store.dispatch("getProducts")
-    }
   },
   components: {
     Loader

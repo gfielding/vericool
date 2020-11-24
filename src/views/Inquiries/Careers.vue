@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="greyback">
     <Nav />
     <div class="page careers">
       <div class="careers__hero">
@@ -60,6 +60,12 @@ export default {
     Nav,
     Loader,
     Footer
-  }
+  },
+  metaInfo: {
+    title: 'Career Opportunities',
+    meta: [
+      { name: 'description', content: 'Find your next career at Vericool' }
+    ],
+  },
 }
 </script>

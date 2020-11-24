@@ -18,10 +18,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;">
-				<img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/mailerAsset%2011%404x.png?alt=media&token=9c0461bd-e06d-42d6-a7f6-47de573f6f4e" alt="" style="width:100%;">
+				<v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Data%2FImage%2010-29-20%20at%209.10%20PM.jpeg?alt=media&token=d229b090-1701-4e93-a246-ca92da64dbd1" alt="" style="width:100%;" />
 				<router-link :to="{ name: 'data' }">
 					<div class="item__overlay--motion">
-						<h3>Performance  &#8594</h3>
+						<h3>Performance Data &#8594</h3>
 					</div>
 				</router-link>
 			</div>
@@ -33,19 +33,30 @@
 					</div>
 				</router-link>
 			</div>
-			<div class="item grid__container--item--5"  style="display: flex;
+
+			<div class="item grid__container--item--5">
+				<v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/articlePics%2F2BQ2L8YX7HE404LHN3YT83?alt=media&token=5d5517c2-9f4d-44d3-96ce-65b20f9b45ee" alt="" style="object-fit: cover;" />
+				<router-link to="/news/WxynsBF8rcjvuw8BEWyb">
+					<div class="item__overlay--motion">
+						<h3>EPS & Our Food Chain  &#8594</h3>
+					</div>
+				</router-link>
+			</div>
+
+
+			<!-- <div class="item grid__container--item--5"  style="display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;">
-				<img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/logoPics%2F8LW5AL3EWOVC1F6I6DQLUT?alt=media&token=bfef4f68-d605-44a9-9f55-aebb07058b65" alt="" style="object-fit: contain; width:80%; min-width:80%; margin:auto; height:auto;">
+				<v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Screen%20Shot%202020-10-28%20at%204.45.25%20PM.png?alt=media&token=01b33af3-6b49-4425-b78d-833ea3a6c84e" alt="" style="object-fit: cover;" />
 				<router-link :to="{ name: 'customers' }">
 					<div class="item__overlay--motion">
 						<h3>Our Customers  &#8594</h3>
 					</div>
 				</router-link>
-			</div>
+			</div> -->
 			<div class="item grid__container--item--6">
-				<img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FVC3%2FVC3-wines-min.png?alt=media&token=2d87f7d8-3fe7-454d-b54d-581fcf327585" alt="" style="object-fit: contain; width:100%; height:auto;">
+				<v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FVC3%2FVC3-wines-min.png?alt=media&token=2d87f7d8-3fe7-454d-b54d-581fcf327585" alt="" style="object-fit: contain; width:100%; height:auto;" />
 				<router-link :to="{ name: 'products' }">
 					<div class="item__overlay--motion">
 						<h3>Explore Our Products &#8594</h3>

@@ -32,8 +32,8 @@
               <div class="container pt-5 pb-5">
                 <form @submit.prevent>
                   <div>
-                    <label for="name">Your Name</label>
-                    <input type="text" placeholder="First and Last Name" v-model.trim="contactForm.name" id="name" required />
+                    <label for="yourName">Your Name</label>
+                    <input type="text" placeholder="First and Last Name" v-model.trim="contactForm.name" id="yourName" required />
                   </div>
                   <div>
                     <label for="email">Your Email Address</label>
@@ -62,7 +62,6 @@
                       style="display:none;" 
                       ref="upload" 
                       accept="image/*,application/pdf,.doc"
-                      required
                       @change="onDocPicked">
                     </input>
                     <button class="btn btn__outlined mt-3" @click="onPickDoc"> Choose File
@@ -231,6 +230,12 @@ export default {
     Nav,
     Loader,
     Footer
-  }
+  },
+  metaInfo: {
+    title: 'Job Application',
+    meta: [
+      { name: 'description', content: 'Join the Vericool Team' }
+    ],
+  },
 }
 </script>

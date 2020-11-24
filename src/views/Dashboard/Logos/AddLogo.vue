@@ -14,7 +14,7 @@
               :prevent-white-space="false"
               :width="240"
               :height="240"
-              :quality="10"
+              :quality="2"
               canvas-color="transparent"
               initial-size="contain"
             ></croppa>

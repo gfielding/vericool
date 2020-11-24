@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="greyback">
     <Nav />
     <div class="page pr">
     	<div class="awards__hero">
       </div>
-      <div class="container">
+      <div class="container pb-8">
         <div class="awards__main">
           <h1>Awards</h1>
           <hr>
@@ -17,7 +17,7 @@
             <div class="flex align-start justify-space-between">
               <div class="flex">
                 <div>
-                  <img :src="item.picUrl" alt="" class="award__item--pic">
+                  <v-lazy-image :src="item.picUrl" alt="" class="award__item--pic" />
                 </div>
                 <div>
                   <h3 class="item--title"><span class="dark-text">{{item.title}}</span></h3>
@@ -61,6 +61,9 @@ export default {
     if (!this.awards || this.awards.length < 1) {
       this.$store.dispatch("getAwards")
     }
+  },
+  metaInfo: {
+    title: 'Awards',
   },
 }
 </script>

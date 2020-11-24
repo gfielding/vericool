@@ -1,6 +1,6 @@
 <template>
 <div class="before-after--lg">
-  <VueCompareImage leftLabel="Theirs" leftImage="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/BeforeAfter%2FScreen%20Shot%202020-10-20%20at%2012.46.11%20PM.png?alt=media&token=f762a444-bb69-4fcc-a946-774c39a20976" rightLabel="Ours" rightImage="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/BeforeAfter%2FScreen%20Shot%202020-10-20%20at%2012.46.28%20PM.png?alt=media&token=558433ce-5f84-49b8-a1b2-7d9aeb6a77a7" />
+  <VueCompareImage leftLabel="Theirs" leftImage="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Data%2FScreen%20Shot%202020-10-20%20at%2012.46.11%20PM%20(1)-min.png?alt=media&token=6c938f23-ba33-4855-9b06-0afa5ad6509e" rightLabel="Ours" rightImage="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Data%2FScreen%20Shot%202020-10-20%20at%2012.46.28%20PM%20(1)-min.png?alt=media&token=9bae1003-36b4-4a71-9540-47af86517a5b" />
 </div>
 </template>
 

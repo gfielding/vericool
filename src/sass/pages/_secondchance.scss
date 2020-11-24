@@ -1,17 +1,19 @@
 .second-chance {
-	margin-bottom: 6rem;
+	//padding-bottom: 4rem;
+	background: $varGreyGradient;
 	&__hero {
 		@include hero;
 	}
 	&__main {
 		@include upfix;
 		background-color: white;
-		padding:6rem 4rem;
+		padding:6rem 4rem 2rem 4rem;
+		@include respond(phone) {padding:2rem;}
 		z-index: 1;
 		position: relative;
 	}
 	&__darrell {
-		background-color:$background !important;
+		//background-color:$background !important;
 		padding: 6rem 0;
 		@include content-wrapper;
 		@include grid-container;
@@ -24,6 +26,7 @@
 		&--item {
 			text-align: center;
 			padding:2rem;
+			@include respond(tablet-land) {padding:2rem 0;}
 			.video-responsive {
 				@include shadow;
 			}
@@ -60,7 +63,7 @@
 				grid-template-columns: 1fr 1fr;
 			}
 			@include respond(phone) {
-				grid-template-rows: repeat(3, min-content);
+				grid-template-rows: repeat(2, min-content);
 				grid-template-columns: 1fr;
 			}
 			.card {

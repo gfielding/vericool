@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="greyback">
     <Nav />
   
     <div class="page environmental-impact">
@@ -7,8 +7,8 @@
         
       </div>
 
-      <div class="container">
-        <div class="environmental-impact__main pb-0">
+      <div class="container pb-8">
+        <div class="environmental-impact__main pb-8">
           <h1>Environmental Impact</h1>
           <h3>What EPS (Styrofoam) does to our environment, and what to do about it</h3>
           <hr>
@@ -47,6 +47,17 @@
             <p>In 2014 styrene, a key component of EPS, was listed as a possible carcinogen.</p>
             <p>Because styrofoam products break apart so easily, animals either confuse it as food and ingest its toxic chemicals or they suffer from it as a choking hazard.</p>
             <!-- <p>Polystyrene, commonly referred to as Styrofoam™, is extremely difficult to dispose of properly, and it releases dangerous styrene into virtually all living creatures. After it has been used, polystyrene food packaging is typically not “clean” enough to be recycled, and only 1.3% of total polystyrene was recycled in the US in 2015. Even when it is clean enough to recycle, only about 5% of the volume of Styrofoam is actually polystyrene, and the rest is air, making Styrofoam uneconomical to collect and store for recycling. In rare instances, manufacturers who handle large amounts of polystyrene will consolidate their scrap materials with compactors (compressing them to less than a tenth of their original volume), and then will sell the compacted blocks of polystyrene to recyclers. However, the polystyrene in these blocks cannot be recovered for use in new polystyrene products. Its quality is only adequate to use as filler in other plastics, which then, in turn, becomes virtually impossible to recycle. - <a href="https://www.worldcentric.com/blog/impacts-and-risks-of-styrofoam" target="_blank" nofollow>(source)</a></p> -->
+          
+            <hr>
+            <h2>How do Our Materials Reduce our Footprint?</h2>
+              <ul>
+                <li>Our products are made with renewable raw and post-consumer materials</li>
+                <li>All of our materials match or outperform EPS, but without the harmful effects on our environment/wildlife</li>
+                <li>All materials meet compostable and curbside recyclability standards</li>
+                <li>Our insulation material is non-toxic, starch-based and water soluble (meaning if you run it under water, it will disappear!)</li>
+                <li>Our materials meet US ASTM D6400 and European specification EN 13432, which require non-harmful degradation in 180 days or less</li>
+                <li>All our materials support corporate zero waste and sustainability goals</li>
+              </ul>
           </div>
         </div>
         <div class="dark pt-5 pb-5">
@@ -86,74 +97,27 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <h2 class="pt-5">How do Our Materials Reduce our Footprint?</h2>
-        <ul>
-          <li>Our products are made with renewable raw and post-consumer materials</li>
-          <li>All of our materials match or outperform EPS, but without the harmful effects on our environment/wildlife</li>
-          <li>All materials meet compostable and curbside recyclability standards</li>
-          <li>Our insulation material is non-toxic, starch-based and water soluble (meaning if you run it under water, it will disappear!)</li>
-          <li>Our materials meet US ASTM D6400 and European specification EN 13432, which require non-harmful degradation in 180 days or less</li>
-          <li>All our materials support corporate zero waste and sustainability goals</li>
-        </ul>
-        <hr>
-        <ProductScroller />
-        <hr>
+
         <transition name="fade">
           <Loader v-if="!impactPics || impactPics.length < 1" />
         </transition>
-          <div class="environmental-impact__grid" v-if="impactPics || impactPics.length >= 1">
-            <div class="environmental-impact__grid--item" v-for="item in impactPics" data-aos="fade" data-aos-once="true">
-              <img :src="item.picUrl" alt="environmental impact of EPS">
-            </div>
+
+      <div class="greyback pb-8">
+        <div class="container">
+      
+        <h2 class="pt-5">See for yourself:</h2>
+        <div class="environmental-impact__grid" v-if="impactPics || impactPics.length >= 1">
+          <div class="environmental-impact__grid--item" v-for="item in impactPics">
+            <img :src="item.picUrl" alt="environmental impact of EPS" />
           </div>
-
-
-
- 
- 
- 
-
-
-<!-- 
-            <p>Vericoolers improve the health and well-being of people and our planet.</p>
-            <ul>
-              <li>Affordable</li>
-              <li>Performs as well as EPS (commonly referred to as Styrofoam®), without harming wildlife</li>
-              <li>Made with renewable raw and post-consumer materials</li>
-              <li>Eliminates manufacturing waste with unique individual insulating beads</li>
-              <li>Meets compostable and curbside recyclable standards</li>
-              <li>Reduce temperature edge loss and will not crack or split, offering increased thermal and transit protection</li>
-              <li>Insulation beads with enclosure bags meet US ASTM D6400 and European specification EN 13432, which require degradation in 180 days or less</li>
-              <li>Materials support corporate zero waste and sustainability goals</li>
-            </ul> -->
-
-<!-- 
-          <h2>Vericool has the perfect products for your cold chain shipping needs.</h2>
-          <p>Vericool provides an environmentally and financially safe replacement of EPS. There is no reason to risk the health of your customers by shipping meals in unproven and unsafe packages. Make it clear to your customers, stockholders, environmental and government organizations that your company is committed to reducing environmental impact, sustainability, and life cycle to end of life management.</p>
-          <div class="icon__boxes">
-            <div class="icon__boxes--item">
-              <i class="fal fa-tablet-rugged" data-aos="flip-left" data-aos-delay="200"></i>
-              <h3>Durable</h3>
-            </div>
-            <div class="icon__boxes--item">
-              <i class="fad fa-coins" data-aos="flip-left" data-aos-delay="200"></i>
-              <h3>Low-Cost</h3>
-            </div>
-            <div class="icon__boxes--item">
-              <i class="fad fa-leaf" data-aos="flip-left" data-aos-delay="200"></i>
-              <h3>Sustainable</h3>
-            </div>
-          </div>
-
-          <hr> -->
-
-          <!-- <h2>EPS BANS AROUD THE WORLD</h2>
-          <p>Thanks to the <a href="https://www.surfrider.org/" target="_blank" nofollow>Surfrider Foundation</a> for contributing to our map!</p>
-          <div class="video-wrapper">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1BxPj2XWM8xxY07ra1moSGRPkI20" width="640" height="480"></iframe>
-          </div> -->
         </div>
+      </div>
+</div>
+      <div class="callout">
+        <div class="container">
+          <ProductScroller />
+        </div>
+      </div>
       </div>
     <Footer />
   </div>
@@ -191,7 +155,7 @@ export default {
     onScroll(e) {
       this.windowTop = e.target.documentElement.scrollTop;
       let top = this.windowTop
-      if (this.windowTop > 1000) {
+      if (this.windowTop > 800) {
         this.run()
       }
     },
@@ -211,6 +175,12 @@ export default {
     Footer,
     ProductScroller,
     Loader
-  }
+  },
+  metaInfo: {
+    title: 'EPS Environmental Impact',
+    meta: [
+      { name: 'description', content: 'EPS does not decompose, but instead “photodegrades,” breaking down into smaller and smaller pieces that continue to pervasively accumulate in marine environments.' }
+    ],
+  },
 }
 </script>

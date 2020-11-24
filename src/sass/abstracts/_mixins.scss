@@ -25,7 +25,8 @@
 }
 
 @mixin gradient {
-	background:linear-gradient(120deg, $secondaryLight 0%, $primaryLight 100%);
+	//background:linear-gradient(120deg, $varSecondary 0%, $varPrimary 100%);
+	background:$masonGreen;
   display: block;
   //-webkit-background-clip:text;
   //color:transparent;
@@ -46,7 +47,7 @@
 	border-bottom: solid;
 	border-image-slice: 1;
 	border-width: 1.2rem;
-	border-image-source: linear-gradient(to right, $primary, $secondary);
+	border-image-source: linear-gradient(to right, $varPrimary, $varSecondary);
 }
 
 @mixin grid-container {
@@ -72,7 +73,7 @@
 		grid-template-columns: 1fr 1fr;
 	}
 	&--item {
-		background-color: white;
+		background-color: transparent;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -87,14 +88,14 @@
 }
 
 @mixin content-wrapper {
-	background:white;
+	background:transparent;
 	margin-bottom:6rem;
 	margin: 4rem 10vw;
 	padding:0 2rem;
 	@include respond(tablet-port) {
-		margin: 4rem 3vw;
+		margin: 3rem 3vw;
 	}
-	@include respond(phone) {margin: 4rem 0;}
+	@include respond(phone) {margin: 2rem 0;}
 }
 
 @mixin slide-image {
@@ -107,36 +108,41 @@
 }
 @mixin nav-container {
 	max-width:1400px;
+	//max-width:1100px;
 	margin:auto;
 	padding: 1rem 2rem;
 	height: 100%;
 	@include respond(phone) {
-    padding:0 2rem;
+    padding:0 1rem;
   }
 }
 
 @mixin button {
 	background-color: white;
-  border-radius: 0;
+  border-radius: $radius;
   letter-spacing: -0.02rem;
   border: none;
   font-family: 'Bebas Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  padding: .6rem 1.2rem;
+  padding: .8rem 1.6rem 0.7rem 1.6rem;
   letter-spacing: 0.24rem;
-  font-size:1.4rem;
+  font-size:1.6rem;
   font-weight: 400;
   transition: all .3s;
 	display:inline-block;
 	color:inherit;
 	text-transform: uppercase;
+	@include shadow;
+	&:hover {
+		@include shadow-med;
+	}
 }
 
 @mixin card {
 	border-radius: 0;
-	background:white;
+	background:transparent;
 	min-height: 10rem;
 	&__body {
 		padding:1rem 2rem 2rem 2rem;
@@ -163,19 +169,51 @@
 
 
 @mixin shadow {
-	box-shadow: 0 0.8rem 1.6rem -.6rem rgba(0,0,0,.4);
+	box-shadow: 0 0.6rem 1.2rem -.6rem rgba(0,0,0,.2);
+}
+
+@mixin shadow-med {
+	box-shadow: 0 1rem 2rem -.6rem rgba(0,0,0,.3);
 }
 
 @mixin shadow-large {
-	box-shadow: 0 1.2rem 2.4rem -.6rem rgba(0,0,0,.6);
+	//box-shadow: 0 1.2rem 2.4rem -.6rem rgba(0,0,0,.4);
+	box-shadow: 0 1.2rem 2.4rem -.6rem rgba(0,0,0,.4);
 }
 
 @mixin text-shadow {
 	text-shadow: 0.2rem 0.2rem 1.6rem $dark;
 }
 
+@mixin kraft {
+	background-image: url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/kraft.jpg?alt=media&token=df95815d-f70f-467e-8f7d-ab50bd332b03');
+	background-repeat:repeat;
+	background-size: cover;
+	@include shadow-large;
+	color:white;
+	text-align: center;
+   // padding: 10%;
+   padding:2rem;
+	p {
+		text-transform: uppercase;
+		padding-bottom: 1rem;
+		font-weight: 500;
+		line-height: 7;
+		font-size: 2rem;
+		margin-bottom: 0;
+		letter-spacing: 0.6rem;
+		border:2px solid white;
+	}
+}
+
 @mixin hero {
 	min-height: 48vh;
+	@include respond(tablet-port) {
+		min-height: 36vh;
+	}
+	@include respond(phone) {
+		min-height: 32vh;
+	}
 	//background-image:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/TreesUp.jpg?alt=media&token=7c7e227f-550f-443a-b42e-6adb00e3addc');
 	background-image:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Carousel%2Fshutterstock_208368145-min.jpg?alt=media&token=d37ca7a9-6df2-4d0a-a723-21d6a8fb7346');
 	background-position:center center;
@@ -199,23 +237,28 @@
 }
 
 @mixin magic  {
-  background-image: linear-gradient(120deg, $secondaryLight 0%, $primaryLight 100%);
+  //background-image: linear-gradient(120deg, $varLightSecondary 0%, $varLightPrimary 100%);
+  background-image:$gradientBlue; 
   background-repeat: no-repeat;
-  background-size: 100% 0.2rem;
+  background-size: 100% 0.3rem;
   background-position: 0 88%;
   transition: background-size 0.5s ease-in;
+  padding: 0 0.5rem;
+  color: white !important;
   &:hover {
     background-size: 100% 88%;
   }
-  animation: under 5s 0.1s both;
+  animation: under 1s 0.1s both;
 }
 
 @mixin magic-fast  {
-  background-image: linear-gradient(120deg, $secondaryLight 0%, $primaryLight 100%);
+  background-image:$gradientBlue;
   background-repeat: no-repeat;
   background-size: 100% 0.2rem;
   background-position: 0 88%;
   transition: background-size 0.5s ease-in;
+  padding: 0 0.5rem;
+  color: white !important;
   &:hover {
     background-size: 100% 88%;
   }

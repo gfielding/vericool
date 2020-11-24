@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="greyback">
 		<Nav />
 		<div class="page ordering">
 			<div class="container">
@@ -12,7 +12,7 @@
 	      <h2>Custom Orders</h2>
 	      <p>We specialize in engineering customized Vericoolers for your specific needs. This ensures maximum performance and efficiency based on product payload, pack out instructions, palletizing configurations and shipping profile. Please complete the form below to help us recommend the best solutions for your needs.</p>
 			</div>
-			<div class="background pt-5 pb-5 mt-5 mb-5">
+			<div class="callout">
 				<div class="container pt-5 pb-5">
 					<LeadForm />
 				</div>
@@ -33,7 +33,13 @@ export default {
 		Nav,
 		LeadForm,
 		Footer
-	}
+	},
+	metaInfo: {
+    title: 'Become a Customer',
+    meta: [
+      { name: 'description', content: 'Get Started With Vericool Eco-Friendly Packaging' }
+    ],
+  },
 }
 	
 </script>

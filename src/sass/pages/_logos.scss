@@ -1,10 +1,11 @@
 .logos {
 	text-align: center;
-	padding:6rem 0;
+	padding:4rem 0;
 	&__grid {
 		@include grid-container;
 		@include content-wrapper;
-		grid-gap:2rem;
+		justify-content: center;
+		grid-gap:1.2rem;
 		grid-template-rows: repeat(1, minmax(4rem, min-content));
   	//grid-template-columns: repeat(7, minmax(min-content, 1fr));
   	grid-template-columns: repeat(auto-fit, 12rem);
@@ -21,12 +22,17 @@
 			grid-template-rows: repeat(1, minmax(4rem, min-content));
 			grid-template-columns: repeat(auto-fit, 10rem);
 		}
+		@include respond(phone) {
+			grid-template-rows: repeat(1, minmax(4rem, min-content));
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 
 		&--item {
 			justify-items: stretch;
 			img {
-				filter: grayscale(1) opacity(0.5);
+				//filter: grayscale(1) opacity(0.5);
 				width: 10rem;
+				opacity: 0.8;
 				//@include respond(tablet-port) {width: 9rem;}
 				@include respond(phone) {width: 8rem;}
 			}

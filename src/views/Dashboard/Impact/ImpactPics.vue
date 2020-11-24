@@ -15,7 +15,7 @@
 
       <div class="list__item" v-for="item in impactPics" :key="item.id">
         <div class="list__item--body--sm">
-          <img :src="item.picUrl" alt="">
+          <v-lazy-image :src="item.picUrl" alt="" />
         </div>
         <div class="list__button">
           <button class="btn btn__outlined ma-2" @click="remove(item)"><i class="fa fa-trash"></i></button>

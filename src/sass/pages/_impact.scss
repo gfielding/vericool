@@ -1,15 +1,19 @@
 .environmental-impact {
-	margin-bottom: 6rem;
+	//padding-bottom: 4rem;
+	//background: $varLightGrey;
+	background: $varGreyGradient;
 	&__hero {
 		@include hero;
 		background-image: url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/11PLASTIC1-jumbo.jpg?alt=media&token=1af425c2-e00a-4786-ab5d-2c7b0e1cd37f');
 		min-height: 72vh;
+		@include respond(phone) {min-height: 40vh;}
 	}
 	&__main {
 		@include upfix;
 		background-color: white;
+		color:$text;
 		padding:6rem 4rem 2rem 4rem;
-		@include respond(phone) {padding:0;}
+		@include respond(phone) {padding:2rem;}
 		z-index: 1;
 		position: relative;
 	}
@@ -34,27 +38,37 @@
 			}
 		}
 	}
-	&__grid {
-		padding-top:2rem;
+	&__grid { 
+		padding-top:0;
 		@include grid-container;
 		grid-gap:2rem;
-		grid-template-rows: repeat(1, minmax(min-content, min-content));
+		grid-template-rows: repeat(1, minmax(10rem, min-content));
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		@include respond(tablet-port) {
-			grid-template-rows: repeat(1, minmax(min-content, min-content));
-			grid-template-columns: 1fr 1fr;
+			grid-template-rows: repeat(1, minmax(8rem, min-content));
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap:1rem;
+		}
+		@include respond(phone) {
+			grid-template-rows: repeat(1, minmax(6rem, min-content));
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap:1rem;
 		}
 		&--item {
-			background-color: white;
-	    overflow: hidden;
+			// background-color: white;
+	  	// overflow: hidden;
 	    display: flex;
-	    align-items: center;
-	    height:auto;
+	    // align-items: center;
 			img {
-				min-height:100%;
 				width: 100%;
-				height: auto;
-				object-fit: contain;
+				height:auto;
+				object-fit: cover;
+				@include respond(tablet-port) {
+					max-height: 16rem;
+				}
+				@include respond(phone) {
+					max-height: 10rem;
+				}
 			}
 		}
 	}

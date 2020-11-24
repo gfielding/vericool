@@ -1,13 +1,15 @@
 /*products*/
-
 .products {
+	//background: $varGreyGradient;
+	//background:$varDarkGrey;
+	background:$varGGradient;
 	&__hero {
 		@include hero;
 	}
 	&__page {
 		@include container;
-		margin-top: 4rem;
-		margin-bottom: 4rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 		hr {
 			margin-top:1rem;
 		}
@@ -16,19 +18,21 @@
 
 .all-products {
 	@include container;
-	margin-top: 4rem;
-	margin-bottom: 4rem;
+	//color:white;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	&__grid {
 		@include grid-container;
 		grid-template-rows: repeat(1, minmax(30rem, min-content));
 		grid-gap:2rem;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		@include respond(tablet-port) {
 			grid-template-rows: repeat(1, minmax(30rem, min-content));
 			grid-template-columns: 1fr 1fr;
 		}
 		@include respond(phone) {
 			grid-template-rows: repeat(3, min-content);
-			grid-template-columns: 1fr;
+			grid-template-columns: 1fr 1fr;
 		}
 		&--item {
 			display: flex;
@@ -37,6 +41,7 @@
 			}
 			.card {
 				text-align: center;
+				cursor: pointer;
 				height: 100%;
 				width: 100%;
 		    display: flex;
@@ -44,20 +49,26 @@
 		    flex-direction: column;
 		    padding-top: 1rem;
 		    transition: all 0.3s ease-in-out !important;
+		    color:$text;
 		    h4 {
 		    	display: inline-block;
 		    }
 				img {
 					max-height: 20rem;
+					max-width: 100%;
 					width: auto;
 					margin:auto;
+					transition: all .2s ease-in-out;
 				}
 				&:hover {
-					transform:translateY(-1px);
-		    	box-shadow: 0 2rem 3rem -0.2rem rgba(0, 0, 0, 0.2);
-		    	h4 {
-		    		@include magic-fast;
+					//transform:translateY(-1px);
+		    	//box-shadow: 0 2rem 3rem -0.2rem rgba(0, 0, 0, 0.2);
+		    	img {
+		    		transform: scale(1.06);
 		    	}
+		    	// h4 {
+		    	// 	@include magic-fast;
+		    	// }
 		    }
 				p {
 					font-size: 1.4rem;
@@ -92,6 +103,21 @@
 	  grid-template-columns: 6fr 1fr 1fr;
 	 	grid-auto-flow:row dense;
 		grid-gap:1rem;
+	}
+	.col-1 {
+		width: 40%;
+		flex-direction: column;
+		@include respond(phone) {
+			width: 80%;
+			margin:auto;
+		}
+	}
+	.col-2 {
+		width:60%;
+		margin-bottom: 2rem;
+		@include respond(phone) {
+			width: 100%;
+		}
 	}
 }
 
@@ -265,4 +291,93 @@
 	}
 }
 
+.prodslides .agile .agile__list {
+  padding:1rem 0;
+}
 
+.prodslides .agile .slide.slide--thumbnail {
+  margin:2rem 1rem;
+}
+
+.prodslides .agile .slide img {
+  //height: 18rem;
+  @include respond(tablet-port) {height: 14rem;}
+}
+.prodslides .agile .agile__actions {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  // left: -5%;
+  // top: 45%;
+  // left:-1%;
+  top:20%;
+  z-index: 10;
+}
+.prodslides .agile__list {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  // width: calc(100% - 12rem);
+  width:100%;
+  margin: auto;
+  z-index: 1;
+}
+.prodslides .agile .agile__nav-button {
+  width: 6rem !important;
+height: 30rem;
+@include respond(phone) {
+  height: 24rem;
+  }
+}
+
+
+.prodslides .agile .slide {
+  //max-height:28rem !important;
+  @include respond(tablet-port) {
+    //max-height:24rem !important;
+  }
+}
+.prodslides .card {
+  height:28rem !important;
+  background-color: transparent;
+  color:white;
+  box-shadow:none;
+  height: 100% !important;
+  @include respond(tablet-port) {
+    // height:24rem !important;
+  }
+  @include respond(phone) {
+    // height:20rem !important;
+  }
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding:2rem !important;
+  min-width: 28rem !important;
+  @include respond(tablet-port) {
+    min-width: 24rem !important;
+  }
+  @include respond(phone) {min-width: 18rem !important;}
+  transition: all 0.3s;
+  h4 {
+    font-size: 1.6rem;
+    color:white;
+    @include respond(tablet-port) {
+      font-size: 1.4rem;
+    }
+    @include respond(phone) {height: 14rem;}
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+    color:white;
+    display: inline-block;
+  }
+  &:hover {
+    transform: translateY(-2px) !important;
+    // @include shadow-large;
+    // h4 {@include magic-fast;}
+  }
+}

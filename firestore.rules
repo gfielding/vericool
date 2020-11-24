@@ -4,7 +4,7 @@ service cloud.firestore {
       allow read;
       allow write: if request.auth.uid != null
     }
-    match /leads/{leadId} {
+    match /applications/{applicationId} {
       allow write;
       allow read: if request.auth.uid != null
     }

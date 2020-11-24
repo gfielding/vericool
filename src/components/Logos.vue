@@ -2,7 +2,7 @@
 	<div class="logos">
 		<div class="logos__grid">
 			<div class="logos__grid--item" v-for="item in logos">
-				<img :src="item.picUrl" :alt="item.company + ' Packaging'">
+				<img :src="item.picUrl" :alt="item.company + ' Packaging'" />
 			</div>
 		</div>		
 	</div>

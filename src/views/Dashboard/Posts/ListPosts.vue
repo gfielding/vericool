@@ -19,7 +19,7 @@
           <p v-html="$options.filters.truncate(item.body, 100)"></p>
         </div>
         <div class="list__button">
-          <router-link :to="`/dashboard/post/` + item.id">
+          <router-link :to="`/dashboard/posts/` + item.id">
             <button class="btn btn__outlined ma-2">Edit</button>
           </router-link>
           <a :href="item.url" target="_blank" nofollow>

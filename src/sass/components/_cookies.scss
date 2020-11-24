@@ -1,0 +1,25 @@
+/**COOKIES**/
+
+.cookie {
+	position: fixed;
+  display: block;
+  max-width: 40rem;
+  min-width: 24rem;
+  min-height: 8rem;
+  padding:2rem;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 99999;
+  background-color: $primary;
+  h3 {
+    color:rgba(255,255,255,0.8);
+  }
+  p {
+  	font-size:1.2rem;
+    color:white;
+  }
+  button.btn {
+    background-color: $primaryDark;
+    color:white;
+  }
+}

@@ -14,7 +14,7 @@
               :prevent-white-space="false"
               :width="240"
               :height="240"
-              :quality="10"
+              :quality="1"
               canvas-color="transparent"
               initial-size="contain"
             ></croppa>
@@ -25,14 +25,14 @@
             <input type="text" placeholder="Title" v-model.trim="award.title" id="title" required />
           </div>
           
-          <div>
+          <!-- <div>
             <label for="description">Description</label>
             <textarea name="description" id="description" cols="30" rows="10" v-model.trim="award.description" required></textarea>
           </div>
           <div class="">
             <label for="url">URL</label>
             <input type="url" placeholder="Paste Link Here" v-model.trim="award.url" id="url" required />
-          </div>
+          </div> -->
           <div class="flex justify-space-between">
             <router-link :to="{ name: 'awards' }">
               <button class="btn btn__outlined mt-4 mb-5">Cancel</button>
@@ -67,9 +67,7 @@ export default {
       performingRequest: false,
       award: {
         title: '',
-        pic: null,
-        description: '',
-        url: ''
+        pic: null
       },
       crumbs: [
         {
@@ -100,8 +98,7 @@ export default {
         blob => {
           let downloadURL
           let title = this.award.title
-          let description = this.award.description
-          let url = this.award.url
+         
           let rand = (Math.random().toString(36).substring(2, 16) + Math.random().toString(36).substring(2, 16)).toUpperCase()
           let picRef = fb.storageRef.child('profilePics/' + rand)
           picRef.put(blob).then((snap) => {
@@ -110,8 +107,7 @@ export default {
               fb.awardsCollection.add({
                 title: title,
                 picUrl: downloadURL,
-                description: description,
-                url: url,
+                
               })
               .then(
                 doc => {
@@ -135,8 +131,6 @@ export default {
     this.performingRequest = false
     this.award.title = ''
     this.award.pic = null
-    this.award.description = ''
-    this.award.url = ''
   }
 }
 </script>

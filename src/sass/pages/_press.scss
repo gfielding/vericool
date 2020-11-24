@@ -4,4 +4,7 @@
 	&__hero {
 		@include hero;
 	}
+	&__main {
+		color:$text;
+	}
 }

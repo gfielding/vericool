@@ -1,4 +1,31 @@
 /**BUTTONS**/
+button {
+	cursor:pointer;
+}
+button.lm {
+	color:$buttonblue;
+	border-radius:20rem;
+	@include shadow;
+	padding:0.5rem 1.5rem;
+	font-weight: 500;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	background:$masonButton;
+	.arrow-move {
+  	padding-left:0;
+  	transition: all ease-in-out 0.2s;
+  }  
+  &:hover {
+		//background: $masonGreen;
+		transform: scale(1.02);
+		//@include shadow-large;
+
+		// .arrow-move {
+		// 	padding-left:4%;
+
+		// }
+	}
+}
 
 .btn, .btn:link, .btn:visited {
 	@include button;
@@ -6,12 +33,17 @@
 		padding: 1rem 2rem;
 		font-size: 1.6rem;
 	}
+	&.btn__xlarge {
+		padding: 1.2rem 2.4rem 1rem 2.4rem;
+		font-size: 2rem;
+	}
 	&.btn__primary {
 		color:white;
 		background:$primary;
-		transition: background .2s ease-in;
+		transition: background .2s ease-in-out;
 		&:hover {
-			background-color:$primaryDark;
+			//background-color:$primaryDark;
+			transform: translateY(-1px);
 			//background:linear-gradient(to right, $primary, $secondary);
 		}
 	}
@@ -69,52 +101,74 @@
 .product__buttons {
 	display: flex;
   justify-content: space-around;
-  margin:6rem auto;
+  margin: 3rem auto 2rem auto;
   flex-wrap: wrap;
   @include respond(phone) {margin:1rem auto;}
 	&--item {
 		display: inline-block;
 		@include respond(phone) {display: block; width:100%; text-align: center;}
-		&--btn {
-			@include magic;
-			//background-image: radial-gradient(circle, $secondaryTrans, $secondaryTrans 100%, transparent 100%);
-	    //height: 20rem !important;
-	    //width: 20rem !important;
-	    font-size: 4rem;
-	    line-height: 0.24;
-	    position:relative;
-	    transition: all 0.4s;
-	    //border-radius: 50%;
-	    @include respond(phone) {
-	    	font-size: 3rem;
-	    	//height: 12rem !important;
-	    	//width: 12rem !important;
-	    	width:auto;
-	    	margin: 1.2rem auto;
-	    }
-	    text-align: center;
-	    .fad {
-	    	position: absolute;
-    		bottom: -2rem;
-    		transform: rotate(-30deg);
-    		right: -2rem;
-    		opacity: 0;
-    		transition: all 0.6s;
-    		@include respond(tablet-port) {
-    			bottom: 1rem;
-    			right:1rem;
-    		}
-    		@include respond(phone) {
-    			bottom: 0;
-    			right:0;
-    		}
-	    }
-	    &:hover {
-				.fad {opacity: 1;}
-				transform: translateY(-2px);
-				//@include shadow;
-				//transform: scale(1.04);
+		button.lm {
+			font-size: 3rem;
+			padding: 1rem 3rem 1rem 3rem;
+			@include respond(tablet-port) {
+				font-size:2.6rem;
+		  	margin: 1.2rem auto;
+		  	padding-top: 1.1rem;
 			}
+			@include respond(phone) {
+		  	font-size: 2.4rem;
+		  	margin: 1rem auto;
+		  	padding-top: 1rem;
+		  }
+		}
+	// 	&--btn {
+	//     font-size: 4rem;
+	//     line-height: 1;
+	//     position:relative;
+	//     background: $varPrimaryGradient;
+	//     color:white;
+	//     clip-path: polygon(4rem 0, 0% 100%, 100% 100%, 100% 0%);
+	//     padding: 1rem 2rem 1rem 6rem;
+	//     text-align: center;
+	//     transition: all ease-in-out 0.4s;
+	//     .hiddenMdAndDown {
+	//     	padding-left:0;
+	//     	 transition: all ease-in-out 0.4s;
+	//     }  
+	//     &:hover {
+	// 			background: $masonGreen;
+	// 			.hiddenMdAndDown {
+	// 				padding-left:1rem;
+	// 			}
+	// 		}
+	// 		@include respond(phone) {
+	//     	font-size: 3rem;
+	//     	width:auto;
+	//     	margin: 1.2rem auto;
+	//     	padding-top: 1rem;
+	//     }
+	// 	}
+	}
+}
+
+button.blue {
+  font-size: 2.2rem;
+  line-height: 1;
+  position:relative;
+  color:white;
+  clip-path: polygon(2rem 0, 0% 100%, 100% 100%, 100% 0%);
+  padding: 1.2rem 1.25rem 0.8rem 4.8rem;
+  text-align: center;
+  background: $varPrimaryGradient;
+  transition: all ease-in-out 0.2s;
+  .arrow-move {
+  	padding-left:0;
+  	transition: all ease-in-out 0.2s;
+  }  
+  &:hover {
+		//background: $masonGreen;
+		.arrow-move {
+			padding-left:1.2rem;
 		}
 	}
 }

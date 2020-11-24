@@ -1,4 +1,5 @@
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
+var webpack = require('webpack')
 const path = require('path');
 
 module.exports = {
@@ -12,8 +13,26 @@ module.exports = {
 	      	'/',
 	      	'/products',
 	      	'/industries',
-	      	'/environmental-impact'
-
+	      	'/environmental-impact',
+	      	'/second-chance-program',
+	      	'/data',
+	      	'/testing',
+	      	'/in-the-news',
+	      	'/careers',
+	      	'/light-test',
+	      	'/faq',
+	      	'/products/vcplus',
+	      	'/products/vcthree',
+	      	'/products/vcfusion',
+	      	'/products/vcfiber',
+	      	'/products/recyclablemailer',
+	      	'/products/fibermailer',
+	      	'/products/gogreenmailer',
+	      	'/products/vericooler',
+	      	'/news',
+	      	'/news/WxynsBF8rcjvuw8BEWyb',
+	      	'/news/wCc3SONvLdPdKEW8oCwQ',
+	      	'/news/Ywk1LRjblXMQdQ1kgIQj'
 	      ],
 	    })
 	  ]

@@ -27,7 +27,7 @@ time, mark, audio, video {
 ul {
   padding-inline-start: 4rem;
 }
-
+ol {list-style-position: inside;}
 /* make sure to set some focus styles for accessibility */
 :focus {
   outline: 0 !important;

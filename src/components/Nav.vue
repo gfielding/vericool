@@ -1,41 +1,82 @@
 <template>
-	<div>
+	<div class="navtop">
 		<div v-if="navMenu">
 			<transition name="fade2">
 				<div class="full__nav">
-					<button class="close" @click="navMenu = false">
-						<i class="fad fa-times fa-5x"></i>
-					</button>
-					<img src="@/assets/logoWhite.png" alt="">
-					<router-link :to="{ name: 'team'}" @click="navMenu = false" tag="button">
-						Meet the Team
-					</router-link>
-					<router-link :to="{ name: 'second-chance' }" @click="navMenu = false" tag="button">
-						2nd Chance Program
-					</router-link>
-					<router-link :to="{ name: 'products' }" tag="button" @click="navMenu = false">
-							Products
-						</router-link>
-
-						<router-link :to="{ name: 'environmental-impact'}" tag="button" @click="navMenu = false">
-							Environmental Impact
-						</router-link>
-
-						<router-link :to="{ name: 'industries' }" tag="button" @click="navMenu = false">
-							Industries
-						</router-link>
-
-						<!-- <router-link :to="{ name: 'customers' }" tag="button">
-							Customers
+					<div class="nav-container">
+						<div class="close-container flex justify-end">
+							<button class="close" @click="close()">
+								<i class="fad fa-times fa-2x"></i>
+							</button>
+						</div>
+					</div>
+					<div class="full__nav--box">
+						<img src="@/assets/logoWhite.png" alt="Vericool Pacakging">
+						<!-- <router-link :to="{ name: 'team'}" @click="navMenu = false" tag="button">
+							Meet the Team
 						</router-link> -->
+
+							<router-link to="{ name: 'home' }" tag="button" @click="close()">
+								Home<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
 						
-						<router-link :to="{ name: 'news' }" tag="button" @click="navMenu = false">
-							News
-						</router-link>
+							<router-link :to="{ name: 'products' }" tag="button" @click="close()">
+								Our Products<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<router-link :to="{ name: 'environmental-impact'}" tag="button" @click="close()">
+								Environmental Impact<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<router-link :to="{ name: 'second-chance' }" @click="close()" tag="button">
+								2nd Chances<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+						
+							<router-link :to="{ name: 'industries' }" tag="button" @click="close()">
+								Industry Solutions<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<router-link :to="{ name: 'data' }" tag="button" @click="close()">
+								Performance Data<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<router-link :to="{ name: 'testing' }" tag="button" @click="close()">
+								Testing<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<router-link :to="{ name: 'light-test' }" tag="button" @click="close()">
+								Light Test<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<router-link :to="{ name: 'faq' }" tag="button" @click="close()">
+								FAQs<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<router-link :to="{ name: 'pr' }" tag="button" @click="close()">
+								In The News<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<!-- <router-link :to="{ name: 'awards' }" tag="button" @click="close()">
+								Awards<i class="fad fa-chevron-right ml-4"></i>
+							</router-link> -->
+
+							<router-link :to="{ name: 'careers' }" tag="button" @click="close()">
+								Careers<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+							
+							<router-link :to="{ name: 'news' }" tag="button" @click="close()">
+								Blog<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+							<router-link :to="{ name: 'getstarted' }" tag="button" @click="close()">
+								Contact Us<i class="fad fa-chevron-right ml-4"></i>
+							</router-link>
+
+					</div>
 				</div>
 			</transition>
 		</div>
-		<div class="pre-nav hiddenSmAndDown">
+		<!-- <div class="pre-nav hiddenSmAndDown">
 			<div class="pre-nav__container">
 				<div class="pre-nav__items">
 					<div v-for="item in articles.slice(0, 1)">
@@ -45,7 +86,7 @@
           </div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="navbar">
 			<div class="navbar__container">
 				<div class="navbar__logo">
@@ -56,8 +97,9 @@
 						<img src="@/assets/logo.png" alt="Vericool Pacakging" class="navbar__logo-textLogo">
 						<!--<img src="@/assets/vericool-icon-white.png" alt="Vericool Pacakging" class="navbar__logo-iconLogo">-->
 					</router-link>
+				</div>
 				
-					<div class="navbar__items hiddenMdAndDown">
+					<div class="navbar__items">
 
 
 						<!-- <router-link to="/2" tag="button">
@@ -125,27 +167,35 @@
 							</transition>
 						</button>-->
 
-						<router-link :to="{ name: 'products' }" tag="button">
+						<router-link to="{ name: 'home' }" tag="button" class="hiddenMdAndDown">
 							<span class="hov">
-								Our Products
+								<!-- <span class="hiddenLgAndUp">Explore Our Products</span> -->
+								<span class="hiddenMdAndDown">Home</span>
 							</span>
 						</router-link>
 
-						<router-link :to="{ name: 'industries' }" tag="button">
+						<router-link :to="{ name: 'all-products' }" tag="button" class="hiddenMdAndDown">
 							<span class="hov">
-								Industry Solutions
+								<!-- <span class="hiddenLgAndUp">Explore Our Products</span> -->
+								<span class="hiddenMdAndDown">Products</span>
 							</span>
 						</router-link>
 
-						<router-link :to="{ name: 'environmental-impact'}" tag="button">
+						<router-link :to="{ name: 'industries' }" tag="button" class="hiddenMdAndDown">
+							<span class="hov">
+								Industries
+							</span>
+						</router-link>
+
+						<router-link :to="{ name: 'environmental-impact'}" tag="button" class="hiddenMdAndDown">
 							<span class="hov">
 								Environmental Impact
 							</span>
 						</router-link>
 
-						<router-link :to="{ name: 'second-chance' }" tag="button">
+						<router-link :to="{ name: 'second-chance' }" tag="button" class="hiddenMdAndDown">
 							<span class="hov">
-								2nd-Chance Program
+								2nd Chances
 							</span>
 						</router-link>
 
@@ -153,7 +203,7 @@
 							Customers
 						</router-link> -->
 						
-						<router-link :to="{ name: 'news' }" tag="button">
+						<router-link :to="{ name: 'news' }" tag="button" class="hiddenMdAndDown">
 							<span class="hov">
 								News
 							</span>
@@ -177,8 +227,9 @@
 								</div>
 							</transition>
 						</button>-->
-					</div>
+
 				</div>
+
 				<div class="navbar__right">
 				
 					<div class="navbar__right--social hiddenSmAndDown">
@@ -198,17 +249,25 @@
 						</a>
 					</div>	
 					<div class="navbar__right--buttons">
-						<router-link :to="{ name: 'getstarted' }" tag="button" class="btn btn__large btn__primary" v-if="!currentUser">
+
+						<router-link :to="{ name: 'getstarted' }" tag="button" class="btn btn__large btn__primary hiddenXsOnly" v-if="!currentUser">
 							Contact Us
 						</router-link>
+
+						<router-link :to="{ name: 'getstarted' }" tag="button" class="btn btn__primary hiddenSmAndUp" v-if="!currentUser">
+							Contact Us
+						</router-link>
+
+
 						<router-link :to="{ name: 'dashboard' }" v-if="currentUser">
-							<button class="btn btn__outlined">Dashboard</button>
+							<button class="btn btn__primary">Dashboard</button>
 						</router-link>
 					</div>
-					<button @click="showMenu()" class="navbar__right--bars hiddenLgAndUp">
-						<i class="fad fa-bars fa-4x"></i>
+					<button @click="showMenu()" class="navbar__right--bars">
+						<i class="fad fa-bars fa-2x"></i>
 					</button>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -265,6 +324,10 @@ export default {
 		hideInquiries() {
 			this.inquiriesMenu = false;
 		},
+		close() {
+			this.navMenu = false;
+			this.$nextTick(); 
+		}
 	}
 }
 </script>

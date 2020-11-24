@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="greyback">
     <Nav />
     <div class="page article">
 
@@ -12,11 +12,12 @@
 	    	<div class="container">
 
         <div class="article__main" v-if="articleInfo">
+          
+            <h1>{{articleInfo.title}}</h1>
+            <div class="light caption">
+          		{{articleInfo.date | moment("MMM Do YYYY")}}
+          	</div>
 
-          <h1>{{articleInfo.title}}</h1>
-          <div class="light">
-        		{{articleInfo.date | moment("MMM Do YYYY")}}
-        	</div>
           <hr>
           <div v-html="articleInfo.body"></div>
           <hr>
@@ -47,6 +48,14 @@ export default {
     Nav,
     Loader,
     Footer
-  }
+  },
+  metaInfo() {
+    return {
+      title: `${this.articleInfo.title}`,
+      meta: [
+        { name: 'description', content: this.articleInfo.body }
+      ],
+    }
+  },
 }
 </script>

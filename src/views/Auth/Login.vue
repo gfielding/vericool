@@ -85,6 +85,12 @@ export default {
         password: this.loginForm.password
       })
     }
-  }
+  },
+  metaInfo: {
+    title: 'Admin Login',
+    meta: [
+      { name: 'description', content: 'Your Vericool Account Login' }
+    ],
+  },
 }
 </script>

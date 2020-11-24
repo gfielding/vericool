@@ -19,12 +19,12 @@
 	    	}
 	    }
 	    &:hover {
-	    	@include shadow-large;
-	    	transform: translateY(-2px);
-	    	h4 {
-	    		color:$text;
-	    		@include magic-fast
-	    	}
+	    	// @include shadow-large;
+	    	// transform: translateY(-1px);
+	    	// h4 {
+	    	// 	color:$text;
+	    	// 	@include magic-fast
+	    	// }
 	    }
 	    @include respond(tablet-port) {
 	  		width:auto;
@@ -57,7 +57,7 @@
 		@include grid-container;
 		grid-gap: 2rem;
 		grid-template-rows: minmax(min-content, min-content);
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		@include respond(tablet-port) {
 			grid-template-rows: repeat(1, minmax(24rem, min-content));
 			grid-template-columns: 1fr 1fr;

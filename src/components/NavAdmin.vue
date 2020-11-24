@@ -20,8 +20,8 @@
 						<!--<img src="@/assets/vericool-icon-white.png" alt="Vericool Pacakging" class="navbar__logo-iconLogo">-->
 					</router-link>
 
-					<div class="navbar__admin__items">
-						<h3>// Admin</h3>
+					<div class="navbar__admin__items hiddenXsOnly">
+						<h3 class="mb-0 light">// Admin</h3>
 					</div>
 				
 					<!-- <div class="navbar__admin__items">

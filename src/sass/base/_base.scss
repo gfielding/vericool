@@ -20,24 +20,59 @@ a {
 }
 
 hr {
-	background-color: #fff;
-	border-top: 0.4rem dotted $textLight;
-	margin-bottom: 2rem;
-	margin-top: 2rem;
+	background-color: transparent;
+	//border-top: 0.3rem dotted $background;
+	//border-top:2px solid rgba(255,255,255,.4);
+	border-top:3px solid rgba(0,0,0,.12);
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 canvas {
 	border: 1px solid !important;
 }
 
-.dark {
-	background-color:#212121;
+.kraft {
+	@include kraft;
+	margin: 6rem;
+}
+
+.bluelineback {
+	background:$varBlueGreyGradient !important;
+	padding:6rem 0;
+	.content-wrapper {
+		background: transparent;
+		color:white;
+		margin:0 10vw;
+	}
+}
+
+.greyback {
+	//background: $varGreyGradient;
+	//color:white;
+	background:$varGGradient;
+}
+.darkBlueGrey {
+	background:$varDarkBlueGrey;
 	color:white;
-	h2 {
-		font-size: 4.8rem;
-		font-style: italic;
-	}
-	.underline--magical {
-		color:black;
-	}
+}
+
+.darkPrimary {
+	background:$gradientDarkBlue;
+	color:white;
+}
+.dark {
+  background-color:#121212;
+  //background: $primaryDark2;
+  color:white;
+  h2 {
+    font-size: 4.4rem;
+    font-style: italic;
+    @include respond(tablet-port) {
+      font-size: 3rem;
+    }
+  }
+  // .underline--magical {
+  //   color:black;
+  // }
 }

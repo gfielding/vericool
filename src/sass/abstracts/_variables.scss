@@ -2,12 +2,14 @@
 //$text: #9897A1;
 //$text: #666;
 //$text: #26282A;
-$text: #585858;
+//$text: #585858;
+$text: #757575;
 $textLight: lighten($text, 20%);
-$textBright: lighten($text, 36%);
+$textBright: lighten($text, 56%);
 $textDark: darken($text, 20%);
 $background:#f7f5f1;
 $backDark: darken($background, 4%);
+$backDark2: darken($background, 20%);
 $backLight: lighten($background, 20%);
 $black: #1f1f1f;
 $dark: #26282A;
@@ -16,7 +18,8 @@ $ptrans1: rgba($primary, 0.2);
 $ptrans2: rgba($primary, 0.4);
 $ptrans3: rgba($primary, 0.6);
 //$primaryDark: darken($primary, 5%);
-$primaryDark: darken($primary, 10%);
+$primaryDark: darken($primary, 30%);
+$primaryDark2: darken($primary, 40%);
 $primaryLight: lighten($primary, 20%);
 $secondary: #78c255;
 $strans1: rgba($secondary, 0.2);
@@ -35,9 +38,56 @@ $primaryTrans: rgba(122,203,232, 0.28);
 $secondaryTrans: rgba($secondary, 0.28);
 
 $gradient:linear-gradient(to right,($secondary, $primary));
+$gradientBlue:linear-gradient(to right bottom,($primaryLight, $primary));
+$gradientBlue2:linear-gradient(to right bottom,($primaryLight, $primaryDark));
+$gradientDarkBlue:linear-gradient(to right bottom,($primaryDark, $primaryDark2));
+$secondaryGradient:linear-gradient(to right,($secondary, $secondaryDark));
 
 $success: green;
 $error: red;
+
+$blue1: #00b3ee;
+$blue2: #007dc1;
+$buttonblue: #6fdfff;
+
+$masonBack:linear-gradient(to right,(#a8acaf, #dbdfe0));
+$masonBlue:linear-gradient(to right,($blue1, $blue2));
+$masonGreen:linear-gradient(to right,(#4c9748, #75c056));
+$masonBlueLine:linear-gradient(to right bottom,(#63787f 50%,#687c82 50%));
+$masonButton:radial-gradient(#007dc1, #044e6b);
+
+$masonMedGrey:#929497;
+$masonDarkGrey:#919598;
+
+//$varGrey:#a8acaf;
+//$varGrey:#a2a2a2;
+$varGrey:#b3b3b0;
+$varLightGrey:lighten($varGrey, 12%);
+$varDarkGrey:darken($varGrey, 12%);
+$varGreyBlockGradient:linear-gradient(to right bottom,($varLightGrey 50%, $varDarkGrey 50%));
+$varGreyGradient:linear-gradient(to right,($varLightGrey, $varDarkGrey));
+//$varGreyGradient:linear-gradient(to right, #D6D2CF, #8c8b83);
+
+$varGGradient:linear-gradient(to right,(#f5f5f5, #D6D5D4));
+
+$varBlueGrey:#687c82;
+$varLightBlueGrey:lighten($varBlueGrey, 15%);
+
+$varDarkBlueGrey:darken($varBlueGrey, 15%);
+
+$varBlueGreyGradient:linear-gradient(to right,($varBlueGrey, $varLightBlueGrey));
+
+$varPrimary: #007dc1;
+$varLightPrimary:lighten($varPrimary, 15%);
+$varDarkPrimary:darken($varPrimary, 15%);
+$varPrimaryRadial:radial-gradient($varPrimary, $varDarkPrimary);
+$varPrimaryGradient:linear-gradient(to right,($varDarkPrimary, $varLightPrimary));
+
+$varSecondary: #4c9748;
+$varLightSecondary:lighten($varSecondary, 15%);
+$varDarkSecondary:darken($varSecondary, 15%);
+$varSecondaryGradient:linear-gradient(to right,($varLightSecondary, $varDarkSecondary));
+
 
 $letter-spacing: 0.12rem;
 

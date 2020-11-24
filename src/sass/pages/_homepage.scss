@@ -1,11 +1,466 @@
 .homepage {
 	//padding:0 2rem;
+	// margin-top:7rem;
+	// @include respond(tablet-land) {
+	// 	margin-top:6rem;
+	// }
+	// @include respond(tablet-port) {
+	// 	margin-top:5.4rem;
+	// }
+	// @include respond(phone) {
+	// 	margin-top:4.8rem;
+	// }
+	&__top {
+		img {
+			width:100%;
+		}
+		.kitchen {
+			position: relative;
+			.box {
+				background: rgba(0,0,0,.5);
+				border-radius:2rem;
+				color:white;
+				width: auto;
+				position: absolute;
+				bottom:12vh;
+				left:15vw;
+				padding:2rem;
+				text-align:center;
+				p {
+					font-size: 2rem;
+				}
+				@include respond(tablet-land) {
+					bottom:7vh;
+					left:10vw;
+				}
+				@include respond(tablet-port) {
+					bottom:3vh;
+					left:10vw;
+				}
+				@include respond(phone) {
+					bottom:1vh;
+					padding:1.5rem;
+					left:1vw;
+					p {
+						font-size: 1.2rem;
+					}
+					h1 {
+						font-size: 2.2rem;
+					}
+				}
+			}
+		}
+	}
+	&__grey {
+		//background:$masonDarkGrey;
+		background:$varGreyGradient;
+		padding:9rem 6rem 6rem 6rem;
+		@include respond(tablet-land) {
+			padding:6rem 4rem 6rem 4rem;
+		}
+	  @include respond(phone) {
+	  	padding:3rem 2rem 3rem 2rem;
+	  }
+		color:white;
+		display: flex;
+		flex-wrap: wrap;
+		&--1 {
+			flex:1;
+			&--box {
+				display: flex;
+				flex-direction: column;
+				align-items:center;
+				img {
+					filter:brightness(20);
+					width: 25%;
+					margin-bottom: 1rem;
+				}
+				p {
+					font-weight: 700;
+					margin-bottom:3rem;
+				}
+			}
+		}
+		&--2 {
+			flex:3;
+			align-items: center;
+	    justify-content: center;
+	    display: flex;
+	    // padding:0 10vw;
+			&--box {
+				padding:3rem 6rem;
+				border:1px solid transparent; 
+				text-align: center;
+				width:70%;
+				@include respond(tablet-land) {
+					padding:2rem 4rem;
+				}
+			  @include respond(phone) {
+			  	padding:2rem 2rem;
+			  }
+			  background:
+			    linear-gradient($primaryLight,$primary) top left,
+			    linear-gradient($primaryLight,$primary) top left,
+			    linear-gradient($primaryLight,$primary) bottom left,
+			    linear-gradient($primaryLight,$primary) bottom left,
+			    linear-gradient($primaryLight,$primary) top right,
+			    linear-gradient($primaryLight,$primary) top right,
+			    linear-gradient($primaryLight,$primary) bottom right,
+			    linear-gradient($primaryLight,$primary) bottom right;
+			  background-size:4px 6rem, 6rem 4px;
+			  background-origin:border-box;
+			  background-repeat:no-repeat;
+			  p {
+			  	font-size: 3.2rem;
+			    line-height: 1.6;
+			    font-style: italic;
+			    @include respond(tablet-land) {font-size: 2.8rem;}
+			    @include respond(phone) {font-size: 2.4rem;}
+			  }
+			}
+		}
+		&--3 {
+			flex:1;
+			&--box {
+				display: flex;
+				flex-direction: column;
+				align-items:center;
+				img {
+					filter:brightness(20);
+					width: 25%;
+					margin-bottom: 1rem;
+				}
+				p {
+					font-weight: 700;
+					margin-bottom:3rem;
+				}
+			}
+		}
+	}
+	&__cooler {
+		.content-wrapper {
+			background-color: transparent;
+			margin-top:0;
+			margin-bottom:0;
+		}
+		&__flex {
+			display: flex;
+			flex-wrap: wrap-reverse;
+			&--1 {
+				flex:1;
+				min-width: 28rem;
+				//background:#eee;
+				background:#465358;
+				display: flex;
+				align-items:center;
+				justify-content: center;
+				flex-direction: column;
+				padding:4rem 5vw;
+				img {
+					width: 100%;
+				}
+			}
+			&--2 {
+				flex:1;
+				min-width: 28rem;
+				display: flex;
+				align-items:center;
+				justify-content: center;
+				flex-direction: column;
+				padding:4rem 5vw;
+				background:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/background8-min.jpg?alt=media&token=995c23be-26f9-4834-9555-591f5442469f');
+				background-size:cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				.kraft {
+					p {
+						font-size: 2.4rem;
+						font-weight: 500;
+						line-height: 3;
+						letter-spacing: 0.6rem;
+						@include respond(tablet-port) {
+							font-size: 2.2rem;
+						}
+						@include respond(phone) {
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__globe {
+		//background: $varGreyBlockGradient;
+		background:white;
+		padding:4rem 0 0 0;
+		@include respond(phone) {
+			padding:2rem 0 0 0;
+		}
+		.content-wrapper {
+			background-color: transparent;
+			margin-top:0;
+			margin-bottom:0;
+		}
+		&__flex {
+		display: flex;
+		flex-wrap: wrap-reverse;
+			&--1 {
+				flex:2;
+				align-items: center;
+		    justify-content: flex-end;
+		    @include respond(phone) {
+		    	justify-content: flex-start;
+		    }
+		    flex-direction: column;
+		    display: flex;
+				// min-width: 30rem;
+				width: 100%;
+				height: 70vh;
+				position: relative;
+				// @include respond(tablet-land) {min-width: 48rem;}
+
+				// display: flex;
+				// align-items:center;
+				// justify-content: flex-end;
+				background:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/2nd-chances-hands3.png?alt=media&token=cef8620e-ccb9-4ed5-852e-4045351310bf');
+				background-size:contain;
+				background-position: bottom center;
+				background-repeat: no-repeat;
+				
+				//@include respond(tablet-port) {height:auto; min-width: 30rem;}
+				// min-width: 30rem;
+				// min-height: 60vh;
+				// @include respond(tablet-port) {min-height: 40vh;}
+				// @include respond(tablet-land) {min-height: 30vh;}
+				// @include respond(phone) {min-height: 20vh;}
+				@include respond(tablet-port) {height: 50vh;}
+				@include respond(phone) {
+					height: 50vh;
+					background:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/2nd-chances-handssq.png?alt=media&token=4fa40c03-518f-44ca-9176-a9ad55db838f');
+					background-size:contain;
+					background-position: bottom center;
+					background-repeat: no-repeat;
+				}
+				.box {
+					width: 80%;
+					min-width: 28rem;
+					max-width: 64rem;
+					text-align:center;
+					color:white;
+					// position: absolute;
+					// right: 0;
+					//@include respond(tablet-land) {width:100%;}
+					//@include kraft;
+					background: rgba(0,0,0,.5);
+					border-radius:2rem;
+					p {
+						text-transform: none !important;
+						line-height: 1.6 !important;
+						border:none !important;
+						font-size: 1.6rem !important;
+						font-weight: 500 !important;
+					}
+					strong {
+						font-weight: 600 !important;
+					}
+			    padding: 1.6rem;
+			    //border-radius: 1rem;
+			    //margin-bottom:6rem;
+			    // bottom: -12vh;
+    			// z-index: 10;
+    			margin-bottom: 6%;
+    			@include respond(phone) {
+    				margin-bottom: 0;
+    			}
+    			h4 {
+    				line-height: 1.35;
+    				@include respond(phone) {font-size: 1.4rem !important;}
+    			}
+				}
+				
+			}
+			// &--2 {
+			// 	flex:1;
+			// 	min-width: 30rem;
+			// 	//height: 70vh;
+			// 	@include respond(tablet-port) {height: 40vh;}
+			// 	display: flex;
+			// 	align-items:center;
+			// 	justify-content: flex-start;
+			// 	.box {
+			// 		width: 100%;
+			// 		@include respond(tablet-land) {width:100%;}
+			// 		@include kraft;
+			// 		p {
+			// 			text-transform: none !important;
+			// 			line-height: 1.5 !important;
+			// 			border:none !important;
+			// 			font-size: 1.6rem !important;
+			// 			font-weight: 500 !important;
+			// 		}
+			// 		strong {
+			// 			font-weight: 900 !important;
+			// 		}
+			//     padding: 2rem;
+			//     //border-radius: 1rem;
+			//     margin-bottom:6rem;
+			// 	}
+			// }
+		}
+	}
+	&__fights {
+		background: $varGGradient;
+		padding:6rem 0;
+		@include respond(tablet-port) {padding:1rem 0;}
+		.content-wrapper {
+			background-color: transparent;
+		}
+		&__flex {
+			display: flex;
+			flex-wrap: wrap;
+			&--1 {
+				background:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/11PLASTIC1-jumboDark.jpg?alt=media&token=cac86768-80e2-4448-ad53-287a18c0bb15');
+				background-size:cover;
+				position: relative;
+				min-width: 28rem;
+				padding:16rem 4rem;
+				@include respond(phone) {
+					padding:10rem 2rem;
+				}
+				flex:1;
+				color:white;
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction:column;
+
+					h4 {
+						font-size: 4rem;
+					}
+					p {
+						text-transform: none !important;
+						border:none !important;
+						letter-spacing: 0;
+						line-height:1.5;
+						font-weight:500;
+						font-size:1.8rem;
+					}
+					// .img-box {
+					// 	//height:60%;
+					// 	overflow: hidden;
+					// 	img {
+					// 		object-fit: cover;
+    	// 				object-position: center center;
+					// 	}
+					// }
+			}
+			&--2 {
+				min-width: 28rem;
+				flex:1;
+				padding:4rem;
+				
+
+				// background:transparent;
+				// padding:2rem;
+				// text-align:center;
+				// display: flex;
+    // 		align-items: center;
+    // 		justify-content: center;
+    		.box {
+    			
+    			position: relative;
+					img {
+						width: 70%;
+						min-width: 32rem;
+						@include shadow;
+						position: absolute;
+					}
+					.img1 {
+						left:0;
+						top:-4rem;
+						// position:absolute;
+						// top:-10%;
+						// left:10%;
+						z-index: 1;
+						// width: 20rem;
+						@include shadow-large;
+					}
+					.img2 {
+						
+						left:15%;
+						top:9rem;
+						// position:absolute;
+						// top:50%;
+						// left:50%;
+						// transform: translate(-50%, -50%);
+						z-index: 2;
+						@include shadow-large;
+						// width:70%;
+						// min-width:24rem;
+					}
+					.img3 {
+						left:30%;
+						top:22rem;
+						// position:absolute;
+						// bottom:-10%;
+						// right:10%;
+						z-index: 3;
+						@include shadow-large;
+						// width: 20rem;
+					}
+				}
+			}
+		}
+	}
 	&__top {
 		width:100%;
 		position: relative;
+  	// padding-bottom:56.25%;
+  	//height:80vh;
+  	//padding-top:11rem;
 		//background-color:$primary;
-		max-height: 100vh;
 		//padding:0 2rem;
+		// min-height: 100vh;
+		// background-image:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/blue-min.png?alt=media&token=ea54d11e-2a7c-46a2-9046-a2e3a3df6070');
+		// background-size:cover;
+		// background-repeat:no-repeat;
+		// background-position:center center;
+		background: white;
+		@include respond(tablet-land) {
+			min-height:0;
+		}
+		&--leaves {
+			background-image:url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/leaves-Header-min.jpg?alt=media&token=2c77af8b-4aee-4dcb-9d73-d8b90be69dc8');
+			width:90vw;
+			height: 40rem;
+			margin:0 5vw 20rem 5vw;
+			
+			background-position:center center;
+			background-size:cover;
+			background-repeat:no-repeat;
+			position:relative;
+			&--callout {
+				display: flex;
+				position: absolute;
+				width:100%;
+				margin-top:10vh;
+				&--1 {
+					flex:1;
+				}
+				&--2 {
+					flex:2;
+					position: relative;
+				}
+			}
+		}
+		&--bg-video {
+			// height: 100%;
+			width: calc(100% - 6rem);
+    	object-fit: cover;
+    	position:absolute;
+    	@include shadow-large;
+		}
 		&--image {
 			width:100%;
 			max-height: 100vh;
@@ -80,11 +535,12 @@
 		//padding:0rem 0 2rem 0;
 		@include grid-container;
 		grid-template-rows: repeat(1, minmax(24rem, min-content));
-	  grid-template-columns: 1fr 1fr;
+	  grid-template-columns: 1fr 1fr 1fr;
 	 	grid-auto-flow:row;
 		grid-gap:2rem;
 		@include respond(tablet-port) {
 			grid-template-rows: repeat(1, minmax(24rem, min-content));
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 		@include respond(phone) {
 			grid-template-rows: repeat(1, minmax(24rem, min-content));
@@ -92,24 +548,25 @@
 		}
 		&--item {
 			display: inline-block;
-			min-width: calc(100% - 6rem);
+			width: 100%;
 			@include respond(phone) {
 				display: block;
 				width: auto;
 			}
-			background: white;
-			padding:3rem;
-			@include shadow;
+			//background: white;
+			//padding:3rem;
+			//@include shadow;
 			transition: all 0.3s;
-			h2 {
-				font-size: 2rem;
+			h4 {
+				font-size: 1.5rem;
+				color:$text;
 			}
 	    &:hover {
-	    	@include shadow-large;
-	    	transform: translateY(-2px);
-	    	h2 {
-	    		@include magic-fast
-	    	}
+	    	//@include shadow-large;
+	    	transform: translateY(-1px);
+	    	// h2 {
+	    	// 	@include magic-fast
+	    	// }
 	    }
 			&--image {
 				height: 28rem;
@@ -121,7 +578,7 @@
 		    background-position: center center;
 		    background-repeat: no-repeat;
 		    max-height: 40vh;
-		    margin-bottom:2rem;
+		    margin-bottom:1rem;
 			}
 		}
 	}
@@ -129,6 +586,10 @@
 		//margin-left:8rem;
 		margin-top:6rem;
 		margin-bottom: 6rem;
+		@include respond(tablet-port) {
+			margin-top:2rem;
+			margin-bottom: 2rem;
+		}
 		padding:6rem 0;
 		max-width: 100%;
 		@include respond(tablet-port) {margin-left:0; padding:2rem 0; max-width: 46rem;}
@@ -136,8 +597,8 @@
 		h2 {
 			text-transform: none;
 			font-size: 5.2vw;
-			@include respond(tablet-port) {font-size: 8vw;}
-			@include respond(phone) {font-size: 13vw;}
+			@include respond(tablet-port) {font-size: 9vw;}
+			@include respond(phone) {font-size: 12vw;}
 			color:$textDark;
 		}
 	}
@@ -212,10 +673,12 @@
 	.grid__container {
 		display: grid;
 		grid-gap:2rem;
+		
 		grid-template-columns: repeat(auto-fit, minmax(Min(8em, 100%), 1fr));
 		grid-auto-flow: row;
 		grid-template-rows: repeat(3, minmax(8rem, min-content));
   	grid-template-columns: 1fr 1fr 1fr;
+  	@include respond(phone) {grid-template-columns: 1fr;}
 		&--item {
 			display: block;
      	width: 100%;
@@ -231,7 +694,8 @@
 					height:42rem;
   			}
   			@include respond(phone) {
-  				height:36rem;
+  				height:30rem;
+  				grid-column: 1 / 4;
   			}
 				height: 100%;
 				img {
@@ -245,19 +709,35 @@
 						font-size: 1.2rem;
 					}
 				}
+				@include respond(phone) {
+  				grid-column: 1 / 4;
+  			}
 
+			}
+			&--3 {
+				@include respond(phone) {
+					grid-column: 1 / 4;
+				}
 			}
 			&--4 {
 				@include respond(tablet-port) {
-					grid-column: 1 / 3;
-				}
-			}
-			&--5 {
-				@include respond(tablet-port) {
+					grid-column: 1 / 2;
 					display: none !important;
 				}
 			}
-
+			&--5 {
+				@include respond(phone) {
+					grid-column: 1 / 4;
+				}
+			}
+			&--6 {
+				@include respond(tablet-port) {
+					grid-column: 2 / 4;
+				}
+				@include respond(phone) {
+					grid-column: 1 / 4;
+				}
+			}
 		}
 	}
 }
@@ -358,14 +838,17 @@
 */
 
 .why {
-	background-color:$background;
+	background-color:$backDark;
 	.grid__container {
 		display: grid;
 		grid-gap:2rem;
-		grid-template-columns: repeat(auto-fit, minmax(Min(8em, 100%), 1fr));
+		//grid-template-columns: repeat(auto-fit, minmax(Min(8em, 100%), 1fr));
 		grid-auto-flow: row;
 		grid-template-rows: repeat(3, minmax(8rem, min-content));
   	grid-template-columns: 1fr 1fr 1fr;
+  	@include respond(phone) {
+  		grid-template-columns: 1fr;
+  	}
 		&--item {
 			display: block;
      	width: 100%; height: 6.5rem;
@@ -394,11 +877,21 @@
 						font-size: 1.2rem;
 					}
 				}
-
+				@include respond(phone) {
+					grid-column: 1 / 4;
+				}
+			}
+			&--3 {
+				@include respond(phone) {
+					grid-column: 1 / 4;
+				}
 			}
 			&--5 {
 				@include respond(tablet-port) {
-					grid-column: 1 / 3;
+					grid-column: 1 / 2;
+				}
+				@include respond(phone) {
+					grid-column: 1 / 4;
 				}
 			}
 			&--4 {
@@ -406,11 +899,14 @@
 					display: none !important;
 				}
 			}
-			// &--6 {
-			// 	@include respond(tablet-port) {
-			// 		grid-column: 1 / 2;
-			// 	}
-			// }
+			&--6 {
+				@include respond(tablet-port) {
+					grid-column: 2 / 4;
+				}
+				@include respond(phone) {
+					grid-column: 1 / 4;
+				}
+			}
 		}
 	}
 }

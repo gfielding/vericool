@@ -15,7 +15,7 @@
 
       <div class="list__item" v-for="item in logos" :key="item.id">
         <div class="list__item--body--sm">
-          <img :src="item.picUrl" alt="">
+          <v-lazy-image :src="item.picUrl" alt="" /> 
           <div class="inline-block">
             <h4>{{item.company}}</h4>
           </div>

@@ -78,7 +78,7 @@ export default {
       fb.careersCollection.doc(this.careerInfo.id).update(this.careerInfo)
       setTimeout(() => {
         this.performingRequest = false
-      }, 1000)
+      }, 2000)
       let url = "/dashboard/careers"
       this.$router.push(url)
     },

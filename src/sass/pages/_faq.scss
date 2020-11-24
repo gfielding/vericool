@@ -1,0 +1,11 @@
+/*faq*/
+
+.faq {
+	&__hero {
+		@include hero;
+		background-image: url('https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/jesse-schoff-Ph2KtIqKs7c-unsplash.jpg?alt=media&token=45ee2ec4-64c6-40bf-971b-4105142ea4f8');
+	}
+	&__main {
+		color:$text;
+	}
+}

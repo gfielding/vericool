@@ -20,14 +20,9 @@ const router = new Router({
       redirect: '/'
     },
     {
-      path: '/2',
-      name: 'homepage',
-      component: () => import(/* webpackChunkName: "homepage" */ '../views/Homepage.vue'),
-    },
-    {
       path: '/',
-      name: 'home2',
-      component: () => import(/* webpackChunkName: "home2" */ '../views/Home2.vue'),
+      name: 'home',
+      component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
     },
     {
       path: '/getstarted',
@@ -69,30 +64,30 @@ const router = new Router({
           name: 'all-products',
           component: () => import(/* webpackChunkName: "all-products" */ '../views/Products/AllProducts.vue'),
         },
+        // {
+        //   path: '/products/custom',
+        //   name: 'custom',
+        //   component: () => import(/* webpackChunkName: "custom" */ '../views/Products/CustomOrders.vue'),
+        // },
+        // {
+        //   path: '/products/disposal',
+        //   name: 'disposal',
+        //   component: () => import(/* webpackChunkName: "disposal" */ '../views/Products/Disposal.vue'),
+        // },
+        // {
+        //   path: '/products/materials',
+        //   name: 'materials',
+        //   component: () => import(/* webpackChunkName: "materials" */ '../views/Products/OurMaterials.vue'),
+        // },
+        // {
+        //   path: '/products/stock',
+        //   name: 'stock',
+        //   component: () => import(/* webpackChunkName: "stock" */ '../views/Products/StockOrders.vue'),
+        // },
         {
-          path: '/products/custom',
-          name: 'custom',
-          component: () => import(/* webpackChunkName: "custom" */ '../views/Products/CustomOrders.vue'),
-        },
-        {
-          path: '/products/disposal',
-          name: 'disposal',
-          component: () => import(/* webpackChunkName: "disposal" */ '../views/Products/Disposal.vue'),
-        },
-        {
-          path: '/products/materials',
-          name: 'materials',
-          component: () => import(/* webpackChunkName: "materials" */ '../views/Products/OurMaterials.vue'),
-        },
-        {
-          path: '/products/stock',
-          name: 'stock',
-          component: () => import(/* webpackChunkName: "stock" */ '../views/Products/StockOrders.vue'),
-        },
-        {
-          path: '/products/ohana',
-          name: 'ohana',
-          component: () => import(/* webpackChunkName: "ohana" */ '../views/Products/Ohana.vue'),
+          path: '/products/vericooler',
+          name: 'vericooler',
+          component: () => import(/* webpackChunkName: "vericooler" */ '../views/Products/Ohana.vue'),
         },
         {
           path: '/products/vcplus',
@@ -137,20 +132,25 @@ const router = new Router({
       ]
 
     },
+    // {
+    //   path: '/competitors',
+    //   name: 'competitors',
+    //   component: () => import(/* webpackChunkName: "competitors" */ '../views/Performance/Competitors.vue'),
+    // },
     {
-      path: '/competitors',
-      name: 'competitors',
-      component: () => import(/* webpackChunkName: "competitors" */ '../views/Performance/Competitors.vue'),
+      path: '/terms',
+      name: 'terms',
+      component: () => import(/* webpackChunkName: "terms" */ '../views/Legal/Terms.vue'),
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: () => import(/* webpackChunkName: "privacy" */ '../views/Legal/Privacy.vue'),
     },
     {
       path: '/data',
       name: 'data',
       component: () => import(/* webpackChunkName: "data" */ '../views/Performance/Data.vue'),
-    },
-    {
-      path: '/industries',
-      name: 'industries',
-      component: () => import(/* webpackChunkName: "industries" */ '../views/Industries.vue'),
     },
     {
       path: '/testing',
@@ -163,6 +163,11 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "light-test" */ '../views/Performance/LightTest.vue'),
     },
     {
+      path: '/industries',
+      name: 'industries',
+      component: () => import(/* webpackChunkName: "industries" */ '../views/Industries.vue'),
+    },
+    {
       path: '/news',
       name: 'news',
       component: () => import(/* webpackChunkName: "news" */ '../views/News/News.vue'),
@@ -172,11 +177,11 @@ const router = new Router({
       name: 'article',
       component: () => import(/* webpackChunkName: "article" */ '../views/News/Article.vue'),
     },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import(/* webpackChunkName: "contact" */ '../views/Inquiries/ContactUs.vue'),
-    },
+    // {
+    //   path: '/contact',
+    //   name: 'contact',
+    //   component: () => import(/* webpackChunkName: "contact" */ '../views/Inquiries/ContactUs.vue'),
+    // },
     {
       path: '/in-the-news',
       name: 'pr',
@@ -192,15 +197,20 @@ const router = new Router({
       name: 'apply',
       component: () => import(/* webpackChunkName: "apply" */ '../views/Inquiries/Apply.vue'),
     },
-    {
-      path: '/buy',
-      name: 'buy',
-      component: () => import(/* webpackChunkName: "buy" */ '../views/Inquiries/Buy.vue'),
-    },
+    // {
+    //   path: '/buy',
+    //   name: 'buy',
+    //   component: () => import(/* webpackChunkName: "buy" */ '../views/Inquiries/Buy.vue'),
+    // },
     {
       path: '/awards',
       name: 'awards',
       component: () => import(/* webpackChunkName: "awards" */ '../views/Awards.vue'),
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: () => import(/* webpackChunkName: "faq" */ '../views/FAQ.vue'),
     },
     {
       path: '/login',
@@ -308,7 +318,14 @@ const router = new Router({
         requiresAuth: true
       }
     },
-
+    {
+      path: '/dashboard/posts/:id',
+      name: 'editpost',
+      component: () => import(/* webpackChunkName: "editpost" */ '../views/Dashboard/Posts/EditPost.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
 
     {
       path: '/dashboard/addlogo',
@@ -359,14 +376,6 @@ const router = new Router({
       }
     },
     {
-      path: '/dashboard/awards/:id',
-      name: 'editaward',
-      component: () => import(/* webpackChunkName: "editaward" */ '../views/Dashboard/Awards/EditAward.vue'),
-      meta: {
-        requiresAuth: true
-      }
-    },
-    {
       path: '/dashboard/impact-pics',
       name: 'impactlist',
       component: () => import(/* webpackChunkName: "impactlist" */ '../views/Dashboard/Impact/ImpactPics.vue'),
@@ -398,7 +407,46 @@ const router = new Router({
         requiresAuth: true
       }
     },
-
+    {
+      path: '/dashboard/ohanapics',
+      name: 'ohanapics',
+      component: () => import(/* webpackChunkName: "ohanapics" */ '../views/Dashboard/Ohana/OhanaPics.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/addohanapic',
+      name: 'addohanapic',
+      component: () => import(/* webpackChunkName: "addohanapic" */ '../views/Dashboard/Ohana/AddPic.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/faqs',
+      name: 'listquestions',
+      component: () => import(/* webpackChunkName: "listquestions" */ '../views/Dashboard/FAQ/ListFAQs.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/addfaq',
+      name: 'addquestion',
+      component: () => import(/* webpackChunkName: "addfaq" */ '../views/Dashboard/FAQ/AddFAQ.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/dashboard/faqs/:id',
+      name: 'editquestion',
+      component: () => import(/* webpackChunkName: "editquestion" */ '../views/Dashboard/FAQ/EditFAQ.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
 
   ]
 })

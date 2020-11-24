@@ -16,7 +16,9 @@ fb.auth.onAuthStateChanged(user => {
     store.dispatch('getLeads')
     store.dispatch('getAwards')
     store.dispatch('getImpactPics')
+    store.dispatch('getOhanaPics')
     store.dispatch('getApplications')
+    store.dispatch('getFAQs')
   } else {
     store.commit('setCurrentUser', null)
   }
@@ -44,6 +46,9 @@ export const store = new Vuex.Store({
     impactPics: [],
     applications: [],
     applicationInfo: {},
+    ohanaPics: [],
+    faqs: [],
+    faqInfo: {},
   },
   actions: {
     fetchUserProfile({ commit, state }) {
@@ -82,6 +87,17 @@ export const store = new Vuex.Store({
         commit('setPress', pressArray)
       })
     },
+    getFAQs({ commit }) {
+      fb.faqCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
+        let faqArray = []
+        querySnapshot.forEach(doc => {
+          let faq = doc.data()
+          faq.id = doc.id
+          faqArray.push(faq)
+        })
+        commit('setFAQ', faqArray)
+      })
+    },
     getChances({ commit }) {
       fb.chancesCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
         let chancesArray = []
@@ -113,6 +129,17 @@ export const store = new Vuex.Store({
           impactPicsArray.push(impactPics)
         })
         commit('setImpactPics', impactPicsArray)
+      })
+    },
+    getOhanaPics({ commit }) {
+      fb.ohanaPicsCollection.orderBy('created', 'desc').onSnapshot(querySnapshot => {
+        let ohanaPicsArray = []
+        querySnapshot.forEach(doc => {
+          let ohanaPics = doc.data()
+          ohanaPics.id = doc.id
+          ohanaPicsArray.push(ohanaPics)
+        })
+        commit('setOhanaPics', ohanaPicsArray)
       })
     },
     getAwards({ commit }) {
@@ -268,10 +295,20 @@ export const store = new Vuex.Store({
         })
       })
     },
+    getFAQFromId({ commit }, payload) {
+      fb.faqCollection.where("id", "==", payload)
+      .get()
+      .then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          commit("setFAQInfo", doc.data())
+        })
+      })
+    },
 
     clearData({ commit }) {
       commit('setCurrentUser', null)
       commit('setCareerInfo', null)
+      commit('setFAQInfo', null)
       commit('setUserProfile', {})
       commit('setPress', [])
       commit('setChances', [])
@@ -280,6 +317,7 @@ export const store = new Vuex.Store({
       commit('setProducts', [])
       commit('setLeads', [])
       commit('setImpactPics', [])
+      commit('setOhanaPics', [])
       commit('setAwards', [])
       commit('setApplications', [])
     },
@@ -297,6 +335,12 @@ export const store = new Vuex.Store({
     },
     clearApplicationState({ commit }) {
       commit('setApplicationInfo', null)
+    },
+    clearArticleState({ commit }) {
+      commit('setArticleInfo', null)
+    },
+    clearFAQState({ commit }) {
+      commit('setFAQInfo', null)
     },
   },
   mutations: {
@@ -369,6 +413,20 @@ export const store = new Vuex.Store({
         state.impactPics = []
       }
     },
+    setOhanaPics(state, val) {
+      if (val) {
+        state.ohanaPics = val
+      } else {
+        state.ohanaPics = []
+      }
+    },
+    setFAQ(state, val) {
+      if (val) {
+        state.faqs = val
+      } else {
+        state.faqs = []
+      }
+    },
     setApplications(state, val) {
       if (val) {
         state.applications = val
@@ -396,6 +454,9 @@ export const store = new Vuex.Store({
     },
     setLeadInfo(state, payload) {
       state.leadInfo = payload
+    },
+    setFAQInfo(state, payload) {
+      state.faqInfo = payload
     },
     setApplicationInfo(state, payload) {
       state.applicationInfo = payload

@@ -3,9 +3,9 @@
     <NavAdmin :crumbs="crumbs" />
     <div class="page dashboard">
       <h1>Dashboard</h1>
-      <hr">
+      <hr>
       <div class="dashboard__grid">
-        <div class="dashboard__grid--item" v-for="item in items" key="index">
+        <div class="dashboard__grid--item" v-for="item in items" :key="item.title">
           <router-link :to="{ name: item.name }">
             <div class="card">
               <div class="card__title"><h4>{{item.title}}</h4></div>
@@ -63,6 +63,14 @@ export default {
         title: "Applications",
         name: 'applications'
       },
+      {
+        title: "Ohana Pics",
+        name: 'ohanapics'
+      },
+      {
+        title: "FAQs",
+        name: 'listquestions'
+      }
     ],
     crumbs: [
       {

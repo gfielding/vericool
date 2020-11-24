@@ -18,6 +18,8 @@ const firebaseConfig = {
   measurementId: "G-D2V9VK551Q"
 };
 firebase.initializeApp(firebaseConfig)
+firebase.analytics()
+firebase.firestore().enablePersistence()
 
 const db = firebase.firestore()
 const firestore = firebase.firestore
@@ -38,6 +40,8 @@ const leadsCollection = db.collection('leads')
 const awardsCollection = db.collection('awards')
 const impactPicsCollection = db.collection('impactPics')
 const applicationsCollection = db.collection('applications')
+const ohanaPicsCollection = db.collection('ohanaPics')
+const faqCollection = db.collection('faqs')
 
 export {
   db,
@@ -56,5 +60,7 @@ export {
   leadsCollection,
   awardsCollection,
   impactPicsCollection,
-  applicationsCollection
+  applicationsCollection,
+  ohanaPicsCollection,
+  faqCollection
 }

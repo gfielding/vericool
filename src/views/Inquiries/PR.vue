@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="greyback">
     <Nav />
     <div class="page pr">
     	<div class="pr__hero">
       </div>
-      <div class="container">
+      <div class="container pb-8">
         <div class="pr__main">
           <h1>In The News</h1>
           <hr>
@@ -15,7 +15,7 @@
 
           <div v-for="item in press" :key="item.id" class="list__item mt-5">
             <div class="flex align-start justify-space-between">
-              <h3 class="item--title">{{item.date | moment("MMM Do YYYY") }} // <span class="dark-text">{{item.title}}</span></h3>
+              <h3 class="item--title">{{item.date | moment("MMM Do YYYY") }}<span class="light"> // {{item.title}}</span></h3>
               <div class="ml-4">
                 <a :href="item.url" target="_blank" nofollow>
                   <button class="btn btn__primary">Visit
@@ -53,6 +53,12 @@ export default {
     if (!this.press || this.press.length < 1) {
       this.$store.dispatch("getPress")
     }
+  },
+  metaInfo: {
+    title: 'In the Press',
+    meta: [
+      { name: 'description', content: 'News about Vericool Packaging' }
+    ],
   },
 }
 </script>

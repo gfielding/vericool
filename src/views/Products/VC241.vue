@@ -29,33 +29,33 @@
         <div class="vc241__iconrow">
           <div>
             <div class="vcthree__iconrow--item">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%208.svg?alt=media&token=8a9bc423-a9f0-4f49-9b38-5b4879feee8e" alt="">
+              <v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%208.svg?alt=media&token=8a9bc423-a9f0-4f49-9b38-5b4879feee8e" alt="" />
               <p>Curbside-Recyclable</p>
             </div>
             <div class="vc241__iconrow--item">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%201.svg?alt=media&token=e73d6468-ab76-489c-8269-d5773276c962" alt="">
+              <v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%201.svg?alt=media&token=e73d6468-ab76-489c-8269-d5773276c962" alt="" />
               <p>Customizable</p>
             </div>
             <div class="vc241__iconrow--item">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%2011.svg?alt=media&token=90b800e7-cbdb-40ea-a2f8-4efc0c7a8c30" alt="">
+              <v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%2011.svg?alt=media&token=90b800e7-cbdb-40ea-a2f8-4efc0c7a8c30" alt="" />
               <p>High-Performing</p>
             </div>
             <div class="vc241__iconrow--item">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%204.svg?alt=media&token=1dd082a9-5a1a-4018-a719-0c71049f0ae5" alt="">
+              <v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%204.svg?alt=media&token=1dd082a9-5a1a-4018-a719-0c71049f0ae5" alt="" />
               <p>Affordable</p>
             </div>
             
             <div class="vc241__iconrow--item">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%206.svg?alt=media&token=dd050ac1-0e39-41bc-9b3b-69bf0efcb236" alt="">
+              <v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%206.svg?alt=media&token=dd050ac1-0e39-41bc-9b3b-69bf0efcb236" alt="" />
               <p>Sustainable</p>
             </div>
             <div class="vc241__iconrow--item">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%207.svg?alt=media&token=cd678ed8-e221-436c-9dc5-a1ef7f7492be" alt="">
+              <v-lazy-image src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Ficons%2FiconsAsset%207.svg?alt=media&token=cd678ed8-e221-436c-9dc5-a1ef7f7492be" alt="" />
               <p>100% Post-Consumer</p>
             </div>
           </div>
           <div class="vc241__iconrow--item">
-            <img class="p" src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Fpatents%2FpAsset%2012.svg?alt=media&token=1a72585c-e9be-495c-9056-0d28e3709e7a">
+            <v-lazy-image class="p" src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Fpatents%2FpAsset%2012.svg?alt=media&token=1a72585c-e9be-495c-9056-0d28e3709e7a" />
           </div>
         </div>  
         <hr>
@@ -88,7 +88,7 @@
 <script>
 import { mapState } from 'vuex'
 import ProductNav from '@/components/ProductNav.vue'
-import ProductScroller from '@/components/ProductScroller.vue'
+import ProductScroller from '@/components/AgileScroller.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
@@ -157,6 +157,12 @@ export default {
     this.options2 = null,
     this.slides = [],
     this.crumbs = []
-  }
+  },
+  metaInfo: {
+    title: 'VC 2-4-1',
+    meta: [
+      { name: 'description', content: 'Selling out in convenience and grocery stores throughout the United States.' }
+    ],
+  },
 }
 </script>

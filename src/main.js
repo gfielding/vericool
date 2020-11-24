@@ -8,6 +8,9 @@ import Croppa from 'vue-croppa';
 import VueDragscroll from 'vue-dragscroll'
 import VueMask from 'v-mask'
 import VueAgile from 'vue-agile'
+import { VLazyImagePlugin } from "v-lazy-image";
+import VueMeta from 'vue-meta'
+import VuePrlx from 'vue-prlx'
 import './sass/main.scss'
 const fb = require('./firebaseConfig.js')
  
@@ -15,11 +18,17 @@ Vue.use(VueAgile);
 Vue.use(Croppa);
 Vue.use(VueMask);
 Vue.use(VueDragscroll);
+Vue.use(VLazyImagePlugin);
+Vue.use(VuePrlx);
+Vue.use(VueMeta, {
+  refreshOnceOnNavigation: true
+})
 
 Vue.use(require('vue-moment'));
 
 Vue.config.productionTip = false
 Vue.config.devtools = true
+
 
 Vue.filter('truncate', function (text, length, suffix) {
     return text.substring(0, length) + suffix;

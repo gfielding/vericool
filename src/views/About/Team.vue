@@ -177,6 +177,12 @@ export default {
   components: {
     Nav,
     Footer
-  }
+  },
+  metaInfo: {
+    title: 'Meet the Team',
+    meta: [
+      { name: 'description', content: 'Saving the environment and fighting recidivism.' }
+    ],
+  },
 }
 </script>

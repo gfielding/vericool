@@ -1,10 +1,10 @@
 <template>
-	<div>
+	<div class="greyback">
 		<Nav />
 	  <div class="page news">
 	  	<div class="news__hero">
 	    </div>
-	    <div class="container">
+	    <div class="container pb-8">
 	    	<div class="news__main">
 	    		<h1>Latest Updates</h1>
 	    		<hr>
@@ -15,13 +15,15 @@
 
       
           <div v-for="item in articles" :key="item.id" class="list__item mt-5">
-          	<div>
-          		<img :src="item.picUrl" style="height:auto;" alt="">
+          	<div class="hiddenXsOnly pr-5">
+          		<v-lazy-image :src="item.picUrl" style="height:auto;" alt="" />
           	</div>
           	<div>
           		<div class="flex align-center justify-space-between mb-3">
-		   					<h3 class="item--title">{{item.title}}</h3>
-		   					<div class="light">{{item.date | moment("MMM Do, YYYY")}}</div>
+                <div class="flex-switch">
+  		   					<h3 class="item--title">{{item.title}}</h3>
+  		   					<div class="light caption">{{item.date | moment("MMM Do, YYYY")}}</div>
+                </div>
 	   					</div>
 	            <div v-html="$options.filters.truncate(item.body, 360, '...')"></div>
 	            <router-link :to="`/news/` + item.id">
@@ -57,6 +59,12 @@ export default {
     Nav,
     Loader,
     Footer
+  },
+  metaInfo: {
+    title: 'Blog Posts',
+    meta: [
+      { name: 'description', content: 'The Latest Blog Posts from Vericool Packaging' }
+    ],
   },
 }
 </script>

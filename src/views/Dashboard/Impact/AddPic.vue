@@ -14,7 +14,7 @@
               :prevent-white-space="false"
               :width="360"
               :height="360"
-              :quality="10"
+              :quality="1"
               canvas-color="transparent"
               initial-size="cover"
             ></croppa>
@@ -85,7 +85,7 @@ export default {
         blob => {
           let downloadURL
           let rand = (Math.random().toString(36).substring(2, 16) + Math.random().toString(36).substring(2, 16)).toUpperCase()
-          let picRef = fb.storageRef.child('logoPics/' + rand)
+          let picRef = fb.storageRef.child('impactPics/' + rand)
           picRef.put(blob).then((snap) => {
             picRef.getDownloadURL().then(function(downloadURL) {
               console.log('File available at', downloadURL)
