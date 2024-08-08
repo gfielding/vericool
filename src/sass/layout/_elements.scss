@@ -296,8 +296,9 @@ div [class$="__main"] {
 .list__item {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 2px solid $textBright;
-	padding:1rem 1rem 2rem 1rem;
+	border-bottom: 2px solid $textLight;
+	padding:1rem 1rem 1rem 1rem;
+	align-items: center;
 	&:last-of-type {
 		border:none;
 	}

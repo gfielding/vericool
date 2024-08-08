@@ -1,4 +1,4 @@
-const firebase = require("firebase/app")
+import firebase from 'firebase/app';
 
 require("firebase/auth")
 require("firebase/storage")
@@ -16,8 +16,8 @@ const firebaseConfig = {
   messagingSenderId: "530042176283",
   appId: "1:530042176283:web:4de2d9a17ab196ed7589be",
   measurementId: "G-D2V9VK551Q"
-};
-firebase.initializeApp(firebaseConfig)
+}
+firebase.initializeApp(firebaseConfig);
 firebase.analytics()
 firebase.firestore().enablePersistence()
 

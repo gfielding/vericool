@@ -7,13 +7,11 @@
       </div>
       <hr>
       <transition name="fadeStop">
-        <Loader v-if="!leads || leads.length == 0" />
+        <Loader v-if="!realLeads || realLeads.length == 0" />
       </transition>
-
-      <div class="list__item" v-for="item in leads" :key="item.id">
+      <div class="list__item" v-for="item in realLeads" :key="item.id">
         <div>
-          <h4>{{item.name}}<span class="light"> // {{item.company}}</span></h4>
-          
+          <h4>{{item.name}}<span class="light"> // {{item.company}} // {{item.date | moment("MMM Do YYYY")}}</span></h4>
         </div>
         <div class="list__button">
           <router-link :to="`/dashboard/leads/` + item.id">
@@ -49,6 +47,11 @@ export default {
   }),
   computed: {
     ...mapState(['currentUser', 'userProfile', 'leads']),
+    realLeads: function() {
+      return this.leads.filter(function(lead) {
+        return lead.date = new Date(lead.created.seconds * 1000)
+      })
+    }
   },
   methods: {
     remove(item) {

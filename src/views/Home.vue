@@ -41,7 +41,7 @@
           <img src="https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Kitchen-min.jpg?alt=media&token=5964d407-fd95-4f31-97a0-5838b6d63ad4" alt="">
           <div class="box" data-aos="fade" data-aos-once="true" data-aos-delay="600">
             <h1>Vericooler Plus</h1>
-            <p>The highest-performing<br />insulation for frozen<br />shippments in the market.</p>
+            <p>The highest-performing<br />insulation for frozen<br />shipments in the market.</p>
             <router-link :to="{ name: 'vcplus' }" tag="button" class="btn btn__primary btn__xlarge mb-0 mt-2 hiddenSmAndDown">Learn More<i class="fad fa-chevron-right ml-3"></i></router-link>
             <router-link :to="{ name: 'vcplus' }" tag="button" class="btn btn__primary mb-0 mt-0 hiddenMdAndUp">Learn More<i class="fad fa-chevron-right ml-3"></i></router-link>
           </div>
@@ -118,7 +118,7 @@
           <div class="icon__boxes--item">
             <i class="fad fa-rocket" data-aos="flip-left" data-aos-delay="1600" data-aos-once="true"></i>
             <h3>Performant</h3>
-            <p>Vericool™ products perform as well or better than EPS (Styrofoam).</p>
+            <p>Vericool™ products perform as well or better than EPS (Styrenfoam).</p>
             <div class="mt-3">
               <router-link :to="{ name: 'data'}">
                 <button class="btn btn__outlined">Performance Data &#8594</button>
@@ -204,7 +204,7 @@
               <div class="kraft">
                 <div class="text">
                   <h4>Vericool Fights Pollution</h4>
-                  <p>Vericool is on a mission to replace all EPS (Styrofoam) packaging with eco-friendly shippers.</p>
+                  <p>Vericool is on a mission to replace all EPS (Styrenfoam) packaging with eco-friendly shippers.</p>
                   <div>
                   <router-link :to="{ name: 'getstarted' }" tag="button" class="lm">Learn More</router-link>
                   </div>
@@ -232,7 +232,7 @@
           <div class="homepage__fights__flex">
             <div class="homepage__fights__flex--1">
                 <h4>Vericool Fights Pollution</h4>
-                <p>Vericool is on a mission to replace all EPS (Styrofoam) packaging with eco-friendly shippers.</p>
+                <p>Vericool is on a mission to replace all EPS (Styrenfoam) packaging with eco-friendly shippers.</p>
                 <div>
                 <router-link :to="{ name: 'environmental-impact' }" tag="button" class="btn btn__primary btn__xlarge">Learn More<i class="fad fa-chevron-right ml-3"></i></router-link>
                 </div>

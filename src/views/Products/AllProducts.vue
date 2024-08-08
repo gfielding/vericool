@@ -24,6 +24,7 @@
     </div>
   </div>
 </template>
+Vericooler™
 
 <script>
 import { mapState } from 'vuex'

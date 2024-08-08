@@ -59,7 +59,7 @@
             <h4 class="mt-4">Recyclable & Compostable Packaging</h4>
               <ul>
                 <li>Developed specifically for the food delivery, specialty pharmaceutical and healthcare industries</li>
-                <li>Replaces environmentally harmful expanded polystyrene (EPS) foam packaging (known as Styrofoam®)</li>
+                <li>Replaces environmentally harmful expanded polystyrene (EPS) foam packaging (known as Styrenfoam)</li>
                 <li>Compostable insulation meets ASTM D6400, EN13424 and home compostable standards</li>
                 <li>Multiple no hassle disposal options; compostable, dissolvable and recyclable</li>
                 <li>Choose your film: Compostable, poly, or kraft paper</li>
@@ -148,7 +148,7 @@ export default {
         'https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FVCPlus%2FPlus-in-poly-And-kraftinside-min.png?alt=media&token=c9feda60-5d10-40f8-9562-ef71023abfd5',
         'https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FVCPlus%2FVC-plus-inside-min.png?alt=media&token=01fa07cd-9892-4d16-a68b-3a22111b6dd5',
         'https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2FVCPlus%2FVC-plus-min.png?alt=media&token=d386ec80-5af4-49ea-b814-473ca68a1ad5',
-        'https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Fpatents%2FiconsAsset%2010.svg?alt=media&token=96aac811-664f-4073-877b-f8a86cc681e9'
+        'https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/Products%2Fpatents%2Fpat.jpg?alt=media&token=03e61501-b35e-4cf5-b428-86f157e1193b'
       ],
       crumbs: [
         {

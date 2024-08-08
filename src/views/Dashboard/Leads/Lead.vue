@@ -9,6 +9,7 @@
       <div v-if="leadInfo">
         <h2 class="pb-0">{{leadInfo.name}}</h2>
         <h3>{{leadInfo.company}}</h3>
+        <div class="lead-format">{{realDate | moment("MMM Do YYYY")}}</div>
         <div class="lead-format">Email: {{leadInfo.email}}</div>
         <div class="lead-format">Phone: {{leadInfo.phone}}</div>
         <div class="lead-format">Location: {{leadInfo.location}}</div>
@@ -28,7 +29,7 @@
         <div class="lead-format">Desired Controlled Temperature: {{leadInfo.desiredControlledTemperature}}</div>
         <div class="lead-format">Duration Of Transit: {{leadInfo.durationOfTransit}}</div>
         <div class="lead-format">Ambient Test Profile: {{leadInfo.ambientTestProfile}}</div>
-        <div class="lead-format">Biggest Customer Complaint: {leadInfo.biggestCustomerComplaint}}</div>
+        <div class="lead-format">Biggest Customer Complaint: {{leadInfo.biggestCustomerComplaint}}</div>
         <div class="lead-format">Current Desired Cost: {{leadInfo.currentDesiredCost}}</div>
       </div>
 
@@ -78,7 +79,7 @@ import Footer from '@/components/Footer.vue'
 const fb = require('../../../firebaseConfig.js')
 
 export default {
-  name: 'editpress',
+  name: 'lead',
   data() {
     return {
       performingRequest: false,
@@ -99,6 +100,9 @@ export default {
   },
   computed: {
     ...mapState(['currentUser', 'userProfile', 'leadInfo']),
+    realDate() {
+      return new Date(this.leadInfo.created.seconds * 1000)
+    }
   },
   created () {
     console.log(this.$route.params.id)
@@ -111,16 +115,16 @@ export default {
   methods: {
     editPress() {
       this.performingRequest = true
-      let {press} = this.pressInfo
-      fb.pressCollection.doc(this.pressInfo.id).update(this.pressInfo)
+      let {lead} = this.leadInfo
+      fb.leadCollection.doc(this.leadInfo.id).update(this.leadInfo)
       setTimeout(() => {
         this.performingRequest = false
       }, 1000)
-      let url = "/dashboard/press"
+      let url = "/dashboard/leads"
       this.$router.push(url)
     },
     cancel() {
-      let url = "/dashboard/press"
+      let url = "/dashboard/leads"
       this.$router.push(url)
     }
   },

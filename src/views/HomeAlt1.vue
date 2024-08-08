@@ -19,7 +19,7 @@
     <section class="home__mission">
     	<div class="home__mission-container" data-aos="fade-up" data-aos-once="true">
         <div class="home__mission-text">
-      		<p>Vericool™ provides a proprietary green technology solution that leaves zero impact on the environment unlike the alternative solution that is devastating our global landscape. The mission of Vericool is to eliminate Styrofoam (EPS) usage in the biomedical, pharmaceutical, life sciences, fish, and food delivery industries. Vericool was founded by temperature controlled packaging experts in response to customer request for recyclable and better yet, compostable, shipping alternatives to EPS, commonly known as Styrofoam®.</p>
+      		<p>Vericool™ provides a proprietary green technology solution that leaves zero impact on the environment unlike the alternative solution that is devastating our global landscape. The mission of Vericool is to eliminate Styrenfoam (EPS) usage in the biomedical, pharmaceutical, life sciences, fish, and food delivery industries. Vericool was founded by temperature controlled packaging experts in response to customer request for recyclable and better yet, compostable, shipping alternatives to EPS, commonly known as Styrenfoam.</p>
       	</div>
       </div>
     </section>

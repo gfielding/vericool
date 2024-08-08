@@ -38,7 +38,11 @@ export default {
       tabIndex: 0
     },
     meta: [
-      { name: 'description', content: "Vericool Environmentally-Friendly Packaging" }
+      { name: 'description', content: "Vericool Environmentally-Friendly Packaging" },
+      {property: 'og:title', content: 'Vericool - Packaging for a Greener World'},
+      {property: 'og:type', content: 'website'},
+      {property: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/vericool-53dd0.appspot.com/o/pharma-min.jpg?alt=media&token=36802d8c-8bdb-456e-bba2-5695f92595d1'},
+      {property: 'og:description', content: 'Patented, high-performing thermal shippers made from natural ingredients that revolutionize the way cold chain products are shipped.'}
     ],
   })
 };

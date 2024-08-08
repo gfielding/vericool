@@ -156,6 +156,7 @@ export default {
     performingRequest: false,
     showForm: true,
     contactForm: {
+    	// to: "Dj@vericool-sol.com, gregpfielding@gmail.com",
     	name: '',
     	company: '',
       email: '',
@@ -186,34 +187,35 @@ export default {
       this.performingRequest = true
       let contact = this.contactForm;
       console.log(contact)
+      this.$store.dispatch('newLead', contact)
       setTimeout(() => {
-      	this.$store.dispatch('newLead', contact)
-      	this.contactForm.name = '',
-	    	this.contactForm.company = '',
-	      this.contactForm.email = '',
-	      this.contactForm.phone = '',
-	      this.contactForm.location = '',
-	      this.contactForm.currentProduct = '',
-	      this.contactForm.currentPackagingType = '',
-	      this.contactForm.currentMonthlyQuantitiesPerSize = '',
-	      this.contactForm.currentPayloadSizes = '',
-	      this.contactForm.currentInsulationThickness = '',
-	      this.contactForm.currentInnerShipperDimensions = '',
-	      this.contactForm.currentOuterShipperDimensions = '',
-	      this.contactForm.dryIceOrGelPacks = '',
-	      this.contactForm.weightOfCoolant = '',
-	      this.contactForm.preconditionedCoolantTemperature = '',
-	      this.contactForm.preconditionedProductTemperature = '',
-	      this.contactForm.currentDistributionLocations = '',
-	      this.contactForm.currentMonthlyGrowthRate = '',
-	      this.contactForm.desiredControlledTemperature = '',
-	      this.contactForm.durationOfTransit = '',
-	      this.contactForm.ambientTestProfile = '',
-	     	this.contactForm.biggestCustomerComplaint = '',
-	      this.contactForm.currentDesiredCost = '',
+      // 	this.contactForm.name = '',
+	    	// this.contactForm.company = '',
+	     //  this.contactForm.email = '',
+	     //  this.contactForm.phone = '',
+	     //  this.contactForm.location = '',
+	     //  this.contactForm.currentProduct = '',
+	     //  this.contactForm.currentPackagingType = '',
+	     //  this.contactForm.currentMonthlyQuantitiesPerSize = '',
+	     //  this.contactForm.currentPayloadSizes = '',
+	     //  this.contactForm.currentInsulationThickness = '',
+	     //  this.contactForm.currentInnerShipperDimensions = '',
+	     //  this.contactForm.currentOuterShipperDimensions = '',
+	     //  this.contactForm.dryIceOrGelPacks = '',
+	     //  this.contactForm.weightOfCoolant = '',
+	     //  this.contactForm.preconditionedCoolantTemperature = '',
+	     //  this.contactForm.preconditionedProductTemperature = '',
+	     //  this.contactForm.currentDistributionLocations = '',
+	     //  this.contactForm.currentMonthlyGrowthRate = '',
+	     //  this.contactForm.desiredControlledTemperature = '',
+	     //  this.contactForm.durationOfTransit = '',
+	     //  this.contactForm.ambientTestProfile = '',
+	     // 	this.contactForm.biggestCustomerComplaint = '',
+	     //  this.contactForm.currentDesiredCost = '',
         this.performingRequest = false,
         this.showForm = false
       }, 2000)
+      
     }
   },
   beforeDestroy() {

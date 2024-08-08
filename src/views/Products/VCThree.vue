@@ -73,7 +73,7 @@
               <ul>
                 <li>Designed for the food, wine, specialty pharmaceutical, and health care industries</li>
                 <li>Recyclable (passes WMU standard)</li>
-                <li>Replaces environmentally detrimental expanded polystyrene (EPS) foam packaging (commonly known as Styrofoam®)</li>
+                <li>Replaces environmentally detrimental expanded polystyrene (EPS) foam packaging (commonly known as Styrenfoam)</li>
                 <li>Outperforms competition, environmentally and structurally, by providing customizable 12-72 hours of thermal protection</li>
               </ul>
             </div>

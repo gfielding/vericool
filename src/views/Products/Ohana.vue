@@ -7,7 +7,7 @@
 	    <div class="container">
 	    	<div class="flex justify-space-between align-center">
           <div>
-            <h1 class="mt-5">Meet the Vericooler®</h1>
+            <h1 class="mt-5">Meet the Vericooler™</h1>
             <h3 class="mb-2">The World's First Eco-Friendly Cooler</h3>
           </div>
           <router-link :to="{ name: 'getstarted'}" tag="button" class="btn product__buttons--item--btn btn__primary hiddenSmAndDown">Contact Sales<i class="fad fa-chevron-right ml-3"></i></router-link>
@@ -59,7 +59,7 @@
           <div class="flex__2">
             
             <div>
-            <h4 class="mt-4">Designed to Replace Styroform® Coolers</h4>
+            <h4 class="mt-4">Designed to Replace Styrenfoam Coolers</h4>
             <ul>
               <li>100% Reusable, recyclable and biodegradable</li>
               <li>Made from recycled boxes</li>
@@ -67,7 +67,7 @@
               <li>Up to 18 hour ice retention</li>
               <li>Spacious family size cooler for picnics, outings, boating,
 camping, and sporting events</li>
-              <li>Eliminates the harmful impact of EPS/Styrofoam® on our
+              <li>Eliminates the harmful impact of EPS/Styrenfoam on our
 environment</li>
               <li>Holds water and ice</li>
               <li>Customer can easily place entire package in curbside

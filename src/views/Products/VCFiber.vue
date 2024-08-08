@@ -49,7 +49,7 @@
               <h4 class="mt-4">Recyclable Packaging</h4>
               <ul>
                 <li>Designed for the food, wine, specialty pharmaceutical, and health care industries</li>
-                <li>Eliminates the harmful impact of EPS/Styrofoam® on our environment</li>
+                <li>Eliminates the harmful impact of EPS/Styrenfoam on our environment</li>
                 <li>Made from post-consumer and post-industrial materials</li>
                 <li>100% Recyclable! Customer can easily place entire package in curbside recycling</li>
               </ul>

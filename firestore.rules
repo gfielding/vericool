@@ -8,5 +8,9 @@ service cloud.firestore {
       allow write;
       allow read: if request.auth.uid != null
     }
+    match /leads/{leadId} {
+      allow write;
+      allow read: if request.auth.uid != null
+    }
   }
 }

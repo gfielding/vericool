@@ -61,7 +61,7 @@
                 <li>Keeps products cold from packaging to receipt with customizable thermal protection duration times</li>
                 <li>Outperforms competition green solutions, environmentally and structurally</li>
                 <li>Design minimizes edge loss which increases temperature control</li>
-                <li>Replaces environmentally harmful expanded polystyrene (EPS) foam packaging (known as Styrofoam)</li>
+                <li>Replaces environmentally harmful expanded polystyrene (EPS) foam packaging (known as Styrenfoam)</li>
               </ul>
             </div>
             <div>

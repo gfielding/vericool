@@ -26,8 +26,8 @@
 					Suites C/D<br />
 					Livermore, CA 94550
 				</address>
-				<a href="tel:925-574-7888">
-					<button><strong>(925) 574-7888</strong></button>
+				<a href="tel:925-238-8847">
+					<button><strong>(925) 238-8847</strong></button>
 				</a>
 				<a href="mailto:info@vericoolpackaging.com"><button><strong>info@vericoolpackaging.com</strong></button></a>
 			</div>

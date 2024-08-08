@@ -10,13 +10,13 @@
       <div class="container pb-8">
         <div class="environmental-impact__main pb-8">
           <h1>Environmental Impact</h1>
-          <h3>What EPS (Styrofoam) does to our environment, and what to do about it</h3>
+          <h3>What EPS (Styrenfoam) does to our environment, and what to do about it</h3>
           <hr>
           <h2>What is EPS?</h2>
           <div class="flex">
             <div class="col-1">
-              <p>EPS stands for expanded polystyrene, or as we know it.... “Styrofoam”</p>
-              <p>“Styrofoam” is popularly used as a cheap and disposable cold-chain shipping insulator.</p>
+              <p>EPS stands for expanded polystyrene, or as we know it.... “Styrenfoam”</p>
+              <p>“Styrenfoam” is popularly used as a cheap and disposable cold-chain shipping insulator.</p>
               <p>EPS does not decompose, but instead “photodegrades,” breaking down into smaller and smaller pieces that continue to pervasively accumulate in marine environments.</p>
               <p>EPS can only be recycled when it is “clean” and uncontaminated by food (which is extremely rare), and even then manufacturers lose money when they recycle EPS, meaning it rarely gets done.</p>
             </div>
@@ -42,11 +42,11 @@
             <hr>
             
             <h2>What EPS does to the Environment</h2>
-            <p>Because polystyrene (Styrofoam) is so difficult to properly dispose of or recycle, it ends up in our environment where it releases carcinogenic styrene into virtually all living creatures. Some of these plastic-feeding animals make it all the way to our tables!</p>
-            <p>When exposed to sunlight, styrofoam creates harmful air pollutants which contaminate landfills and deplete the ozone layer.</p>
+            <p>Because polystyrene (Styrenfoam) is so difficult to properly dispose of or recycle, it ends up in our environment where it releases carcinogenic styrene into virtually all living creatures. Some of these plastic-feeding animals make it all the way to our tables!</p>
+            <p>When exposed to sunlight, Styrenfoam creates harmful air pollutants which contaminate landfills and deplete the ozone layer.</p>
             <p>In 2014 styrene, a key component of EPS, was listed as a possible carcinogen.</p>
-            <p>Because styrofoam products break apart so easily, animals either confuse it as food and ingest its toxic chemicals or they suffer from it as a choking hazard.</p>
-            <!-- <p>Polystyrene, commonly referred to as Styrofoam™, is extremely difficult to dispose of properly, and it releases dangerous styrene into virtually all living creatures. After it has been used, polystyrene food packaging is typically not “clean” enough to be recycled, and only 1.3% of total polystyrene was recycled in the US in 2015. Even when it is clean enough to recycle, only about 5% of the volume of Styrofoam is actually polystyrene, and the rest is air, making Styrofoam uneconomical to collect and store for recycling. In rare instances, manufacturers who handle large amounts of polystyrene will consolidate their scrap materials with compactors (compressing them to less than a tenth of their original volume), and then will sell the compacted blocks of polystyrene to recyclers. However, the polystyrene in these blocks cannot be recovered for use in new polystyrene products. Its quality is only adequate to use as filler in other plastics, which then, in turn, becomes virtually impossible to recycle. - <a href="https://www.worldcentric.com/blog/impacts-and-risks-of-styrofoam" target="_blank" nofollow>(source)</a></p> -->
+            <p>Because Styrenfoam products break apart so easily, animals either confuse it as food and ingest its toxic chemicals or they suffer from it as a choking hazard.</p>
+            <!-- <p>Polystyrene, commonly referred to as Styrenfoam™, is extremely difficult to dispose of properly, and it releases dangerous styrene into virtually all living creatures. After it has been used, polystyrene food packaging is typically not “clean” enough to be recycled, and only 1.3% of total polystyrene was recycled in the US in 2015. Even when it is clean enough to recycle, only about 5% of the volume of Styrenfoam is actually polystyrene, and the rest is air, making Styrenfoam uneconomical to collect and store for recycling. In rare instances, manufacturers who handle large amounts of polystyrene will consolidate their scrap materials with compactors (compressing them to less than a tenth of their original volume), and then will sell the compacted blocks of polystyrene to recyclers. However, the polystyrene in these blocks cannot be recovered for use in new polystyrene products. Its quality is only adequate to use as filler in other plastics, which then, in turn, becomes virtually impossible to recycle. - <a href="https://www.worldcentric.com/blog/impacts-and-risks-of-styrofoam" target="_blank" nofollow>(source)</a></p> -->
           
             <hr>
             <h2>How do Our Materials Reduce our Footprint?</h2>
@@ -68,13 +68,13 @@
               <span class="number" v-numflip="num1">
               </span>
               <span class="number"></span>
-              <p>years is how long experts estimate it takes <span class="underline--magical"><strong>styrofoam to decompose</strong></span></p>
+              <p>years is how long experts estimate it takes <span class="underline--magical"><strong>styrenfoam to decompose</strong></span></p>
             </div>
             <div class="environmental-impact__data--item">
               <span class="number" v-numflip="num2">
               </span>
               <span class="number">%</span>
-              <p>or more of landfill composition (by volume) is <span class="underline--magical"><strong>styrofoam</strong></span></p>
+              <p>or more of landfill composition (by volume) is <span class="underline--magical"><strong>styrenfoam</strong></span></p>
             </div>
             <div class="environmental-impact__data--item">
               <span class="number" v-numflip="num3">
@@ -92,7 +92,7 @@
               <span class="number" v-numflip="num5">
               </span>
               <span class="number"></span>
-              <p><span class="underline--magical"><strong>Billion Styrofoam</strong></span> coffee cups are thrown away every year by Americans alone</p>
+              <p><span class="underline--magical"><strong>Billion Styrenfoam</strong></span> coffee cups are thrown away every year by Americans alone</p>
             </div>
           </div>
         </div>
